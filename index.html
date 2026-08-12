@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TuringLambdaAI — 可视化技术教学与开发者工具</title>
-    <meta name="description" content="汽车协议、电机控制的可视化学习平台，以及给开发者的实用工具。">
+    <meta name="description" content="可视化学习平台、开发者工具与技术书籍。把复杂的技术，做得直观好用。">
     <meta name="google-adsense-account" content="ca-pub-3215512126020129">
     <meta property="og:title" content="TuringLambdaAI">
-    <meta property="og:description" content="可视化技术教学平台与开发者工具">
+    <meta property="og:description" content="可视化学习平台、开发者工具与技术书籍">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jrtx.site">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>λ</text></svg>">
@@ -17,12 +17,18 @@
     <!-- umami analytics: account at limit, add data-website-id later -->
     <link rel="stylesheet" href="assets/css/main.css">
     <style>
-        /* homepage-specific additions */
-        .footer-wechat { display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: 28px; padding-top: 32px; border-top: 1px solid var(--border); }
-        .footer-wechat img { width: 132px; height: 132px; border-radius: 12px; border: 1px solid var(--border); display: block; }
-        .footer-wechat .wc-name { font-family: "Inter", -apple-system, sans-serif; font-size: 0.92em; font-weight: 600; color: var(--text); margin: 0; }
-        .footer-wechat .wc-label { font-size: 0.82em; color: var(--text-3); margin: 0; }
-        @media (max-width: 480px) { .footer-wechat img { width: 112px; height: 112px; } }
+        /* product card: value-driven layout (name + tagline + desc + CTA) */
+        .product-tagline { font-size: 1.02em; font-weight: 600; color: var(--text); margin: 2px 0 10px; line-height: 1.4; }
+        .product-cta { display: inline-block; margin-top: auto; padding-top: 14px; color: var(--accent); font-family: "Inter", -apple-system, sans-serif; font-size: 0.9em; font-weight: 500; transition: transform 0.15s; }
+        .product-card:hover .product-cta { transform: translateX(3px); }
+        /* footer wechat inline (compact, not a big block) */
+        .footer-wechat-inline { display: flex; align-items: center; gap: 10px; }
+        .footer-wechat-inline img { width: 76px; height: 76px; border-radius: 8px; border: 1px solid var(--border); display: block; }
+        .footer-wechat-inline span { font-size: 0.78em; color: var(--text-3); line-height: 1.4; }
+        @media (max-width: 600px) {
+            .footer-inner { flex-direction: column; gap: 18px; }
+            .footer-wechat-inline img { width: 68px; height: 68px; }
+        }
     </style>
 </head>
 <body>
@@ -33,8 +39,7 @@
                 <span class="nav-logo-text">TuringLambdaAI</span>
             </a>
             <div class="nav-links">
-                <a href="#products">项目</a>
-                <a href="#wechat">公众号</a>
+                <a href="#products">产品</a>
                 <a href="https://github.com/turinglambdaai" target="_blank" rel="noopener">GitHub</a>
                 <button class="theme-btn" id="themeToggle" aria-label="切换主题">
                     <svg class="icon-sun" viewBox="0 0 20 20" fill="currentColor"><circle cx="10" cy="10" r="4"/><path d="M10 0v3M10 17v3M0 10h3M17 10h3M2.93 2.93l2.12 2.12M14.95 14.95l2.12 2.12M2.93 17.07l2.12-2.12M14.95 5.05l2.12-2.12"/></svg>
@@ -47,9 +52,9 @@
     <header class="hero">
         <div class="container">
             <h1 class="hero-title">把复杂技术做直观</h1>
-            <p class="hero-desc">汽车协议、电机控制的可视化学习平台，以及给开发者的实用工具。</p>
+            <p class="hero-desc">可视化学习平台 · 开发者工具 · 技术书籍</p>
             <div class="hero-actions">
-                <a href="#products" class="btn btn-primary">浏览项目</a>
+                <a href="#products" class="btn btn-primary">看看产品</a>
                 <a href="https://github.com/turinglambdaai" target="_blank" rel="noopener" class="btn btn-secondary">GitHub</a>
             </div>
         </div>
@@ -58,65 +63,36 @@
     <section class="products-section" id="products">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">项目</h2>
-                <p class="section-desc">可视化教学平台与开发者工具</p>
+                <h2 class="section-title">产品</h2>
             </div>
 
             <div class="product-grid">
-                <a href="https://protocol.jrtx.site" class="product-card product-card--active" target="_blank" rel="noopener">
-                    <div class="product-card-header">
-                        <span class="product-step">协议</span>
-                        <span class="product-status product-status--active">已上线</span>
-                    </div>
+                <a href="https://protocol.jrtx.site" class="product-card" target="_blank" rel="noopener">
                     <h3 class="product-name">Visual Protocol</h3>
-                    <p class="product-fullname">汽车通信协议可视化</p>
-                    <p class="product-desc">LIN、CAN、Ethernet、TCP/UDP、DoIP、UDS、SOME/IP、MQTT、DDS 等协议的交互式学习平台，自底向上掌握车载通信。</p>
-                    <div class="product-meta">
-                        <span class="product-standard">protocol.jrtx.site</span>
-                        <span class="product-layer">学习平台</span>
-                    </div>
+                    <p class="product-tagline">汽车通信协议，从未如此直观</p>
+                    <p class="product-desc">可视化掌握 CAN、Ethernet、UDS、SOME/IP 等车载通信协议，自底向上建立完整知识体系。</p>
+                    <span class="product-cta">开始学习 →</span>
                 </a>
 
-                <a href="https://foc.jrtx.site" class="product-card product-card--active" target="_blank" rel="noopener">
-                    <div class="product-card-header">
-                        <span class="product-step">电机</span>
-                        <span class="product-status product-status--active">已上线</span>
-                    </div>
+                <a href="https://foc.jrtx.site" class="product-card" target="_blank" rel="noopener">
                     <h3 class="product-name">Visual FOC</h3>
-                    <p class="product-fullname">磁场定向控制可视化</p>
-                    <p class="product-desc">通过实时动画与真实 PMSM 物理仿真，直观理解 Clarke / Park 坐标变换、PI 调参与 SVPWM。</p>
-                    <div class="product-meta">
-                        <span class="product-standard">foc.jrtx.site</span>
-                        <span class="product-layer">学习平台</span>
-                    </div>
+                    <p class="product-tagline">电机控制原理，看得见摸得着</p>
+                    <p class="product-desc">实时动画与真实 PMSM 物理仿真，直观理解 Clarke/Park 变换、PI 调参与 SVPWM。</p>
+                    <span class="product-cta">开始学习 →</span>
                 </a>
 
-                <a href="https://taskly.jrtx.site" class="product-card product-card--active" target="_blank" rel="noopener">
-                    <div class="product-card-header">
-                        <span class="product-step">工具</span>
-                        <span class="product-status product-status--active">可下载</span>
-                    </div>
+                <a href="https://taskly.jrtx.site" class="product-card" target="_blank" rel="noopener">
                     <h3 class="product-name">Taskly</h3>
-                    <p class="product-fullname">跨平台任务管理</p>
-                    <p class="product-desc">仿 macOS Reminders 的跨平台任务管理桌面应用，Avalonia 构建，支持 Windows / macOS / Linux。</p>
-                    <div class="product-meta">
-                        <span class="product-standard">taskly.jrtx.site</span>
-                        <span class="product-layer">桌面应用</span>
-                    </div>
+                    <p class="product-tagline">跨平台任务管理，简洁专注</p>
+                    <p class="product-desc">仿 macOS Reminders 的桌面任务管理应用，本地 SQLite，支持 Windows / macOS / Linux。</p>
+                    <span class="product-cta">立即下载 →</span>
                 </a>
 
-                <a href="https://racket.jrtx.site" class="product-card product-card--active" target="_blank" rel="noopener">
-                    <div class="product-card-header">
-                        <span class="product-step">书籍</span>
-                        <span class="product-status product-status--active">已上线</span>
-                    </div>
+                <a href="https://racket.jrtx.site" class="product-card" target="_blank" rel="noopener">
                     <h3 class="product-name">Racket 程序设计</h3>
-                    <p class="product-fullname">在线技术书</p>
-                    <p class="product-desc">一本关于 Racket 编程语言的在线技术书，图文讲解语法、语义与实际应用。</p>
-                    <div class="product-meta">
-                        <span class="product-standard">racket.jrtx.site</span>
-                        <span class="product-layer">在线书籍</span>
-                    </div>
+                    <p class="product-tagline">从语法到语言设计的在线技术书</p>
+                    <p class="product-desc">覆盖 Racket 核心语法、宏系统、并发与契约编程，以及用 #lang 创造新语言。</p>
+                    <span class="product-cta">在线阅读 →</span>
                 </a>
             </div>
         </div>
@@ -129,15 +105,13 @@
                     <span class="footer-brand">TuringLambdaAI</span>
                     <span class="footer-copy">&copy; 2026</span>
                 </div>
+                <div class="footer-wechat-inline">
+                    <img src="assets/img/wechat-qr.jpg" alt="公众号 TuringLambdaAI 二维码" loading="lazy">
+                    <span>扫码关注<br>公众号</span>
+                </div>
                 <div class="footer-links">
                     <a href="https://github.com/turinglambdaai" target="_blank" rel="noopener">GitHub</a>
-                    <a href="#wechat">公众号</a>
                 </div>
-            </div>
-            <div class="footer-wechat" id="wechat">
-                <img src="assets/img/wechat-qr.jpg" alt="公众号 TuringLambdaAI 二维码" loading="lazy">
-                <p class="wc-name">TuringLambdaAI</p>
-                <p class="wc-label">微信扫码关注公众号</p>
             </div>
         </div>
     </footer>
