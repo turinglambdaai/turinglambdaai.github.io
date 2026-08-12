@@ -7,7 +7,7 @@
     <meta name="description" content="可视化学习平台、开发者工具与技术书籍。把复杂的技术，做得直观好用。">
     <meta name="google-adsense-account" content="ca-pub-3215512126020129">
     <meta property="og:title" content="TuringLambdaAI">
-    <meta property="og:description" content="可视化学习平台、开发者工具与技术书籍">
+    <meta property="og:description" content="Visual learning platforms, developer tools and technical books.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jrtx.site">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>λ</text></svg>">
@@ -17,30 +17,42 @@
     <!-- umami analytics: account at limit, add data-website-id later -->
     <link rel="stylesheet" href="assets/css/main.css">
     <style>
-        /* product card: value-driven layout (name + tagline + desc + CTA) */
         .product-tagline { font-size: 1.02em; font-weight: 600; color: var(--text); margin: 2px 0 10px; line-height: 1.4; }
         .product-cta { display: inline-block; margin-top: auto; padding-top: 14px; color: var(--accent); font-family: "Inter", -apple-system, sans-serif; font-size: 0.9em; font-weight: 500; transition: transform 0.15s; }
         .product-card:hover .product-cta { transform: translateX(3px); }
-        /* footer wechat inline (compact, not a big block) */
-        .footer-wechat-inline { display: flex; align-items: center; gap: 10px; }
-        .footer-wechat-inline img { width: 76px; height: 76px; border-radius: 8px; border: 1px solid var(--border); display: block; }
-        .footer-wechat-inline span { font-size: 0.78em; color: var(--text-3); line-height: 1.4; }
+
+        /* Hero connect block (WeChat CN / GitHub EN) */
+        .hero-connect { display: flex; flex-direction: column; align-items: center; gap: 14px; margin: 44px auto 0; padding-top: 36px; max-width: 460px; border-top: 1px solid var(--border); }
+        .hero-connect img, .github-tile { width: 128px; height: 128px; border-radius: 14px; border: 1px solid var(--border); }
+        .hero-connect img { display: block; }
+        .github-tile { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; background: var(--surface); color: var(--text); font-family: "Inter", -apple-system, sans-serif; font-weight: 600; text-decoration: none; transition: border-color 0.15s, transform 0.15s; }
+        .github-tile:hover { border-color: var(--accent); transform: translateY(-2px); }
+        .github-tile svg { width: 40px; height: 40px; }
+        .hc-text { text-align: center; }
+        .hc-title { font-family: "Inter", -apple-system, sans-serif; font-weight: 600; font-size: 0.92em; margin-bottom: 6px; }
+        .hc-desc { font-size: 0.8em; color: var(--text-3); line-height: 1.6; }
+
+        /* Language toggle */
+        .lang-btn { padding: 6px 12px; border-radius: 100px; font-size: 0.82em; font-weight: 600; border: 1px solid var(--border); background: var(--surface); color: var(--text-2); cursor: pointer; font-family: "Inter", -apple-system, sans-serif; transition: all 0.15s; }
+        .lang-btn:hover { border-color: var(--accent); color: var(--accent); }
+
         @media (max-width: 600px) {
-            .footer-inner { flex-direction: column; gap: 18px; }
-            .footer-wechat-inline img { width: 68px; height: 68px; }
+            .hero-connect { margin-top: 36px; padding-top: 28px; }
+            .hero-connect img, .github-tile { width: 112px; height: 112px; }
         }
     </style>
 </head>
 <body>
     <nav class="site-nav" role="navigation">
         <div class="nav-inner container-wide">
-            <a href="/" class="nav-logo" aria-label="TuringLambdaAI 首页">
+            <a href="/" class="nav-logo" aria-label="TuringLambdaAI">
                 <svg class="nav-logo-icon" viewBox="0 0 24 24"><text x="12" y="19" text-anchor="middle" font-size="22" font-weight="700" fill="currentColor" font-family="Inter, sans-serif">λ</text></svg>
                 <span class="nav-logo-text">TuringLambdaAI</span>
             </a>
             <div class="nav-links">
-                <a href="#products">产品</a>
+                <a href="#products" data-i18n="nav_products">产品</a>
                 <a href="https://github.com/turinglambdaai" target="_blank" rel="noopener">GitHub</a>
+                <button class="lang-btn" id="langToggle" aria-label="Switch language">EN</button>
                 <button class="theme-btn" id="themeToggle" aria-label="切换主题">
                     <svg class="icon-sun" viewBox="0 0 20 20" fill="currentColor"><circle cx="10" cy="10" r="4"/><path d="M10 0v3M10 17v3M0 10h3M17 10h3M2.93 2.93l2.12 2.12M14.95 14.95l2.12 2.12M2.93 17.07l2.12-2.12M14.95 5.05l2.12-2.12"/></svg>
                     <svg class="icon-moon" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.003 8.003 0 1010.586 10.586z"/></svg>
@@ -51,11 +63,32 @@
 
     <header class="hero">
         <div class="container">
-            <h1 class="hero-title">把复杂技术做直观</h1>
-            <p class="hero-desc">可视化学习平台 · 开发者工具 · 技术书籍</p>
+            <h1 class="hero-title" data-i18n="tagline">把复杂技术做直观</h1>
+            <p class="hero-desc" data-i18n="subtitle">可视化学习平台 · 开发者工具 · 技术书籍</p>
             <div class="hero-actions">
-                <a href="#products" class="btn btn-primary">看看产品</a>
+                <a href="#products" class="btn btn-primary" data-i18n="viewProducts">看看产品</a>
                 <a href="https://github.com/turinglambdaai" target="_blank" rel="noopener" class="btn btn-secondary">GitHub</a>
+            </div>
+
+            <!-- CN: WeChat (funnel to official account) -->
+            <div class="hero-connect" data-lang-block="zh">
+                <img src="assets/img/wechat-qr.jpg" alt="公众号 TuringLambdaAI 二维码" loading="lazy">
+                <div class="hc-text">
+                    <p class="hc-title">公众号 TuringLambdaAI</p>
+                    <p class="hc-desc">车载软件工程师 · 帮你搞懂 AUTOSAR、嵌入式、编程语言与 AI · 不讲套话，只写本质</p>
+                </div>
+            </div>
+
+            <!-- EN: GitHub (localized — overseas users don't use WeChat) -->
+            <div class="hero-connect" data-lang-block="en" hidden>
+                <a class="github-tile" href="https://github.com/turinglambdaai" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 .1.8 1.7 2.6 1.2.1-.7.4-1.2.7-1.5-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+                    <span>@turinglambdaai</span>
+                </a>
+                <div class="hc-text">
+                    <p class="hc-title">All code, open source</p>
+                    <p class="hc-desc">Automotive software engineer. Straight talk on AUTOSAR, embedded, programming languages &amp; AI.</p>
+                </div>
             </div>
         </div>
     </header>
@@ -63,36 +96,36 @@
     <section class="products-section" id="products">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">产品</h2>
+                <h2 class="section-title" data-i18n="products_title">产品</h2>
             </div>
 
             <div class="product-grid">
                 <a href="https://protocol.jrtx.site" class="product-card" target="_blank" rel="noopener">
                     <h3 class="product-name">Visual Protocol</h3>
-                    <p class="product-tagline">汽车通信协议，从未如此直观</p>
-                    <p class="product-desc">可视化掌握 CAN、Ethernet、UDS、SOME/IP 等车载通信协议，自底向上建立完整知识体系。</p>
-                    <span class="product-cta">开始学习 →</span>
+                    <p class="product-tagline" data-i18n="vp_tag">汽车通信协议，从未如此直观</p>
+                    <p class="product-desc" data-i18n="vp_desc">可视化掌握 CAN、Ethernet、UDS、SOME/IP 等车载通信协议，自底向上建立完整知识体系。</p>
+                    <span class="product-cta" data-i18n="cta_learn">开始学习 →</span>
                 </a>
 
                 <a href="https://foc.jrtx.site" class="product-card" target="_blank" rel="noopener">
                     <h3 class="product-name">Visual FOC</h3>
-                    <p class="product-tagline">电机控制原理，看得见摸得着</p>
-                    <p class="product-desc">实时动画与真实 PMSM 物理仿真，直观理解 Clarke/Park 变换、PI 调参与 SVPWM。</p>
-                    <span class="product-cta">开始学习 →</span>
+                    <p class="product-tagline" data-i18n="vf_tag">电机控制原理，看得见摸得着</p>
+                    <p class="product-desc" data-i18n="vf_desc">实时动画与真实 PMSM 物理仿真，直观理解 Clarke/Park 变换、PI 调参与 SVPWM。</p>
+                    <span class="product-cta" data-i18n="cta_learn">开始学习 →</span>
                 </a>
 
                 <a href="https://taskly.jrtx.site" class="product-card" target="_blank" rel="noopener">
                     <h3 class="product-name">Taskly</h3>
-                    <p class="product-tagline">跨平台任务管理，简洁专注</p>
-                    <p class="product-desc">仿 macOS Reminders 的桌面任务管理应用，本地 SQLite，支持 Windows / macOS / Linux。</p>
-                    <span class="product-cta">立即下载 →</span>
+                    <p class="product-tagline" data-i18n="tk_tag">跨平台任务管理，简洁专注</p>
+                    <p class="product-desc" data-i18n="tk_desc">仿 macOS Reminders 的桌面任务管理应用，本地 SQLite，支持 Windows / macOS / Linux。</p>
+                    <span class="product-cta" data-i18n="cta_download">立即下载 →</span>
                 </a>
 
                 <a href="https://racket.jrtx.site" class="product-card" target="_blank" rel="noopener">
                     <h3 class="product-name">Racket 程序设计</h3>
-                    <p class="product-tagline">从语法到语言设计的在线技术书</p>
-                    <p class="product-desc">覆盖 Racket 核心语法、宏系统、并发与契约编程，以及用 #lang 创造新语言。</p>
-                    <span class="product-cta">在线阅读 →</span>
+                    <p class="product-tagline" data-i18n="rk_tag">从语法到语言设计的在线技术书</p>
+                    <p class="product-desc" data-i18n="rk_desc">覆盖 Racket 核心语法、宏系统、并发与契约编程，以及用 #lang 创造新语言。</p>
+                    <span class="product-cta" data-i18n="cta_read">在线阅读 →</span>
                 </a>
             </div>
         </div>
@@ -105,10 +138,6 @@
                     <span class="footer-brand">TuringLambdaAI</span>
                     <span class="footer-copy">&copy; 2026</span>
                 </div>
-                <div class="footer-wechat-inline">
-                    <img src="assets/img/wechat-qr.jpg" alt="公众号 TuringLambdaAI 二维码" loading="lazy">
-                    <span>扫码关注<br>公众号</span>
-                </div>
                 <div class="footer-links">
                     <a href="https://github.com/turinglambdaai" target="_blank" rel="noopener">GitHub</a>
                 </div>
@@ -117,22 +146,72 @@
     </footer>
 
     <script>
-        (function () {
-            function getPreferredTheme() {
-                var stored = localStorage.getItem('tl-theme');
-                if (stored) return stored;
-                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-            }
-            function applyTheme(theme) { document.body.setAttribute('data-theme', theme); }
+        var I18N = {
+            nav_products: { zh: "产品", en: "Products" },
+            tagline: { zh: "把复杂技术做直观", en: "Making complex technology intuitive" },
+            subtitle: { zh: "可视化学习平台 · 开发者工具 · 技术书籍", en: "Visual learning platforms · Developer tools · Technical books" },
+            viewProducts: { zh: "看看产品", en: "View Products" },
+            products_title: { zh: "产品", en: "Products" },
+            vp_tag: { zh: "汽车通信协议，从未如此直观", en: "Car communication protocols, finally intuitive" },
+            vp_desc: { zh: "可视化掌握 CAN、Ethernet、UDS、SOME/IP 等车载通信协议，自底向上建立完整知识体系。", en: "Master CAN, Ethernet, UDS, SOME/IP visually — build a complete picture of in-vehicle networking." },
+            cta_learn: { zh: "开始学习 →", en: "Start learning →" },
+            vf_tag: { zh: "电机控制原理，看得见摸得着", en: "Motor control principles you can actually see" },
+            vf_desc: { zh: "实时动画与真实 PMSM 物理仿真，直观理解 Clarke/Park 变换、PI 调参与 SVPWM。", en: "Real-time animation & real PMSM simulation — see Clarke/Park transforms, PI tuning and SVPWM." },
+            tk_tag: { zh: "跨平台任务管理，简洁专注", en: "Cross-platform tasks, simple and focused" },
+            tk_desc: { zh: "仿 macOS Reminders 的桌面任务管理应用，本地 SQLite，支持 Windows / macOS / Linux。", en: "A macOS Reminders-style desktop app. Local SQLite. Windows / macOS / Linux." },
+            cta_download: { zh: "立即下载 →", en: "Download →" },
+            rk_tag: { zh: "从语法到语言设计的在线技术书", en: "An online book: from syntax to language design" },
+            rk_desc: { zh: "覆盖 Racket 核心语法、宏系统、并发与契约编程，以及用 #lang 创造新语言。", en: "Racket core syntax, macros, concurrency & contracts, and building new languages with #lang." },
+            cta_read: { zh: "在线阅读 →", en: "Read online →" }
+        };
+
+        function getInitialLang() {
+            var stored = localStorage.getItem('tl-lang');
+            if (stored === 'zh' || stored === 'en') return stored;
+            return (navigator.language || '').toLowerCase().indexOf('zh') === 0 ? 'zh' : 'en';
+        }
+        function applyLang(lang) {
+            document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+            document.querySelectorAll('[data-i18n]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n');
+                if (I18N[key] && I18N[key][lang]) el.textContent = I18N[key][lang];
+            });
+            document.querySelectorAll('[data-lang-block]').forEach(function (el) {
+                if (el.getAttribute('data-lang-block') === lang) el.removeAttribute('hidden');
+                else el.setAttribute('hidden', '');
+            });
+            var btn = document.getElementById('langToggle');
+            if (btn) btn.textContent = lang === 'zh' ? 'EN' : '中';
+            localStorage.setItem('tl-lang', lang);
+        }
+
+        // theme
+        function getPreferredTheme() {
+            var stored = localStorage.getItem('tl-theme');
+            if (stored) return stored;
+            return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        function applyTheme(theme) { document.body.setAttribute('data-theme', theme); }
+
+        applyTheme(getPreferredTheme());
+        applyLang(getInitialLang());
+
+        document.addEventListener('DOMContentLoaded', function () {
             applyTheme(getPreferredTheme());
-            var btn = document.getElementById('themeToggle');
-            if (btn) btn.addEventListener('click', function () {
-                var current = document.body.getAttribute('data-theme') || getPreferredTheme();
-                var next = current === 'dark' ? 'light' : 'dark';
+            applyLang(localStorage.getItem('tl-lang') || getInitialLang());
+            var tb = document.getElementById('themeToggle');
+            if (tb) tb.addEventListener('click', function () {
+                var cur = document.body.getAttribute('data-theme') || getPreferredTheme();
+                var next = cur === 'dark' ? 'light' : 'dark';
                 applyTheme(next);
                 localStorage.setItem('tl-theme', next);
             });
-        })();
+            var lb = document.getElementById('langToggle');
+            if (lb) lb.addEventListener('click', function () {
+                var cur = localStorage.getItem('tl-lang') || getInitialLang();
+                applyLang(cur === 'zh' ? 'en' : 'zh');
+            });
+        });
     </script>
 </body>
 </html>
