@@ -1,6 +1,6 @@
 # TuringLambdaAI
 
-个人主页与项目导航 — 上线于 **[jrtx.site](https://jrtx.site)**。把开发者工具和技术书籍汇集在一处，围绕同一个理念：把复杂技术做直观。
+**TuringLambdaAI** 的门面主页 — 上线于 **[jrtx.site](https://jrtx.site)**。把读者导向微信公众号技术专栏，展示业余时间独立开发的工具，围绕同一个理念：把复杂技术做直观。
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
 
@@ -10,16 +10,19 @@
 
 ## 精选项目
 
-| 项目 | 简介 |
+| 渠道 / 项目 | 简介 |
 |------|------|
+| **公众号 TuringLambdaAI**（微信） | AUTOSAR、嵌入式、编程语言与 AI 的深度技术专栏 — 当前主线 |
 | **[Taskly](https://taskly.jrtx.site)** | 跨平台任务管理桌面应用（Windows / macOS / Linux） |
+| **[Mapalyze](https://github.com/turinglambdaai/mapalyze)** | 固件体积分析器 — GUI + agent 友好 CLI |
+| **[BrainFuel](https://brainfuel.jrtx.site)** | GLM Coding Plan 配额悬浮小部件 |
 | **[Racket 程序设计](https://racket.jrtx.site)** | 一本关于 Racket 编程语言的在线技术书 |
 
 ## 特性
 
 - **中英双语** — 完整的中 / 英文切换，自动识别浏览器语言
 - **明暗主题** — 跟随系统偏好，可手动切换，跨次访问保持记忆
-- **本地化引导** — 中文访客展示微信公众号二维码，其他地区展示 GitHub
+- **公众号优先引流** — 中文访客展示公众号专区块（价值点 + 二维码卡片），其他地区展示 GitHub
 - **统一设计系统** — Anthropic 风格的暖色调
 - **零依赖** — 纯手写 HTML/CSS 加一层极简 vanilla-JS 国际化，无需构建
 - **响应式** — 从桌面到移动端布局自适应

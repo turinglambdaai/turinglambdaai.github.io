@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TuringLambdaAI — 可视化技术教学与开发者工具</title>
-    <meta name="description" content="开发者工具与技术书籍。把复杂的技术，做得直观好用。">
+    <title>TuringLambdaAI — 深度技术写作与独立开发</title>
+    <meta name="description" content="车载软件工程师的深度技术写作与独立开发。把复杂的技术，做得直观好用。">
     <meta name="google-adsense-account" content="ca-pub-3215512126020129">
     <meta property="og:title" content="TuringLambdaAI">
-    <meta property="og:description" content="Developer tools and technical books.">
+    <meta property="og:description" content="Deep-dive technical writing & indie developer tools.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jrtx.site">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%22 y=%22.9em%22 font-size=%2290%22 text-anchor=%22middle%22>λ</text></svg>">
@@ -16,9 +16,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/main.css">
     <style>
+        /* .btn 等显式 display 声明会压过 UA 的 [hidden] 规则，这里兜底 */
+        [hidden] { display: none !important; }
+
         .product-tagline { font-size: 1.02em; font-weight: 600; color: var(--text); margin: 2px 0 10px; line-height: 1.4; }
         .product-cta { display: inline-block; margin-top: auto; padding-top: 14px; color: var(--accent); font-family: "Inter", -apple-system, sans-serif; font-size: 0.9em; font-weight: 500; transition: transform 0.15s; }
         .product-card:hover .product-cta { transform: translateX(3px); }
+
+        /* WeChat section — the flagship funnel */
+        .wechat-section { padding: 60px 0; border-top: 1px solid var(--border); }
+        .wechat-section .section-header { margin-bottom: 40px; }
+        .wechat-layout { display: flex; align-items: center; justify-content: center; gap: 56px; }
+        .wechat-points { max-width: 460px; display: flex; flex-direction: column; gap: 26px; }
+        .wechat-point { display: flex; gap: 14px; }
+        .wechat-point-dot { flex-shrink: 0; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); margin-top: 9px; }
+        .wechat-point h3 { font-size: 1.05em; margin-bottom: 4px; }
+        .wechat-point p { font-size: 0.9em; color: var(--text-2); line-height: 1.6; }
+        .wechat-qr-card { flex-shrink: 0; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px; text-align: center; box-shadow: var(--shadow); }
+        .wechat-qr-card img { display: block; width: 208px; height: 208px; border-radius: 12px; }
+        .wechat-qr-title { font-family: "Inter", -apple-system, sans-serif; font-weight: 600; font-size: 0.95em; margin-top: 16px; }
+        .wechat-qr-sub { font-size: 0.8em; color: var(--text-3); margin-top: 4px; }
 
         /* Open source section */
         .oss-section { border-top: 1px solid var(--border); }
@@ -30,26 +47,13 @@
         .oss-name { font-family: "Inter", -apple-system, sans-serif; font-size: 1.05em; font-weight: 700; margin-right: auto; }
         .oss-desc { font-size: 0.88em; color: var(--text-2); line-height: 1.6; }
 
-        /* Hero connect block (WeChat CN / GitHub EN) */
-        .hero-connect { display: flex; flex-direction: column; align-items: center; gap: 14px; margin: 44px auto 0; padding-top: 36px; max-width: 460px; border-top: 1px solid var(--border); }
-        .hero-connect[hidden] { display: none; }
-        .hero-connect img, .github-tile { width: 128px; height: 128px; border-radius: 14px; border: 1px solid var(--border); }
-        .hero-connect img { display: block; }
-        .github-tile { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; background: var(--surface); color: var(--text); font-family: "Inter", -apple-system, sans-serif; font-weight: 600; text-decoration: none; transition: border-color 0.15s, transform 0.15s; overflow: hidden; padding: 10px; box-sizing: border-box; text-align: center; }
-        .github-tile:hover { border-color: var(--accent); transform: translateY(-2px); }
-        .github-tile svg { width: 40px; height: 40px; }
-        .github-tile span { font-size: 0.74em; white-space: nowrap; max-width: 100%; overflow: hidden; text-overflow: ellipsis; }
-        .hc-text { text-align: center; }
-        .hc-title { font-family: "Inter", -apple-system, sans-serif; font-weight: 600; font-size: 0.92em; margin-bottom: 6px; }
-        .hc-desc { font-size: 0.8em; color: var(--text-3); line-height: 1.6; }
-
         /* Language toggle */
         .lang-btn { padding: 6px 12px; border-radius: 100px; font-size: 0.82em; font-weight: 600; border: 1px solid var(--border); background: var(--surface); color: var(--text-2); cursor: pointer; font-family: "Inter", -apple-system, sans-serif; transition: all 0.15s; }
         .lang-btn:hover { border-color: var(--accent); color: var(--accent); }
 
-        @media (max-width: 600px) {
-            .hero-connect { margin-top: 36px; padding-top: 28px; }
-            .hero-connect img, .github-tile { width: 112px; height: 112px; }
+        @media (max-width: 768px) {
+            .wechat-layout { flex-direction: column; gap: 36px; }
+            .wechat-points { max-width: 100%; }
         }
     </style>
 </head>
@@ -61,7 +65,8 @@
                 <span class="nav-logo-text">TuringLambdaAI</span>
             </a>
             <div class="nav-links">
-                <a href="#products" data-i18n="nav_products">产品</a>
+                <a href="#wechat" data-i18n="nav_wechat" data-lang-block="zh">公众号</a>
+                <a href="#works" data-i18n="nav_works">作品</a>
                 <a href="#oss" data-i18n="nav_oss">开源</a>
                 <a href="https://github.com/turinglambdaai" target="_blank" rel="noopener">GitHub</a>
                 <button class="lang-btn" id="langToggle" aria-label="Switch language">EN</button>
@@ -76,39 +81,59 @@
     <header class="hero">
         <div class="container">
             <h1 class="hero-title" data-i18n="tagline">把复杂技术做直观</h1>
-            <p class="hero-desc" data-i18n="subtitle">开发者工具 · 技术书籍</p>
+            <p class="hero-desc" data-i18n="subtitle">车载软件工程师，在公众号把 AUTOSAR、嵌入式与编程语言讲透；业余时间，造些趁手的工具。</p>
             <div class="hero-actions">
-                <a href="#products" class="btn btn-primary" data-i18n="viewProducts">看看产品</a>
-                <a href="https://github.com/turinglambdaai" target="_blank" rel="noopener" class="btn btn-secondary">GitHub</a>
-            </div>
-
-            <!-- CN: WeChat (funnel to official account) -->
-            <div class="hero-connect" data-lang-block="zh">
-                <img src="assets/img/wechat-qr.jpg" alt="公众号 TuringLambdaAI 二维码" loading="lazy">
-                <div class="hc-text">
-                    <p class="hc-title">公众号 TuringLambdaAI</p>
-                    <p class="hc-desc">车载软件工程师 · 帮你搞懂 AUTOSAR、嵌入式、编程语言与 AI · 不讲套话，只写本质</p>
-                </div>
-            </div>
-
-            <!-- EN: GitHub (localized — overseas users don't use WeChat) -->
-            <div class="hero-connect" data-lang-block="en" hidden>
-                <a class="github-tile" href="https://github.com/turinglambdaai" target="_blank" rel="noopener">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 .1.8 1.7 2.6 1.2.1-.7.4-1.2.7-1.5-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
-                    <span>@turinglambdaai</span>
-                </a>
-                <div class="hc-text">
-                    <p class="hc-title">All code, open source</p>
-                    <p class="hc-desc">Automotive software engineer. Straight talk on AUTOSAR, embedded, programming languages &amp; AI.</p>
-                </div>
+                <a href="#wechat" class="btn btn-primary" data-i18n="cta_follow" data-lang-block="zh">关注公众号</a>
+                <a href="https://github.com/turinglambdaai" target="_blank" rel="noopener" class="btn btn-primary" data-lang-block="en" hidden>Follow on GitHub</a>
+                <a href="#works" class="btn btn-secondary" data-i18n="cta_works">看看作品</a>
             </div>
         </div>
     </header>
 
-    <section class="products-section" id="products">
+    <section class="wechat-section" id="wechat" data-lang-block="zh">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title" data-i18n="products_title">产品</h2>
+                <h2 class="section-title" data-i18n="wechat_title">公众号 · TuringLambdaAI</h2>
+                <p class="section-desc" data-i18n="wechat_desc">车载软件工程师的深度技术写作。</p>
+            </div>
+            <div class="wechat-layout">
+                <div class="wechat-points">
+                    <div class="wechat-point">
+                        <span class="wechat-point-dot"></span>
+                        <div>
+                            <h3 data-i18n="wechat_f1_title">深度解析</h3>
+                            <p data-i18n="wechat_f1_desc">AUTOSAR、车载通信、嵌入式底层——讲原理，也讲工程实践。</p>
+                        </div>
+                    </div>
+                    <div class="wechat-point">
+                        <span class="wechat-point-dot"></span>
+                        <div>
+                            <h3 data-i18n="wechat_f2_title">语言与 AI</h3>
+                            <p data-i18n="wechat_f2_desc">编程语言与 AI 编程工具链，工程师视角的实操笔记。</p>
+                        </div>
+                    </div>
+                    <div class="wechat-point">
+                        <span class="wechat-point-dot"></span>
+                        <div>
+                            <h3 data-i18n="wechat_f3_title">不讲套话</h3>
+                            <p data-i18n="wechat_f3_desc">只写本质，帮你把最难啃的技术真正搞懂。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="wechat-qr-card">
+                    <img src="assets/img/wechat-qr.jpg" alt="公众号 TuringLambdaAI 二维码" loading="lazy">
+                    <p class="wechat-qr-title" data-i18n="wechat_scan">扫码关注</p>
+                    <p class="wechat-qr-sub" data-i18n="wechat_id">微信搜索 TuringLambdaAI</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="products-section" id="works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="works_title">作品</h2>
+                <p class="section-desc" data-i18n="works_desc">业余时间独立开发的工具与书籍。</p>
             </div>
 
             <div class="product-grid">
@@ -202,11 +227,25 @@
 
     <script>
         var I18N = {
-            nav_products: { zh: "产品", en: "Products" },
+            nav_wechat: { zh: "公众号", en: "WeChat" },
+            nav_works: { zh: "作品", en: "Work" },
+            nav_oss: { zh: "开源", en: "Open Source" },
             tagline: { zh: "把复杂技术做直观", en: "Making complex technology intuitive" },
-            subtitle: { zh: "开发者工具 · 技术书籍", en: "Developer tools · Technical books" },
-            viewProducts: { zh: "看看产品", en: "View Products" },
-            products_title: { zh: "产品", en: "Products" },
+            subtitle: { zh: "车载软件工程师，在公众号把 AUTOSAR、嵌入式与编程语言讲透；业余时间，造些趁手的工具。", en: "Automotive software engineer — deep dives on AUTOSAR, embedded systems & programming languages, plus indie tools built after hours." },
+            cta_follow: { zh: "关注公众号", en: "Follow on GitHub" },
+            cta_works: { zh: "看看作品", en: "See my work" },
+            wechat_title: { zh: "公众号 · TuringLambdaAI", en: "WeChat · TuringLambdaAI" },
+            wechat_desc: { zh: "车载软件工程师的深度技术写作。", en: "In-depth technical writing for automotive software engineers." },
+            wechat_f1_title: { zh: "深度解析", en: "Deep dives" },
+            wechat_f1_desc: { zh: "AUTOSAR、车载通信、嵌入式底层——讲原理，也讲工程实践。", en: "AUTOSAR, in-vehicle networking and embedded internals — principles plus engineering practice." },
+            wechat_f2_title: { zh: "语言与 AI", en: "Languages & AI" },
+            wechat_f2_desc: { zh: "编程语言与 AI 编程工具链，工程师视角的实操笔记。", en: "Programming languages and AI tooling, from an engineer's hands-on perspective." },
+            wechat_f3_title: { zh: "不讲套话", en: "No fluff" },
+            wechat_f3_desc: { zh: "只写本质，帮你把最难啃的技术真正搞懂。", en: "Just the essentials — so the hardest topics finally click." },
+            wechat_scan: { zh: "扫码关注", en: "Scan to follow" },
+            wechat_id: { zh: "微信搜索 TuringLambdaAI", en: "WeChat ID: TuringLambdaAI" },
+            works_title: { zh: "作品", en: "Work" },
+            works_desc: { zh: "业余时间独立开发的工具与书籍。", en: "Indie tools and a book, built after hours." },
             tk_tag: { zh: "跨平台任务管理，简洁专注", en: "Cross-platform tasks, simple and focused" },
             tk_desc: { zh: "仿 macOS Reminders 的桌面任务管理应用，本地 SQLite，支持 Windows / macOS / Linux。", en: "A macOS Reminders-style desktop app. Local SQLite. Windows / macOS / Linux." },
             cta_download: { zh: "立即下载 →", en: "Download →" },
@@ -215,7 +254,6 @@
             rk_tag: { zh: "从语法到语言设计的在线技术书", en: "An online book: from syntax to language design" },
             rk_desc: { zh: "覆盖 Racket 核心语法、宏系统、并发与契约编程，以及用 #lang 创造新语言。", en: "Racket core syntax, macros, concurrency & contracts, and building new languages with #lang." },
             cta_read: { zh: "在线阅读 →", en: "Read online →" },
-            nav_oss: { zh: "开源", en: "Open Source" },
             mp_tag: { zh: "固件体积，一眼看清", en: "Firmware size, at a glance" },
             mp_desc: { zh: "跨平台固件体积分析器，直接解析 GNU ld MAP 与 ELF 文件，GUI + agent 友好 CLI（JSON 输出），无需 nm/readelf。", en: "Cross-platform firmware size analyzer — parses GNU ld MAP & ELF directly. GUI + agent-friendly CLI with JSON output, no nm/readelf needed." },
             cta_source: { zh: "查看源码 →", en: "View source →" },
