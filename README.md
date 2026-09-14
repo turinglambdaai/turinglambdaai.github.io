@@ -1,6 +1,6 @@
 # TuringLambdaAI
 
-A personal homepage and project showcase — live at **[jrtx.site](https://jrtx.site)**. It brings together visual learning platforms, developer tools, and a technical book under one roof, all built around a single idea: make complex technology intuitive.
+A personal homepage and project showcase — live at **[jrtx.site](https://jrtx.site)**. It brings together developer tools and a technical book under one roof, all built around a single idea: make complex technology intuitive.
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
 
@@ -12,8 +12,6 @@ A personal homepage and project showcase — live at **[jrtx.site](https://jrtx.
 
 | Project | What it is |
 |---------|------------|
-| **[Visual Protocol](https://protocol.jrtx.site)** | Car communication protocols, finally intuitive — CAN, Ethernet, UDS, SOME/IP |
-| **[Visual FOC](https://foc.jrtx.site)** | Motor control you can actually see — Clarke/Park, PI tuning, SVPWM |
 | **[Taskly](https://taskly.jrtx.site)** | Cross-platform desktop task manager (Windows / macOS / Linux) |
 | **[Racket 程序设计](https://racket.jrtx.site)** | An online book on the Racket programming language |
 
@@ -22,7 +20,7 @@ A personal homepage and project showcase — live at **[jrtx.site](https://jrtx.
 - **Bilingual** — full Chinese / English toggle with automatic browser-language detection
 - **Light & dark themes** — follows the system preference, manually switchable, remembered across visits
 - **Localized call-to-action** — WeChat QR for Chinese visitors, GitHub tile for everyone else
-- **Shared design system** — an Anthropic-inspired warm palette, reused from Visual Protocol
+- **Shared design system** — an Anthropic-inspired warm palette
 - **Zero dependencies** — hand-written HTML/CSS with a small vanilla-JS i18n layer; no build step
 - **Responsive** — lays out cleanly from desktop down to mobile
 
