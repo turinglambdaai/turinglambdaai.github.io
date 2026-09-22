@@ -273,24 +273,42 @@
             badge_experimental: { zh: "实验性", en: "Experimental" }
         };
 
-        function getInitialLang() {
-            var stored = localStorage.getItem('tl-lang');
-            if (stored === 'zh' || stored === 'en') return stored;
-            return (navigator.language || '').toLowerCase().indexOf('zh') === 0 ? 'zh' : 'en';
+        var LANGUAGE_OVERRIDE_KEY = 'tl-lang-override-v2';
+        var LEGACY_LANGUAGE_KEY = 'tl-lang';
+        var currentLang = 'zh';
+
+        function readLanguageOverride() {
+            try {
+                var stored = localStorage.getItem(LANGUAGE_OVERRIDE_KEY);
+                return stored === 'zh' || stored === 'en' ? stored : null;
+            } catch (e) {
+                return null;
+            }
         }
-        function applyLang(lang) {
-            document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+
+        function detectBrowserLanguage() {
+            var locale = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+            if (!locale) return 'zh';
+            return String(locale).toLowerCase().indexOf('zh') === 0 ? 'zh' : 'en';
+        }
+
+        function applyLang(lang, persist) {
+            currentLang = lang === 'en' ? 'en' : 'zh';
+            if (persist) {
+                try { localStorage.setItem(LANGUAGE_OVERRIDE_KEY, currentLang); } catch (e) { /* private mode */ }
+            }
+            document.documentElement.lang = currentLang === 'zh' ? 'zh-CN' : 'en';
+            document.documentElement.setAttribute('data-language', currentLang);
             document.querySelectorAll('[data-i18n]').forEach(function (el) {
                 var key = el.getAttribute('data-i18n');
-                if (I18N[key] && I18N[key][lang]) el.textContent = I18N[key][lang];
+                if (I18N[key] && I18N[key][currentLang]) el.textContent = I18N[key][currentLang];
             });
             document.querySelectorAll('[data-lang-block]').forEach(function (el) {
-                if (el.getAttribute('data-lang-block') === lang) el.removeAttribute('hidden');
+                if (el.getAttribute('data-lang-block') === currentLang) el.removeAttribute('hidden');
                 else el.setAttribute('hidden', '');
             });
             var btn = document.getElementById('langToggle');
-            if (btn) btn.textContent = lang === 'zh' ? 'EN' : '中';
-            localStorage.setItem('tl-lang', lang);
+            if (btn) btn.textContent = currentLang === 'zh' ? 'EN' : '中';
         }
 
         // theme
@@ -301,12 +319,13 @@
         }
         function applyTheme(theme) { document.body.setAttribute('data-theme', theme); }
 
+        try { localStorage.removeItem(LEGACY_LANGUAGE_KEY); } catch (e) { /* private mode */ }
         applyTheme(getPreferredTheme());
-        applyLang(getInitialLang());
+        applyLang(readLanguageOverride() || detectBrowserLanguage(), false);
 
         document.addEventListener('DOMContentLoaded', function () {
             applyTheme(getPreferredTheme());
-            applyLang(localStorage.getItem('tl-lang') || getInitialLang());
+            applyLang(readLanguageOverride() || detectBrowserLanguage(), false);
             var tb = document.getElementById('themeToggle');
             if (tb) tb.addEventListener('click', function () {
                 var cur = document.body.getAttribute('data-theme') || getPreferredTheme();
@@ -316,9 +335,12 @@
             });
             var lb = document.getElementById('langToggle');
             if (lb) lb.addEventListener('click', function () {
-                var cur = localStorage.getItem('tl-lang') || getInitialLang();
-                applyLang(cur === 'zh' ? 'en' : 'zh');
+                applyLang(currentLang === 'zh' ? 'en' : 'zh', true);
             });
+        });
+
+        window.addEventListener('languagechange', function () {
+            if (!readLanguageOverride()) applyLang(detectBrowserLanguage(), false);
         });
     </script>
 </body>
