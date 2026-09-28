@@ -70,6 +70,9 @@
         .product-grid--2 { grid-template-columns: repeat(2, 1fr); }
         .product-grid--feature { grid-template-columns: 1fr; }
 
+        /* Odd card count in a 2-col grid: last card spans full width */
+        .product-grid--2 .product-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
+
         /* Single-card group renders as a full-width horizontal banner */
         .product-card--wide { flex-direction: row; align-items: center; gap: 36px; padding: 30px 34px; }
         .product-card--wide .product-wide-head { flex-shrink: 0; }
@@ -256,9 +259,11 @@
                         <p class="product-desc" data-i18n="hd_desc">给非英语开发者的 HN 阅读器：内置翻译与三层 AI 摘要——文章 TL;DR、评论区观点提炼、每日晨报。自带 API Key 全功能免费，Pro 提供托管翻译与同步。</p>
                         <span class="product-cta" data-i18n="cta_download">立即下载 →</span>
                     </a>
-                <a href="https://github.com/turinglambdaai/syncpilot" class="product-card" target="_blank" rel="noopener">
-                        <h3 class="product-name">SyncPilot</h3>
-                        <p class="product-tagline" data-i18n="sp_tag">Resilio Sync 的 Linux 原生桌面</p>
+                    <a href="https://github.com/turinglambdaai/syncpilot" class="product-card product-card--wide" target="_blank" rel="noopener">
+                        <div class="product-wide-head">
+                            <h3 class="product-name">SyncPilot</h3>
+                            <p class="product-tagline" data-i18n="sp_tag">Resilio Sync 的 Linux 原生桌面</p>
+                        </div>
                         <p class="product-desc" data-i18n="sp_desc">给官方客户端没带到 Linux 的桌面体验：用 Tauri 2 原生应用管理 rslsync 守护进程——文件夹、同步伙伴、传输、暂停限速与托盘。仅走环回 API，密钥与文件不出本机。</p>
                         <span class="product-cta" data-i18n="cta_github">GitHub 了解 →</span>
                     </a>
