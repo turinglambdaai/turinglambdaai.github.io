@@ -35,6 +35,63 @@
         .product-cta { display: inline-block; margin-top: auto; padding-top: 14px; color: var(--accent); font-family: "Inter", -apple-system, sans-serif; font-size: 0.9em; font-weight: 500; transition: transform 0.15s; }
         .product-card:hover .product-cta { transform: translateX(3px); }
 
+        /* Works section — three groups, roomier rhythm */
+        #works { padding: 76px 0 64px; scroll-margin-top: 40px; }
+        #wechat, #oss { scroll-margin-top: 40px; }
+        #works .section-header { margin-bottom: 44px; }
+        #works .work-group { margin-bottom: 56px; }
+        #works .work-group:last-child { margin-bottom: 0; }
+        #works .work-group-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1em;
+            font-weight: 600;
+            color: var(--text-2);
+            margin-bottom: 18px;
+        }
+        #works .work-group-title::before {
+            content: "";
+            flex-shrink: 0;
+            width: 8px;
+            height: 8px;
+            border-radius: 2px;
+            background: var(--accent);
+        }
+        #works .work-group-title::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+        #works .product-grid { gap: 20px; }
+        #works .product-card { padding: 26px 28px; }
+        .product-grid--3 { grid-template-columns: repeat(3, 1fr); }
+        .product-grid--2 { grid-template-columns: repeat(2, 1fr); }
+        .product-grid--feature { grid-template-columns: 1fr; }
+
+        /* Single-card group renders as a full-width horizontal banner */
+        .product-card--wide { flex-direction: row; align-items: center; gap: 36px; padding: 30px 34px; }
+        .product-card--wide .product-wide-head { flex-shrink: 0; }
+        .product-card--wide .product-name { font-size: 1.3em; margin-bottom: 4px; }
+        .product-card--wide .product-tagline { margin: 0; }
+        .product-card--wide .product-desc { flex: 1; margin-bottom: 0; }
+        .product-card--wide .product-cta { margin-top: 0; padding-top: 0; flex-shrink: 0; }
+
+        @media (max-width: 1000px) {
+            .product-grid--3, .product-grid--2 { grid-template-columns: repeat(2, 1fr); }
+            .product-card--wide { flex-direction: column; align-items: flex-start; gap: 0; }
+            .product-card--wide .product-wide-head { margin-bottom: 12px; }
+            .product-card--wide .product-desc { margin-bottom: 4px; }
+            .product-card--wide .product-cta { margin-top: auto; padding-top: 14px; }
+        }
+
+        @media (max-width: 768px) {
+            #works { padding: 48px 0 40px; }
+            #works .work-group { margin-bottom: 44px; }
+            .product-grid--3, .product-grid--2 { grid-template-columns: 1fr; }
+        }
+
         /* WeChat section — the flagship funnel */
         .wechat-section { padding: 60px 0; border-top: 1px solid var(--border); }
         .wechat-section .section-header { margin-bottom: 40px; }
@@ -142,28 +199,28 @@
     </section>
 
     <section class="products-section" id="works">
-        <div class="container">
+        <div class="container-wide">
             <div class="section-header">
                 <h2 class="section-title" data-i18n="works_title">作品</h2>
                 <p class="section-desc" data-i18n="works_desc">业余时间独立开发的工具与书籍。</p>
             </div>
 
-                        <div class="work-group">
+            <div class="work-group">
                 <h3 class="work-group-title" data-i18n="grp_auto">汽车电子</h3>
-                <div class="product-grid">
-                <a href="https://benchpilot.jrtx.site" class="product-card" target="_blank" rel="noopener">
+                <div class="product-grid product-grid--3">
+                    <a href="https://benchpilot.jrtx.site" class="product-card" target="_blank" rel="noopener">
                         <h3 class="product-name">BenchPilot</h3>
                         <p class="product-tagline" data-i18n="bp_tag">给 agent 的 ECU 试验台运行时</p>
                         <p class="product-desc" data-i18n="bp_desc">一个运行时管住串口、J-Link、电源与车用网络：上电、烧录、串口观察、UDS 诊断与刷写（ISO-TP/CAN 与 DoIP 双传输）。单命令自动拉起守护进程，稳定退出码与失败证据为 agent 与 CI 设计。</p>
                         <span class="product-cta" data-i18n="cta_read">在线了解 →</span>
                     </a>
-                <a href="https://autarx.jrtx.site" class="product-card" target="_blank" rel="noopener">
+                    <a href="https://autarx.jrtx.site" class="product-card" target="_blank" rel="noopener">
                         <h3 class="product-name">Autarx</h3>
                         <p class="product-tagline" data-i18n="ax_tag">AUTOSAR 集成工作台</p>
                         <p class="product-desc" data-i18n="ax_desc">语义索引 OEM 交付的 ARXML：引用图追溯、两版交付语义 diff、ECU 影响分析、通信链路投影；受控编辑全程语义 diff 门禁，AI agent 走 MCP 接口，v1.0.0 已发布。</p>
                         <span class="product-cta" data-i18n="cta_read">在线了解 →</span>
                     </a>
-                <a href="https://gptp-studio.jrtx.site" class="product-card" target="_blank" rel="noopener">
+                    <a href="https://gptp-studio.jrtx.site" class="product-card" target="_blank" rel="noopener">
                         <h3 class="product-name">gPTP Studio</h3>
                         <p class="product-tagline" data-i18n="gs_tag">Linux 原生的 gPTP 调试工作台</p>
                         <p class="product-desc" data-i18n="gs_desc">gPTP / IEEE 802.1AS 调试利器：GrandMaster / Slave / Listener 一键切换、实时同步曲线、报文全字段解码，Doctor 环境体检，内置模拟器。开源核心 + Pro。</p>
@@ -174,26 +231,26 @@
 
             <div class="work-group">
                 <h3 class="work-group-title" data-i18n="grp_tools">效率与开发工具</h3>
-                <div class="product-grid">
-                <a href="https://taskly.jrtx.site" class="product-card" target="_blank" rel="noopener">
+                <div class="product-grid product-grid--2">
+                    <a href="https://taskly.jrtx.site" class="product-card" target="_blank" rel="noopener">
                         <h3 class="product-name">Taskly</h3>
                         <p class="product-tagline" data-i18n="tk_tag">跨平台任务管理，简洁专注</p>
                         <p class="product-desc" data-i18n="tk_desc">仿 macOS Reminders 的桌面任务管理应用，本地 SQLite，支持 Windows / macOS / Linux。</p>
                         <span class="product-cta" data-i18n="cta_download">立即下载 →</span>
                     </a>
-                <a href="https://brainfuel.jrtx.site" class="product-card" target="_blank" rel="noopener">
+                    <a href="https://brainfuel.jrtx.site" class="product-card" target="_blank" rel="noopener">
                         <h3 class="product-name">BrainFuel</h3>
                         <p class="product-tagline" data-i18n="bf_tag">GLM Coding Plan 配额，一眼掌握</p>
                         <p class="product-desc" data-i18n="bf_desc">桌面悬浮小部件，实时监控 5 小时滚动窗口与每周额度，再也不被限流打断。</p>
                         <span class="product-cta" data-i18n="cta_download">立即下载 →</span>
                     </a>
-                <a href="https://movebit.jrtx.site" class="product-card" target="_blank" rel="noopener">
+                    <a href="https://movebit.jrtx.site" class="product-card" target="_blank" rel="noopener">
                         <h3 class="product-name">MoveBit</h3>
                         <p class="product-tagline" data-i18n="mv_tag">强制你离开椅子的健康提醒</p>
                         <p class="product-desc" data-i18n="mv_desc">统计真实工作时长，到点用全屏倒计时锁定每台显示器请你起身；喝水提醒只做轻量 toast。Windows / macOS / Linux。</p>
                         <span class="product-cta" data-i18n="cta_download">立即下载 →</span>
                     </a>
-                <a href="https://hackdigest.jrtx.site" class="product-card" target="_blank" rel="noopener">
+                    <a href="https://hackdigest.jrtx.site" class="product-card" target="_blank" rel="noopener">
                         <h3 class="product-name">HackDigest</h3>
                         <p class="product-tagline" data-i18n="hd_tag">把 Hacker News 读成中文</p>
                         <p class="product-desc" data-i18n="hd_desc">给非英语开发者的 HN 阅读器：内置翻译与三层 AI 摘要——文章 TL;DR、评论区观点提炼、每日晨报。自带 API Key 全功能免费，Pro 提供托管翻译与同步。</p>
@@ -210,15 +267,16 @@
 
             <div class="work-group">
                 <h3 class="work-group-title" data-i18n="grp_writing">写作</h3>
-                <div class="product-grid">
-                <a href="https://racket.jrtx.site" class="product-card" target="_blank" rel="noopener">
-                        <h3 class="product-name">Racket 程序设计</h3>
-                        <p class="product-tagline" data-i18n="rk_tag">从语法到语言设计的在线技术书</p>
+                <div class="product-grid product-grid--feature">
+                    <a href="https://racket.jrtx.site" class="product-card product-card--wide" target="_blank" rel="noopener">
+                        <div class="product-wide-head">
+                            <h3 class="product-name">Racket 程序设计</h3>
+                            <p class="product-tagline" data-i18n="rk_tag">从语法到语言设计的在线技术书</p>
+                        </div>
                         <p class="product-desc" data-i18n="rk_desc">覆盖 Racket 核心语法、宏系统、并发与契约编程，以及用 #lang 创造新语言。</p>
                         <span class="product-cta" data-i18n="cta_read">在线阅读 →</span>
                     </a>
                 </div>
-            </div>
             </div>
         </div>
     </section>
