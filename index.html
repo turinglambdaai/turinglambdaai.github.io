@@ -72,6 +72,8 @@
 
         /* Odd card count in a 2-col grid: last card spans full width */
         .product-grid--2 .product-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
+        /* Wide banners always span the full row, regardless of position */
+        #works .product-grid--2 .product-card--wide { grid-column: 1 / -1; }
 
         /* Single-card group renders as a full-width horizontal banner */
         .product-card--wide { flex-direction: row; align-items: center; gap: 36px; padding: 30px 34px; }
@@ -267,6 +269,14 @@
                         <p class="product-desc" data-i18n="sp_desc">给官方客户端没带到 Linux 的桌面体验：用 Tauri 2 原生应用管理 rslsync 守护进程——文件夹、同步伙伴、传输、暂停限速与托盘。仅走环回 API，密钥与文件不出本机。</p>
                         <span class="product-cta" data-i18n="cta_github">GitHub 了解 →</span>
                     </a>
+                    <a href="https://pdfgist.jrtx.site" class="product-card product-card--wide" target="_blank" rel="noopener">
+                        <div class="product-wide-head">
+                            <h3 class="product-name">PDFGist</h3>
+                            <p class="product-tagline" data-i18n="pg_tag">接入自己大模型的 AI PDF 阅读器</p>
+                        </div>
+                        <p class="product-desc" data-i18n="pg_desc">本地优先的 PDF 阅读器：划词翻译、页面/全文总结、与文档对话，全部流式输出。兼容任意 OpenAI 协议端点（OpenAI、DeepSeek、Kimi、Ollama 等），API Key 只存本机。Windows / macOS / Linux。</p>
+                        <span class="product-cta" data-i18n="cta_download">立即下载 →</span>
+                    </a>
                 </div>
             </div>
 
@@ -383,6 +393,8 @@
             bp_desc: { zh: "一个运行时管住串口、J-Link、电源与车用网络：上电、烧录、串口观察、UDS 诊断与刷写（ISO-TP/CAN 与 DoIP 双传输）。单命令自动拉起守护进程，稳定退出码与失败证据为 agent 与 CI 设计。", en: "One runtime for serial, J-Link, power and vehicle networking: power, flash, serial observation, UDS diagnostics and flashing over ISO-TP/CAN and DoIP. One command starts the resident daemon; stable exit codes and failure evidence are designed for agents and CI." },
             sp_tag: { zh: "Resilio Sync 的 Linux 原生桌面", en: "Native Linux desktop for Resilio Sync" },
             sp_desc: { zh: "给官方客户端没带到 Linux 的桌面体验：用 Tauri 2 原生应用管理 rslsync 守护进程——文件夹、同步伙伴、传输、暂停限速与托盘。仅走环回 API，密钥与文件不出本机。", en: "The desktop experience the official clients never brought to Linux: manage the rslsync daemon from a Tauri 2 native app — folders, peers, transfers, pause and speed limits, tray icon. Loopback API only; keys and files never leave your machine." },
+            pg_tag: { zh: "接入自己大模型的 AI PDF 阅读器", en: "The AI PDF reader that brings your own model" },
+            pg_desc: { zh: "本地优先的 PDF 阅读器：划词翻译、页面/全文总结、与文档对话，全部流式输出。兼容任意 OpenAI 协议端点（OpenAI、DeepSeek、Kimi、Ollama 等），API Key 只存本机。Windows / macOS / Linux。", en: "A local-first PDF reader: selection translation, page & document summaries, and document chat — all streamed. Works with any OpenAI-compatible endpoint (OpenAI, DeepSeek, Kimi, Ollama…). Your API key never leaves your machine. Windows / macOS / Linux." },
             cta_github: { zh: "GitHub 了解 →", en: "View on GitHub →" },
             badge_experimental: { zh: "实验性", en: "Experimental" }
         };
