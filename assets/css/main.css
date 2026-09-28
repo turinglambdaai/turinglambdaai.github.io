@@ -317,6 +317,18 @@ body[data-theme="light"] .theme-btn .icon-moon { display: block; }
     gap: 16px;
 }
 
+/* ---- Work Groups ---- */
+
+.work-group { margin-bottom: 32px; }
+.work-group:last-child { margin-bottom: 0; }
+.work-group-title {
+    font-size: 0.95em;
+    font-weight: 600;
+    color: var(--text-3);
+    letter-spacing: 0.02em;
+    margin-bottom: 12px;
+}
+
 .product-card {
     position: relative;
     display: flex;
