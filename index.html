@@ -31,6 +31,7 @@
         /* .btn 等显式 display 声明会压过 UA 的 [hidden] 规则，这里兜底 */
         [hidden] { display: none !important; }
 
+        .product-name-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
         .product-tagline { font-size: 1.02em; font-weight: 600; color: var(--text); margin: 2px 0 10px; line-height: 1.4; }
         .product-cta { display: inline-block; margin-top: auto; padding-top: 14px; color: var(--accent); font-family: "Inter", -apple-system, sans-serif; font-size: 0.9em; font-weight: 500; transition: transform 0.15s; }
         .product-card:hover .product-cta { transform: translateX(3px); }
@@ -214,19 +215,28 @@
                 <h3 class="work-group-title" data-i18n="grp_auto">汽车电子</h3>
                 <div class="product-grid product-grid--3">
                     <a href="https://benchpilot.jrtx.site" class="product-card" target="_blank" rel="noopener">
-                        <h3 class="product-name">BenchPilot</h3>
+                        <div class="product-name-row">
+                            <h3 class="product-name">BenchPilot</h3>
+                            <span class="product-layer">.NET</span>
+                        </div>
                         <p class="product-tagline" data-i18n="bp_tag">给 agent 的 ECU 试验台运行时</p>
                         <p class="product-desc" data-i18n="bp_desc">一个运行时管住串口、J-Link、电源与车用网络：上电、烧录、串口观察、UDS 诊断与刷写（ISO-TP/CAN 与 DoIP 双传输）。单命令自动拉起守护进程，稳定退出码与失败证据为 agent 与 CI 设计。</p>
                         <span class="product-cta" data-i18n="cta_read">在线了解 →</span>
                     </a>
                     <a href="https://autarx.jrtx.site" class="product-card" target="_blank" rel="noopener">
-                        <h3 class="product-name">Autarx</h3>
+                        <div class="product-name-row">
+                            <h3 class="product-name">Autarx</h3>
+                            <span class="product-layer">Avalonia</span>
+                        </div>
                         <p class="product-tagline" data-i18n="ax_tag">AUTOSAR 集成工作台</p>
                         <p class="product-desc" data-i18n="ax_desc">语义索引 OEM 交付的 ARXML：引用图追溯、两版交付语义 diff、ECU 影响分析、通信链路投影；受控编辑全程语义 diff 门禁，AI agent 走 MCP 接口，现已发布。</p>
                         <span class="product-cta" data-i18n="cta_read">在线了解 →</span>
                     </a>
                     <a href="https://gptp-studio.jrtx.site" class="product-card" target="_blank" rel="noopener">
-                        <h3 class="product-name">gPTP Studio</h3>
+                        <div class="product-name-row">
+                            <h3 class="product-name">gPTP Studio</h3>
+                            <span class="product-layer">glaze</span>
+                        </div>
                         <p class="product-tagline" data-i18n="gs_tag">Linux 原生的 gPTP 调试工作台</p>
                         <p class="product-desc" data-i18n="gs_desc">gPTP / IEEE 802.1AS 调试利器：GrandMaster / Slave / Listener 一键切换、实时同步曲线、报文全字段解码，Doctor 环境体检，内置模拟器。开源核心 + Pro。</p>
                         <span class="product-cta" data-i18n="cta_download">立即下载 →</span>
@@ -238,56 +248,83 @@
                 <h3 class="work-group-title" data-i18n="grp_tools">效率与开发工具</h3>
                 <div class="product-grid product-grid--2">
                     <a href="https://taskly.jrtx.site" class="product-card" target="_blank" rel="noopener">
-                        <h3 class="product-name">Taskly</h3>
+                        <div class="product-name-row">
+                            <h3 class="product-name">Taskly</h3>
+                            <span class="product-layer">WinUI 3 · SwiftUI · GTK4</span>
+                        </div>
                         <p class="product-tagline" data-i18n="tk_tag">跨平台任务管理，简洁专注</p>
                         <p class="product-desc" data-i18n="tk_desc">仿 macOS Reminders 的桌面任务管理应用，本地 SQLite，支持 Windows / macOS / Linux。</p>
                         <span class="product-cta" data-i18n="cta_progress">了解进展 →</span>
                     </a>
                     <a href="https://brainfuel.jrtx.site" class="product-card" target="_blank" rel="noopener">
-                        <h3 class="product-name">BrainFuel</h3>
+                        <div class="product-name-row">
+                            <h3 class="product-name">BrainFuel</h3>
+                            <span class="product-layer">Avalonia</span>
+                        </div>
                         <p class="product-tagline" data-i18n="bf_tag">GLM Coding Plan 配额，一眼掌握</p>
                         <p class="product-desc" data-i18n="bf_desc">桌面悬浮小部件，实时监控 5 小时滚动窗口与每周额度，再也不被限流打断。</p>
                         <span class="product-cta" data-i18n="cta_download">立即下载 →</span>
                     </a>
                     <a href="https://movebit.jrtx.site" class="product-card" target="_blank" rel="noopener">
-                        <h3 class="product-name">MoveBit</h3>
+                        <div class="product-name-row">
+                            <h3 class="product-name">MoveBit</h3>
+                            <span class="product-layer">Avalonia</span>
+                        </div>
                         <p class="product-tagline" data-i18n="mv_tag">强制你离开椅子的健康提醒</p>
                         <p class="product-desc" data-i18n="mv_desc">统计真实工作时长，到点用全屏倒计时锁定每台显示器请你起身；喝水提醒只做轻量 toast。Windows / macOS / Linux。</p>
                         <span class="product-cta" data-i18n="cta_download">立即下载 →</span>
                     </a>
                     <a href="https://hackdigest.jrtx.site" class="product-card" target="_blank" rel="noopener">
-                        <h3 class="product-name">HackDigest</h3>
+                        <div class="product-name-row">
+                            <h3 class="product-name">HackDigest</h3>
+                            <span class="product-layer">Tauri</span>
+                        </div>
                         <p class="product-tagline" data-i18n="hd_tag">把 Hacker News 读成中文</p>
                         <p class="product-desc" data-i18n="hd_desc">给非英语开发者的 HN 阅读器：内置翻译与三层 AI 摘要——文章 TL;DR、评论区观点提炼、每日晨报。自带 API Key 全功能免费，Pro 提供托管翻译与同步。</p>
                         <span class="product-cta" data-i18n="cta_download">立即下载 →</span>
                     </a>
                     <a href="https://regexmate.jrtx.site/" class="product-card" target="_blank" rel="noopener">
-                        <h3 class="product-name">RegexMate</h3>
+                        <div class="product-name-row">
+                            <h3 class="product-name">RegexMate</h3>
+                            <span class="product-layer">Racket</span>
+                        </div>
                         <p class="product-tagline" data-i18n="rm_tag">面向人与 agent 的正则工作台</p>
                         <p class="product-desc" data-i18n="rm_desc">一条命令搞定正则的校验、匹配、解释、替换、铁路图、批量测试与风险 lint；MCP server 七个工具原生接入智能体，版本化 JSON 契约与明确退出码为 agent 与 CI 设计。三平台独立二进制，免装运行时。</p>
                         <span class="product-cta" data-i18n="cta_read">在线了解 →</span>
                     </a>
                     <a href="https://fulcrum.jrtx.site" class="product-card" target="_blank" rel="noopener">
-                        <h3 class="product-name">Fulcrum</h3>
+                        <div class="product-name-row">
+                            <h3 class="product-name">Fulcrum</h3>
+                            <span class="product-layer">rivet</span>
+                        </div>
                         <p class="product-tagline" data-i18n="fc_tag">一次按键，直达一切</p>
                         <p class="product-desc" data-i18n="fc_desc">键盘优先的三平台启动器：模糊搜索应用、剪贴板历史与片段，内联计算、Web 搜索 bang 与系统命令。一个 Racket 大脑，WinUI 3 / SwiftUI / GTK4 三套原生 UI，无 WebView，数据不出本机。</p>
                         <span class="product-cta" data-i18n="cta_read">在线了解 →</span>
                     </a>
                     <a href="https://publy.jrtx.site" class="product-card" target="_blank" rel="noopener">
-                        <h3 class="product-name">Publy</h3>
+                        <div class="product-name-row">
+                            <h3 class="product-name">Publy</h3>
+                            <span class="product-layer">TypeScript</span>
+                        </div>
                         <p class="product-tagline" data-i18n="pb_tag">agent 时代的公众号发布管线</p>
                         <p class="product-desc" data-i18n="pb_desc">写作留在 Obsidian，发布交给 agent：一条命令完成排版与小绿书卡片渲染，主题即 npm 包，托管服务负责稳定发布。只走官方 API，开源核心不做锁定。</p>
                         <span class="product-cta" data-i18n="cta_progress">了解进展 →</span>
                     </a>
                     <a href="https://syncpilot.jrtx.site" class="product-card" target="_blank" rel="noopener">
-                        <h3 class="product-name">SyncPilot</h3>
+                        <div class="product-name-row">
+                            <h3 class="product-name">SyncPilot</h3>
+                            <span class="product-layer">Tauri</span>
+                        </div>
                         <p class="product-tagline" data-i18n="sp_tag">Resilio Sync 的 Linux 原生桌面</p>
                         <p class="product-desc" data-i18n="sp_desc">给官方客户端没带到 Linux 的桌面体验：用 Tauri 2 原生应用管理 rslsync 守护进程——文件夹、同步伙伴、传输、暂停限速与托盘。仅走环回 API，密钥与文件不出本机。</p>
                         <span class="product-cta" data-i18n="cta_read">在线了解 →</span>
                     </a>
                     <a href="https://pdfgist.jrtx.site" class="product-card product-card--wide" target="_blank" rel="noopener">
                         <div class="product-wide-head">
-                            <h3 class="product-name">PDFGist</h3>
+                            <div class="product-name-row">
+                                <h3 class="product-name">PDFGist</h3>
+                                <span class="product-layer">Tauri</span>
+                            </div>
                             <p class="product-tagline" data-i18n="pg_tag">接入自己大模型的 AI PDF 阅读器</p>
                         </div>
                         <p class="product-desc" data-i18n="pg_desc">本地优先的 PDF 阅读器：划词翻译、页面/全文总结、与文档对话，全部流式输出。兼容任意 OpenAI 协议端点（OpenAI、DeepSeek、Kimi、Ollama 等），API Key 只存本机。Windows / macOS / Linux。</p>
