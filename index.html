@@ -366,7 +366,7 @@
                             <span class="product-layer">Rivet</span>
                         </div>
                         <p class="product-tagline" data-i18n="pay_tag">每一台设备，都在一天天回本</p>
-                        <p class="product-desc" data-i18n="pay_desc">记下购买价格，看每日成本一天天下落；设定「一天值多少钱」，看回本进度环一点点走满。Rivet 原生应用（macOS SwiftUI / Windows WinUI 3），数据存于单份可读 JSON。</p>
+                        <p class="product-desc" data-i18n="pay_desc">记下购买价格，看每日成本一天天下落；设定「一天值多少钱」，看回本进度环一点点走满。Rivet 原生应用（macOS / Windows / Linux），数据存于单份可读文件。</p>
                         <span class="product-cta" data-i18n="cta_online">在线了解 →</span>
                     </a>
                     <a href="https://pdfgist.jrtx.site" class="product-card product-card--wide" target="_blank" rel="noopener">
@@ -377,7 +377,7 @@
                             </div>
                             <p class="product-tagline" data-i18n="pg_tag">接入自己大模型的 AI PDF 阅读器</p>
                         </div>
-                        <p class="product-desc" data-i18n="pg_desc">本地优先的 PDF 阅读器：划词翻译、页面/全文总结、与文档对话，全部流式输出。兼容任意 OpenAI 协议端点（OpenAI、DeepSeek、Kimi、Ollama 等），API Key 只存本机。Windows / macOS / Linux。</p>
+                        <p class="product-desc" data-i18n="pg_desc">本地优先的 PDF 阅读器：划词翻译、页面/全文总结、与文档对话，全部流式输出。兼容任意 OpenAI 协议端点（OpenAI、DeepSeek、Kimi、Ollama 等），API Key 只存本机。macOS。</p>
                         <span class="product-cta" data-i18n="cta_download">立即下载 →</span>
                     </a>
                     <a href="https://keepsake.jrtx.site" class="product-card" target="_blank" rel="noopener">
@@ -386,7 +386,7 @@
                             <span class="product-layer">Go</span>
                         </div>
                         <p class="product-tagline" data-i18n="ks_tag">微信桌面数据的时光机</p>
-                        <p class="product-desc" data-i18n="ks_desc">给微信账号目录拍内容寻址的增量快照：媒体整文件去重、消息库按页去重，任意时点一键恢复。仓库是可逃生的纯目录格式，自托管 hub 规划中；零解密、不碰内容，查看与恢复走微信本体。macOS / Windows / Linux。</p>
+                        <p class="product-desc" data-i18n="ks_desc">给微信账号目录拍内容寻址的增量快照：媒体整文件去重、消息库按页去重，任意时点一键恢复。仓库是可逃生的纯目录格式，自托管 hub 规划中；零解密、不碰内容，查看与恢复走微信本体。开发中，尚未发布。</p>
                         <span class="product-cta" data-i18n="cta_progress">了解进展 →</span>
                     </a>
                 </div>
@@ -482,7 +482,7 @@
             tk_tag: { zh: "跨平台任务管理，简洁专注", en: "Cross-platform tasks, simple and focused" },
             tk_desc: { zh: "仿 macOS Reminders 的桌面任务管理器，Rivet 架构——一个 Racket 核心驱动三端原生宿主，本地 SQLite 单文件 + agent CLI。三平台可下载。", en: "A macOS Reminders-style task manager on the Rivet architecture — one Racket core behind three native hosts. Local SQLite, agent CLI, all three desktops." },
             ks_tag: { zh: "微信桌面数据的时光机", en: "A time machine for desktop WeChat data" },
-            ks_desc: { zh: "给微信账号目录拍内容寻址的增量快照：媒体整文件去重、消息库按页去重，任意时点一键恢复。仓库是可逃生的纯目录格式，自托管 hub 规划中；零解密、不碰内容，查看与恢复走微信本体。macOS / Windows / Linux。", en: "Content-addressed incremental snapshots of WeChat account directories: whole-file dedup for media, page-level dedup for message stores, any snapshot restored in place. The repository is an escapable plain-directory format; self-hosted hub planned. Zero decryption — viewing and restoring stay inside WeChat itself. macOS / Windows / Linux." },
+            ks_desc: { zh: "给微信账号目录拍内容寻址的增量快照：媒体整文件去重、消息库按页去重，任意时点一键恢复。仓库是可逃生的纯目录格式，自托管 hub 规划中；零解密、不碰内容，查看与恢复走微信本体。开发中，尚未发布。", en: "Content-addressed incremental snapshots of WeChat account directories: whole-file dedup for media, page-level dedup for message stores, any snapshot restored in place. The repository is an escapable plain-directory format; self-hosted hub planned. Zero decryption — viewing and restoring stay inside WeChat itself. In development — no release yet." },
             cta_download: { zh: "立即下载 →", en: "Download →" },
             mv_tag: { zh: "强制你离开椅子的健康提醒", en: "Health reminders you can't click away" },
             mv_desc: { zh: "统计真实工作时长，到点用全屏倒计时锁定每台显示器请你起身；喝水提醒只做轻量 toast。Windows / macOS / Linux。", en: "Measures active work time, then locks every monitor with a countdown break; water reminders stay as toasts. Windows / macOS / Linux." },
@@ -506,7 +506,7 @@
             rp_tag: { zh: "一套 Profile，覆盖每一台设备", en: "One profile, every device" },
             rp_desc: { zh: "Local-first 原生网络工具箱：一套 Racket 控制平面统一 Profile、规则与策略组，每条路由都有确定性 DecisionTrace，Xray 只是第一个可替换引擎。桌面与移动端规划中，当前为架构 Alpha。", en: "A local-first native network toolbox: one Racket control plane unifies profiles, rules and policy groups, every route gets a deterministic DecisionTrace, and Xray is just the first replaceable engine. Desktop and mobile hosts planned — architecture alpha today." },
             pg_tag: { zh: "接入自己大模型的 AI PDF 阅读器", en: "The AI PDF reader that brings your own model" },
-            pg_desc: { zh: "本地优先的 PDF 阅读器：划词翻译、页面/全文总结、与文档对话，全部流式输出。兼容任意 OpenAI 协议端点（OpenAI、DeepSeek、Kimi、Ollama 等），API Key 只存本机。Windows / macOS / Linux。", en: "A local-first PDF reader: selection translation, page & document summaries, and document chat — all streamed. Works with any OpenAI-compatible endpoint (OpenAI, DeepSeek, Kimi, Ollama…). Your API key never leaves your machine. Windows / macOS / Linux." },
+            pg_desc: { zh: "本地优先的 PDF 阅读器：划词翻译、页面/全文总结、与文档对话，全部流式输出。兼容任意 OpenAI 协议端点（OpenAI、DeepSeek、Kimi、Ollama 等），API Key 只存本机。macOS。", en: "A local-first PDF reader: selection translation, page & document summaries, and document chat — all streamed. Works with any OpenAI-compatible endpoint (OpenAI, DeepSeek, Kimi, Ollama…). Your API key never leaves your machine. macOS." },
             cta_online: { zh: "在线了解 →", en: "Learn more →" },
             fc_tag: { zh: "一次按键，直达一切", en: "One keystroke. Everything within reach." },
             fc_desc: { zh: "键盘优先的三平台启动器：模糊搜索应用、剪贴板历史与片段，内联计算、Web 搜索 bang 与系统命令。一个 Racket 大脑，WinUI 3 / SwiftUI / GTK4 三套原生 UI，无 WebView，数据不出本机。", en: "A keyboard-first launcher for three platforms: fuzzy-search apps, clipboard history and snippets, inline math, web-search bangs and system commands. One Racket brain with first-party native UIs in WinUI 3 / SwiftUI / GTK4 — no WebView, nothing leaves your machine." },
@@ -515,7 +515,7 @@
             pl_tag: { zh: "听得懂的英文播客", en: "Podcasts, in your language" },
             pl_desc: { zh: "跨平台桌面播客应用：用你自己的大模型 API key，把英文单集转写、逐句翻译、自动总结——为「读得懂、听不懂」的听众而生。Rivet 原生架构，转录、翻译与摘要全部缓存在本机。", en: "A cross-platform podcast player that transcribes, translates and summarizes English episodes with your own LLM API key — for listeners who understand far more reading than hearing. Rivet-native, with transcripts, translations and summaries cached on your machine." },
             pay_tag: { zh: "每一台设备，都在一天天回本", en: "Every device pays itself back, one day at a time" },
-            pay_desc: { zh: "记下购买价格，看每日成本一天天下落；设定「一天值多少钱」，看回本进度环一点点走满。Rivet 原生应用（macOS SwiftUI / Windows WinUI 3），数据存于单份可读 JSON。", en: "Record what you paid and watch the daily cost tick down; set what a day with the device is worth to you and fill the payback ring. A Rivet-native app (SwiftUI on macOS, WinUI 3 on Windows) storing one human-readable JSON file." },
+            pay_desc: { zh: "记下购买价格，看每日成本一天天下落；设定「一天值多少钱」，看回本进度环一点点走满。Rivet 原生应用（macOS / Windows / Linux），数据存于单份可读文件。", en: "Record what you paid and watch the daily cost tick down; set what a day with the device is worth to you and fill the payback ring. A Rivet-native app for macOS, Windows and Linux, storing one human-readable file." },
             badge_experimental: { zh: "实验性", en: "Experimental" }
         };
 
