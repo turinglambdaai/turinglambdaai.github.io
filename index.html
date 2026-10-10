@@ -23,9 +23,7 @@
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F9F7F4">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#171412">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%22 y=%22.9em%22 font-size=%2290%22 text-anchor=%22middle%22>λ</text></svg>">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="assets/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="assets/css/main.css">
     <style>
         /* .btn 等显式 display 声明会压过 UA 的 [hidden] 规则，这里兜底 */
@@ -128,8 +126,10 @@
         .lang-btn:hover { color: var(--accent); }
         .lang-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; box-shadow: var(--shadow-md); padding: 6px; min-width: 132px; margin: 0; list-style: none; opacity: 0; visibility: hidden; transform: translateY(-4px); transition: opacity .18s, visibility .18s, transform .18s; z-index: 10000; }
         .lang-dropdown-wrapper:hover .lang-menu, .lang-dropdown-wrapper:focus-within .lang-menu { opacity: 1; visibility: visible; transform: translateY(0); }
-        .lang-menu li { padding: 7px 12px; font-size: 0.88em; color: var(--text); border-radius: 6px; cursor: pointer; transition: color .15s; }
-        .lang-menu li:hover { color: var(--accent); }
+        .lang-menu li { margin: 0; }
+        .lang-menu button { display: block; width: 100%; background: none; border: none; cursor: pointer; font-family: inherit; font-size: 0.88em; color: var(--text); text-align: left; padding: 7px 12px; border-radius: 6px; transition: color .15s; }
+        .lang-menu button:hover, .lang-menu button:focus-visible { color: var(--accent); outline: none; }
+        .lang-menu button:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
 
         @media (max-width: 768px) {
             .wechat-layout { flex-direction: column; gap: 36px; }
@@ -152,11 +152,11 @@
                 <div class="lang-dropdown-wrapper">
                     <button class="lang-btn" type="button" onclick="void 0" aria-label="Switch language">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-                        <span id="current-lang-label">English</span>
+                        <span id="current-lang-label">简体中文</span>
                     </button>
                     <ul class="lang-menu">
-                        <li onclick="setLanguage('en')">English</li>
-                        <li onclick="setLanguage('zh')">简体中文</li>
+                        <li><button type="button" onclick="setLanguage('en')">English</button></li>
+                        <li><button type="button" onclick="setLanguage('zh')">简体中文</button></li>
                     </ul>
                 </div>
                 <button class="theme-btn" id="themeToggle" aria-label="切换主题">
@@ -306,7 +306,7 @@
                         <p class="product-desc" data-i18n="hd_desc">给非英语开发者的 HN 阅读器：内置翻译与三层 AI 摘要——文章 TL;DR、评论区观点提炼、每日晨报。自带 API Key 全功能免费，Pro 提供托管翻译与同步。</p>
                         <span class="product-cta" data-i18n="cta_download">立即下载 →</span>
                     </a>
-                    <a href="https://regexmate.jrtx.site/" class="product-card" target="_blank" rel="noopener">
+                    <a href="https://regexmate.jrtx.site" class="product-card" target="_blank" rel="noopener">
                         <div class="product-name-row">
                             <h3 class="product-name">RegexMate</h3>
                             <span class="product-layer">Rivet</span>
@@ -516,7 +516,8 @@
             pl_desc: { zh: "跨平台桌面播客应用：用你自己的大模型 API key，把英文单集转写、逐句翻译、自动总结——为「读得懂、听不懂」的听众而生。Rivet 原生架构，转录、翻译与摘要全部缓存在本机。", en: "A cross-platform podcast player that transcribes, translates and summarizes English episodes with your own LLM API key — for listeners who understand far more reading than hearing. Rivet-native, with transcripts, translations and summaries cached on your machine." },
             pay_tag: { zh: "每一台设备，都在一天天回本", en: "Every device pays itself back, one day at a time" },
             pay_desc: { zh: "记下购买价格，看每日成本一天天下落；设定「一天值多少钱」，看回本进度环一点点走满。Rivet 原生应用（macOS / Windows / Linux），数据存于单份可读文件。", en: "Record what you paid and watch the daily cost tick down; set what a day with the device is worth to you and fill the payback ring. A Rivet-native app for macOS, Windows and Linux, storing one human-readable file." },
-            badge_experimental: { zh: "实验性", en: "Experimental" }
+            meta_title: { zh: "TuringLambdaAI — 深度技术写作与独立开发", en: "TuringLambdaAI — Deep-dive technical writing & indie tools" },
+            meta_desc: { zh: "车载软件工程师的深度技术写作与独立开发。把复杂的技术，做得直观好用。", en: "Automotive software engineer — deep-dive technical writing and indie developer tools. Making complex technology intuitive." }
         };
 
         var LANGUAGE_OVERRIDE_KEY = 'tl-lang-override-v2';
@@ -545,6 +546,10 @@
             }
             document.documentElement.lang = currentLang === 'zh' ? 'zh-CN' : 'en';
             document.documentElement.setAttribute('data-language', currentLang);
+            var meta = I18N.meta_title[currentLang];
+            if (meta) document.title = meta;
+            var metaDesc = document.querySelector('meta[name="description"]');
+            if (metaDesc && I18N.meta_desc[currentLang]) metaDesc.setAttribute('content', I18N.meta_desc[currentLang]);
             document.querySelectorAll('[data-i18n]').forEach(function (el) {
                 var key = el.getAttribute('data-i18n');
                 if (I18N[key] && I18N[key][currentLang]) el.textContent = I18N[key][currentLang];
