@@ -15,7 +15,6 @@
 | **公众号 TuringLambdaAI**（微信） | AUTOSAR、嵌入式、编程语言与 AI 的深度技术专栏 — 当前主线 |
 | **[Taskly](https://taskly.jrtx.site)** | 跨平台任务管理桌面应用（Windows / macOS / Linux） |
 | **[Keepsake](https://keepsake.jrtx.site)** | 微信桌面数据的时光机——文件级备份，零解密 |
-| **[Mapalyze](https://github.com/turinglambdaai/mapalyze)** | 固件体积分析器 — GUI + agent 友好 CLI |
 | **[BrainFuel](https://brainfuel.jrtx.site)** | GLM Coding Plan 配额悬浮小部件 |
 | **[Racket 程序设计](https://racket.jrtx.site)** | 一本关于 Racket 编程语言的在线技术书 |
 
@@ -35,7 +34,7 @@
 | 结构 | 手写 HTML5 |
 | 样式 | 原生 CSS，基于 CSS 自定义属性（明 / 暗主题） |
 | 脚本 | 原生 JS — 国际化、主题切换、localStorage 持久化 |
-| 字体 | Inter（Google Fonts） |
+| 字体 | 自托管可变字体（Inter）——不用 Google Fonts |
 | 托管 | GitHub Pages + 自定义域名（`jrtx.site`） |
 
 ## 快速开始
