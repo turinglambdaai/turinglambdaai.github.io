@@ -476,7 +476,7 @@ var _hmt = _hmt || [];
                         <h3 class="oss-name">glaze</h3>
                         <span class="product-layer">Racket</span>
                     </div>
-                    <p class="oss-desc" data-i18n="oss_glaze">Racket 写逻辑、Web 做 UI 的桌面应用框架：原生窗口内嵌系统 WebView（WKWebView / WebView2 / WebKitGTK），纯 FFI 免原生工具链，二进制轻量；页面经 GLZ1 原生消息通道直调 Racket，不碰 TCP 端口；default-deny 能力门禁管住文件、shell、SQLite、剪贴板等系统能力，命令声明自带类型校验并生成 TypeScript，内置窗口截图为 agent 验证 UI 而生。</p>
+                    <p class="oss-desc" data-i18n="oss_glaze">Racket 写逻辑、Web 做 UI 的桌面应用框架：原生窗口内嵌系统 WebView，纯 FFI 免原生工具链，页面经 GLZ1 直调 Racket。</p>
                 </a>
 
                 <a href="https://rivet.jrtx.site" class="oss-card" target="_blank" rel="noopener">
@@ -484,7 +484,7 @@ var _hmt = _hmt || [];
                         <h3 class="oss-name">rivet</h3>
                         <span class="product-layer">Racket</span>
                     </div>
-                    <p class="oss-desc" data-i18n="oss_rivet">Racket 写逻辑，交付一等原生应用：WinUI 3 / SwiftUI / GTK4 宿主内嵌 Racket CS 运行时，构建期生成 Swift / C++ / Kotlin 客户端，后端契约经 Keel 与 Glaze 共享；内置实时图表与三平台签名更新器，下游只消费发布包。</p>
+                    <p class="oss-desc" data-i18n="oss_rivet">Racket 写逻辑，交付一等原生应用：WinUI 3 / SwiftUI / GTK4 宿主内嵌 Racket 运行时，构建期生成 Swift / C++ / Kotlin 类型化客户端。</p>
                 </a>
 
                 <a href="https://keel.jrtx.site" class="oss-card" target="_blank" rel="noopener">
@@ -492,7 +492,7 @@ var _hmt = _hmt || [];
                         <h3 class="oss-name">keel</h3>
                         <span class="product-layer">Racket</span>
                     </div>
-                    <p class="oss-desc" data-i18n="oss_keel">Rivet 与 Glaze 两线共享的传输无关应用契约：一个值模型、一套规范字节编码、一个结构化错误形状、一套生命周期词汇；模式描述应用边界而不预设传输，RVT1 与 GLZ1 字节一致，golden 语料守住兼容性。Racket 参考实现，MIT 开源。</p>
+                    <p class="oss-desc" data-i18n="oss_keel">Rivet 与 Glaze 共享的传输无关应用契约：一个值模型、一套规范字节编码、一个结构化错误形状，两端永远说同一种字节。</p>
                 </a>
 
                 <a href="https://permit.jrtx.site" class="oss-card" target="_blank" rel="noopener">
@@ -500,7 +500,7 @@ var _hmt = _hmt || [];
                         <h3 class="oss-name">permit</h3>
                         <span class="product-layer">Racket</span>
                     </div>
-                    <p class="oss-desc" data-i18n="oss_permit">签名产品授权的开放协议：买断、订阅、试用都签成 Ed25519 凭证，应用用内置公钥离线验证，授权永不依赖在线服务；商业权益、安装租约、试用资格三层分离，密钥轮换平滑无断档。Racket 参考实现与 raco CLI，Apache-2.0 开源。</p>
+                    <p class="oss-desc" data-i18n="oss_permit">签名产品授权的开放协议：买断、订阅、试用都签成 Ed25519 凭证，应用用内置公钥离线验证，授权永不依赖在线服务。</p>
                 </a>
 
             </div>
@@ -573,10 +573,10 @@ var _hmt = _hmt || [];
             yw_desc: { zh: "每周自动增量抓取 yinwang.org 全部文章存为 Markdown：图片本地化、中文标题进 frontmatter；被删的文章靠 Git 历史永久保留，静态站全文可搜，GitHub Actions 全自动运行。", en: "A weekly incremental crawl archives every yinwang.org post as Markdown — images localized, Chinese titles in frontmatter. Deleted posts live on in Git history; the static site is fully searchable, all via GitHub Actions." },
             cta_read: { zh: "在线阅读 →", en: "Read online →" },
             oss_title: { zh: "开源项目", en: "Open Source" },
-            oss_glaze: { zh: "Racket 写逻辑、Web 做 UI 的桌面应用框架：原生窗口内嵌系统 WebView（WKWebView / WebView2 / WebKitGTK），纯 FFI 免原生工具链，二进制轻量；页面经 GLZ1 原生消息通道直调 Racket，不碰 TCP 端口；default-deny 能力门禁管住文件、shell、SQLite、剪贴板等系统能力，命令声明自带类型校验并生成 TypeScript，内置窗口截图为 agent 验证 UI 而生。", en: "Desktop apps with Racket logic and a web UI: a native window hosting the system WebView (WKWebView / WebView2 / WebKitGTK), pure FFI with no native toolchain, tiny binaries; the page calls Racket directly over the GLZ1 native message channel — no TCP port; default-deny capability gates cover files, shell, SQLite, clipboard and more; typed command declarations validate on the wire and generate TypeScript; built-in window capture for agent-driven UI verification." },
-            oss_rivet: { zh: "Racket 写逻辑，交付一等原生应用：WinUI 3 / SwiftUI / GTK4 宿主内嵌 Racket CS 运行时，构建期生成 Swift / C++ / Kotlin 客户端，后端契约经 Keel 与 Glaze 共享；内置实时图表与三平台签名更新器，下游只消费发布包。", en: "Racket logic in first-party native apps — the Racket CS runtime embedded in WinUI 3 / SwiftUI / GTK4 hosts, with generated typed Swift / C++ / Kotlin clients and a backend contract shared with Glaze via Keel; built-in real-time charts and a signed updater on all three desktops, consumed as released packages." },
-            oss_keel: { zh: "Rivet 与 Glaze 两线共享的传输无关应用契约：一个值模型、一套规范字节编码、一个结构化错误形状、一套生命周期词汇；模式描述应用边界而不预设传输，RVT1 与 GLZ1 字节一致，golden 语料守住兼容性。Racket 参考实现，MIT 开源。", en: "The transport-neutral application contract shared by the Rivet and Glaze lines: one value model, one canonical byte encoding, one structured-error shape, one lifecycle vocabulary; schemas describe the application boundary without owning a transport — RVT1 and GLZ1 stay byte-identical, and the golden corpus guards compatibility. Racket reference implementation, MIT." },
-            oss_permit: { zh: "签名产品授权的开放协议：买断、订阅、试用都签成 Ed25519 凭证，应用用内置公钥离线验证，授权永不依赖在线服务；商业权益、安装租约、试用资格三层分离，密钥轮换平滑无断档。Racket 参考实现与 raco CLI，Apache-2.0 开源。", en: "An open protocol for signed product rights: perpetual, subscription and trial licenses become Ed25519 credentials that apps verify offline with an embedded public key — authorization never depends on an online service. Commercial rights, activation leases and trials as separate layers; key rotation without a flag day. Racket reference implementation and CLI, Apache-2.0." },
+            oss_glaze: { zh: "Racket 写逻辑、Web 做 UI 的桌面应用框架：原生窗口内嵌系统 WebView，纯 FFI 免原生工具链，页面经 GLZ1 直调 Racket。", en: "Desktop apps with Racket logic and a web UI: native windows hosting the system WebView, pure FFI with no native toolchain, the page calling Racket directly over GLZ1." },
+            oss_rivet: { zh: "Racket 写逻辑，交付一等原生应用：WinUI 3 / SwiftUI / GTK4 宿主内嵌 Racket 运行时，构建期生成 Swift / C++ / Kotlin 类型化客户端。", en: "Racket logic in first-party native apps: the Racket runtime embedded in WinUI 3 / SwiftUI / GTK4 hosts, with typed Swift / C++ / Kotlin clients generated at build time." },
+            oss_keel: { zh: "Rivet 与 Glaze 共享的传输无关应用契约：一个值模型、一套规范字节编码、一个结构化错误形状，两端永远说同一种字节。", en: "The transport-neutral contract shared by Rivet and Glaze: one value model, one canonical byte encoding, one structured error shape — both runtimes speak the same bytes." },
+            oss_permit: { zh: "签名产品授权的开放协议：买断、订阅、试用都签成 Ed25519 凭证，应用用内置公钥离线验证，授权永不依赖在线服务。", en: "An open protocol for signed product rights: purchases, subscriptions and trials become Ed25519 credentials verified offline with an embedded public key — authorization never depends on an online service." },
             bp_tag: { zh: "给 agent 的 ECU 试验台运行时", en: "The ECU bench runtime for agents" },
             bp_desc: { zh: "一个运行时管住串口、J-Link、电源与车用网络：上电、烧录、串口观察、UDS 诊断与刷写（ISO-TP/CAN 与 DoIP 双传输）。单命令自动拉起守护进程，稳定退出码与失败证据为 agent 与 CI 设计。", en: "One runtime for serial, J-Link, power and vehicle networking: power, flash, serial observation, UDS diagnostics and flashing over ISO-TP/CAN and DoIP. One command starts the resident daemon; stable exit codes and failure evidence are designed for agents and CI." },
             fp_tag: { zh: "Agent 原生的 ECU 刷写引擎", en: "Agent-native ECU flashing engine" },
