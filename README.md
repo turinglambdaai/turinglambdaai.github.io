@@ -14,7 +14,6 @@ The front door of **TuringLambdaAI** — live at **[jrtx.site](https://jrtx.site
 |---------|------------|
 | **公众号 TuringLambdaAI** (WeChat) | Deep-dive column on AUTOSAR, embedded systems, programming languages & AI — the flagship |
 | **[Taskly](https://taskly.jrtx.site)** | Cross-platform desktop task manager (Windows / macOS / Linux) |
-| **[Keepsake](https://keepsake.jrtx.site)** | Time Machine for desktop WeChat data — file-level backup, zero decryption |
 | **[Racket 程序设计](https://racket.jrtx.site)** | An online book on the Racket programming language |
 
 ## Features
