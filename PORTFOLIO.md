@@ -11,7 +11,7 @@ offer/policy/issuance，产品侧零改动。
 
 ## 轨道与授权形态
 
-### 1. 商业支柱 — B2B 专业工具，养活独立开发的主力
+### 1. 商业支柱 — B2B 专业工具，终局单位经济的上限（自服务电商，不追直销）
 
 | 产品 | 源码许可 | 商业形态 |
 |---|---|---|
@@ -24,12 +24,14 @@ offer/policy/issuance，产品侧零改动。
 - 开源边界：源码许可与官方分发权益分离——官方 Pro 卖的是签名构建、更新、支持与验证
   资产，不是「禁止读源码」（gptp-studio `docs/licensing-model.md` 的结论全家族适用）。
 
-### 2. 消费买断 — BYO-key，无边际成本，一次性买断诚实可行
+### 2. 消费买断 — BYO-key / 本地优先，无托管成本，一次性买断诚实可行
 
 | 产品 | 源码许可 | 商业形态 |
 |---|---|---|
+| Fulcrum | BUSL-1.1 → MIT（2030-09-28 或各版首发四周年，先到者） | **消费线第一棒**。三平台全原生、无 WebView 的启动器，免费核心已完整；Pro 走买断 + 更新窗（Alfred Powerpack / Listary Pro / uTools 会员已证明该品类按份付费成立）。Pro 边界待设计，候选：工作流/自定义命令、主题、高级剪贴板。竞品现实：Raycast 已覆盖 macOS+Windows（订阅制、融资充足）、uTools 三平台 Electron 会员制——护城河是原生性能 + 本地隐私 + 工作流生态，不是收费墙 |
 | Booklight | AGPL-3.0 | 永久买断 + 更新窗 + 试用；模型自带 key，不自建托管 |
 | PodLens | AGPL-3.0 | 同 Booklight |
+| Taskly（候选） | AGPL-3.0 | 第三梯队：Things 式买断；等产品成熟并划出 Pro 边界再启动，现阶段永久免费 |
 
 ### 3. 免费 + 托管 Pro — 只有真实服务成本才配收订阅
 
@@ -44,14 +46,18 @@ offer/policy/issuance，产品侧零改动。
 
 | 产品 | 许可 | 定位 |
 |---|---|---|
-| Fulcrum | BUSL-1.1 → MIT（2030-09-28 起或各版本首发四周年，以先到者为准） | 竞争品类（启动器），源码可得建信任、防闭源竞品；现阶段免费获客，保留 Pro 化期权（BUSL 不阻止版权人随时商业化，装机量证明需求后可加 Pro 层） |
-| Taskly | AGPL-3.0 | 免费；Pro 功能（如有）观望 |
 | MoveBit / Payback | MIT | 完全赠送，建口碑 |
-| Threadly / SyncPilot | AGPL-3.0 | 社区善意；SyncPilot 依附第三方 Resilio，不作为生意 |
-| RegexMate | MIT | agent 生态分发器，最大化采用 |
-| Pitboard | MIT | 汽车内容资产，为汽车线背书 |
+| RegexMate | MIT | agent 生态分发器，最大化采用；远期可议团队 Pro，近期不动 |
 | Keyward | AGPL-3.0 | 安全工具开源即信任；同时是家族自用的发布基础设施 |
 | Racket 程序设计 / Yinwang Archive | — | 内容与生态引流 |
+
+### 维护模式 — 免费保活，不再新增投入
+
+| 产品 | 许可 | 处置 |
+|---|---|---|
+| SyncPilot | AGPL-3.0 | 依附第三方 Resilio，无商业前途；仅保活，上游变动只做兼容性修复 |
+| Threadly | AGPL-3.0 | Racket 社区工具；保活，远期可移交社区 |
+| Pitboard | MIT | 内容站保活；若汽车线内容获客价值不成立，可归档 |
 
 RelayPilot：架构 Alpha、无公开仓库，网络工具敏感度高——私有观望，不进收费计划。
 
@@ -62,14 +68,15 @@ Racket 协议与数据格式库族（uds / isotp / dbc / crc / pcap / …）。
 
 ## 收入架构
 
-收入支柱只有轨道 1：Autarx / FlashPilot / gPTP Studio 的 B2B 席位经济——单价高、
-客户少也能覆盖独立开发的生活线（对标 DaVinci / tresos / vFlash 是数万元级许可）。
-轨道 2 消费买断与轨道 3 托管订阅是补充。
+**近期现金流看消费线**（Fulcrum / Booklight / PodLens）：受众广、决策链短、个人可支付、
+在线自服务成交。**单位经济的上限仍是 B2B**（Autarx / FlashPilot / gPTP Studio，对标
+数万元级许可，几十个席位覆盖生活线）——但企业直接合作链路长、打磨期长，汽车线的姿势
+是**自服务电商 + 内容获客**（试用 → 在线购买 → Permit 凭证，全程无销售介入），把 B2B
+当终局支柱，不当近期现金流。
 
-轨道 4 与基础设施**不背收入指标**：Fulcrum 是 Rivet 技术旗舰展示位，Keyward 开源是
-安全信任状，RegexMate 做 agent 生态分发，其余是真实自用与社区/内容漏斗。
-免费层是营销成本，不是收入损失；判断某产品该不该收费，只看它是否属于轨道 1–3，
-不看它「能不能收」。
+收费判断标准：**红海不是免费的充分理由**。有真实差异化空位、且品类已被证明愿意按份
+付费（启动器：Alfred Powerpack / Listary Pro / uTools 会员）的产品应当收费。
+免费层是营销成本，不是收入损失；维护模式的产品连营销职能也弱时，进一步压缩投入。
 
 ## 授权形态词汇（与 Permit/commerce 一一对应）
 
@@ -81,10 +88,11 @@ Racket 协议与数据格式库族（uds / isotp / dbc / crc / pcap / …）。
 ## 节奏
 
 1. **现在（打磨期，推广未开始）**：打磨与定位对齐；全部产品免费/源码可得；不做任何价格预告，不做推广投放。
-2. **第一棒**：gptp-studio — 模式已落地，等产品稳定即开卖。
-3. **第二棒**：Booklight / PodLens — 买断制接入成本最低（两个 offer 即接入）。
-4. **第三棒**：Autarx / FlashPilot — B2B 席位与验证服务，护城河最深，打磨期最长。
-5. **commerce 部署后**：所有付费形态走统一 offer/policy/issuance。
+2. **第一棒：gptp-studio** — 纯自服务（无销售介入），模式已落地，用它验证整条链路。
+3. **第二棒：Fulcrum** — 消费线先锋；先设计并落地 Pro 边界，再开卖。
+4. **第三棒：Booklight / PodLens** — 买断制接入成本最低。
+5. **长线支柱：Autarx / FlashPilot** — 自服务电商，不追企业直销；打磨到企业可信为止，不设时间表。
+6. **commerce 部署后**：所有付费形态走统一 offer/policy/issuance。
 
 ## 文档同步约定
 
