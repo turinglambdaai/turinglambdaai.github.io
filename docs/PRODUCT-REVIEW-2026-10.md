@@ -74,9 +74,9 @@ Booklight #17/#19，以及 Fulcrum 的交互/发布与功能切片。开放 PR �
 | yinwang-archive | P2 | 这是内容归档项目，不应用桌面更新/收费基线；最新master与gh-pages分支均需保留其部署用途。 | [审查 issue](https://github.com/turinglambdaai/yinwang-archive/issues/5) |
 | racket-programming | P2 | 在线书属于免费社区内容，需用示例可运行、导航和勘误作为交付标准。代码书不应继承桌面产品的移动/许可队列。 | [审查 issue](https://github.com/turinglambdaai/racket-programming/issues/8) |
 
-Keepsake / Moonbeam 的主页入口存在，但本轮连接按项目名搜索为空，仓库读取返回 404。
-无法据此判断仓库是私有、改名或缺权限；不能称其不存在。源码、维护者、规范/发布
-证据映射补齐前，只保留诚实的进度入口，不臆造问题或改动实现。
+用户已确认 Keepsake / Moonbeam 等本轮找不到的仓库已删除。Keepsake / Moonbeam
+退出当前产品组合，不再作为来源待补、待恢复或待收费项目。主站残留产品卡、进度入口、
+导航、双语文案与文档引用应清理；历史审查记录保留删除事实，不据此重建仓库。
 
 ## 收费模式与投入
 
@@ -109,7 +109,7 @@ yinwang-archive 的 gh-pages 是部署分支，不是无用分支。
 ## 主页
 
 主页实施沿 [#2](https://github.com/turinglambdaai/turinglambdaai.github.io/issues/2)，
-分支/来源盘点沿 [#3](https://github.com/turinglambdaai/turinglambdaai.github.io/issues/3)。
+分支盘点与已删除项目引用清理沿 [#3](https://github.com/turinglambdaai/turinglambdaai.github.io/issues/3)。
 
 [HOME-PAGE-PLAN](HOME-PAGE-PLAN.md) 规定主站的精选故事、完整目录、实验区、builder区，
 以及产品页统一的任务/下载/隐私/收费/支持结构。保留双语、静态和自托管字体。
@@ -145,8 +145,8 @@ cancelled 与 skipped 均未当作通过。执行前重新检查当前状态。
 | podlens | main | [40acec2](https://github.com/turinglambdaai/podlens/tree/40acec2cbdd22097ae7fdf26b023ceb57085aee5) | v0.3.0 |
 | payback | main | [33729c0](https://github.com/turinglambdaai/payback/tree/33729c01b50221d52324124f637373b3294ab5a2) | v1.10.3 |
 | booklight | main | [06e0331](https://github.com/turinglambdaai/booklight/tree/06e033192be4bbce3ad6e4781291c372af728a6d) | v0.7.0 |
-| keepsake | main | 未解析 | 无可核验发布 |
-| moonbeam | main | 未解析 | 无可核验发布 |
+| keepsake | — | 用户确认已删除 | 退出当前组合 |
+| moonbeam | — | 用户确认已删除 | 退出当前组合 |
 | keyward | main | [24ce217](https://github.com/turinglambdaai/keyward/tree/24ce2178449d9ac06ad067f57b8ee360ce33b6cd) | v0.2.0 |
 | pitboard | main | [e9eb0e4](https://github.com/turinglambdaai/pitboard/tree/e9eb0e4f3d8a8c00de2c8540c1dbdc8e7f7f0aa9) | 无可核验发布 |
 | yinwang-archive | master | [06b9ed9](https://github.com/turinglambdaai/yinwang-archive/tree/06b9ed9eb0cf7ad6717f1f7df6598cb2f110593d) | 无可核验发布 |
