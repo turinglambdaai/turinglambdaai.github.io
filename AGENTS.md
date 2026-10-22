@@ -24,3 +24,7 @@ turinglambdaai 家族主站（jrtx.site）——纯静态 HTML/CSS 单页，零�
 - 零依赖：不引外部 JS/CSS 框架；字体只走自托管（禁 Google Fonts，大陆阻塞首屏）。
 - 页面含 data-i18n 双语文案，改动须中英同步。
 - 头部不放版本号（版本信息只在各产品仓库/About 承载）。
+
+## 产品组合与交付治理
+
+组合归属以 `PORTFOLIO.md` 为准；交付基线见 `docs/PRODUCT-STANDARD.md`，本轮逐产品证据与 issue 入口见 `docs/PRODUCT-REVIEW-2026-10.md`，主页改版执行简报见 `docs/HOME-PAGE-PLAN.md`。库间依赖图仍以 Keel 的 `docs/family-architecture.md` 为准，不在主站另造协议或复制各仓实施队列。
