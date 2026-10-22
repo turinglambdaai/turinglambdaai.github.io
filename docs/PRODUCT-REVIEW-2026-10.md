@@ -23,6 +23,14 @@ inspect/doctor/schema/acceptance 已是正确基础，下一步是干净环境�
 
 ## 基础库现状
 
+执行入口：[Rivet #314](https://github.com/turinglambdaai/rivet/issues/314)、
+[Glaze #76](https://github.com/turinglambdaai/glaze/issues/76)、
+[Keel #6](https://github.com/turinglambdaai/keel/issues/6)、
+[Commerce #4](https://github.com/turinglambdaai/commerce/issues/4)。
+文档修正：[Rivet #313](https://github.com/turinglambdaai/rivet/pull/313)、
+[Permit #8](https://github.com/turinglambdaai/permit/pull/8)、
+[Commerce #3](https://github.com/turinglambdaai/commerce/pull/3)。
+
 | 库 | 已有基础 | 本轮判断与下一步 |
 | --- | --- | --- |
 | Rivet | v0.12.0；原生宿主、类型化客户端、schema/acceptance/matrix；多条 companion PR | 继续原 desktop/mobile handoff；修 #310/#311 诊断体验；手机 companion 与独立移动应用分别表述；补交互契约与新手验收旅程 |
@@ -46,25 +54,25 @@ Booklight #17/#19，以及 Fulcrum 的交互/发布与功能切片。开放 PR �
 
 | 产品 | 优先级 | 已核验差距 / 首要动作 | 执行入口 |
 | --- | --- | --- | --- |
-| taskly | P1 | Taskly 是较好的交付样板，但 main 的 rivet-acceptance requirements 没有 release kind；反馈 #55/#56 与 Windows 快捷键 #57 仍在推进。AGENTS/CLI 有些断言和计数是历史快照。 | 本轮执行 issue 待登记 |
-| autarx | P1 | docs/ROADMAP.md 的 M9 仍列 licensing、大 OEM 性能与签名/公证；早期 M0 还把 Avalonia 写成当前基础。三平台 native 和 acceptance 已存在，应在现有路径收尾。 | 本轮执行 issue 待登记 |
-| flashpilot | P1 | main 已声明 AGPL、Rivet GUI 和模拟 ECU acceptance；v0.1.0 发布资产是独立 zip，未见 update manifest。README 的 license-free 定位需与官方 Pro 计划解释一致；#3 正在新增 ODX/MCP，当前共享层有写入者。 | 本轮执行 issue 待登记 |
-| gptp-studio | P0 | 默认分支 docs/index.html 仍写 GTK3+WebKitGTK4.1，与 Rivet/GTK4 当前架构冲突。PRICING 的“5席”解释为5台设备，named seats/devices 语义未分清；#33/#34 正在补分发产物，不能重复。 | 本轮执行 issue 待登记 |
-| movebit | P1 | main README 仍把 native in-app update 列为待办，而本地/远端提交标题和 CHANGELOG 已描述0.5.0更新适配。快照最新 published release 仍为0.4.0；main、tag、published 必须分别表述。 | 本轮执行 issue 待登记 |
-| hackdigest | P1 | backend/main.rkt 仅 macOS 默认 native，Windows/Linux 默认 HTTP；框架1.0计划已把该差距列为 gate。README 的 fair-use unlimited 没有可核验预算，AGENTS 很短，缺完整入口。 当前默认分支树未见 glaze.rktd/schema baseline，与框架计划中的消费者进度叙述不符，须复核。 | 本轮执行 issue 待登记 |
-| threadly | P1 | README 仍称 read-only/no credentials/macOS shell，同时 M1–M3 勾选三端登录回帖、通知与AI；仓库没有 rivet-acceptance.rktd。维护产品需要真实交付证据，无需自动扩展移动端。 | 本轮执行 issue 待登记 |
-| regexmate | P0 | LICENSE Additional Use Grant 明确允许 internal production、CI 与 agents；主站 PORTFOLIO 却把团队/商业 CI 作为收费边界。已有 #3 记录换照，不能把现行许可描述成企业内部使用需付费。 | 本轮执行 issue 待登记 |
-| fulcrum | P1 | 已有 cross-platform-interaction.md 与 #36 收敛交互，#72/#73 是公证/真实更新门禁，多条新功能PR正在推进。未来 Pro 若直接收费既有剪贴板/快捷键会破坏免费基线。 | 本轮执行 issue 待登记 |
-| publy | P1 | README/AGENTS 的 M0 design 标记与0.8.3发布/日常dogfooding冲突。AGENTS 记录 WebSocket query key，需要审计URL/代理日志泄漏；它是TypeScript发布服务加Racket旁路，不应为统一技术栈重写。 | 本轮执行 issue 待登记 |
-| syncpilot | P2 | README诚实说明更新只下载验签tar.gz、应用需手动解压；已有0.8.4分发和acceptance。该产品被组合列为保活，不应再扩大重写或跨端工作。 | 本轮执行 issue 待登记 |
-| relaypilot | P2 | 源码仓库可访问、README明确无可运行VPN/TUN/UI，而PORTFOLIO仍写无公开仓库。许可是专有，源码可访问不等于开源。 | 本轮执行 issue 待登记 |
-| podlens | P1 | README与app/core/config.rkt明确将api-key存本地JSON；现有#11/#12补Linux功能和试听，不能重写活动共享层。平台图仍只有macOS/Windows，当前有Linux宿主。 | 本轮执行 issue 待登记 |
-| payback | P0 | PRICING仍规划桌面10设备限制/付费导出/全平台包与早鸟，site/index.html也预告桌面Pro；与PORTFOLIO的MIT桌面永久免费相冲突。#17/#18/#19正在统一同步与三端布局。 | 本轮执行 issue 待登记 |
-| booklight | P1 | README把三端阅读/主题/批注统称完成，#17/#19仍在做PDF night/EPUB annotations；必须区分main功能与已发布包。reader有数据/编辑风险，不宜直接扩手机端。 | 本轮执行 issue 待登记 |
-| keyward | P1 | #1/#2分别记录多私钥只校验首项及缺少用途说明；README宣称Deep check较宽。快照0.2.0有hash sidecars但无update manifest，且没有rivet-acceptance契约。 | 本轮执行 issue 待登记 |
-| pitboard | P2 | PORTFOLIO把产品列为保活，docs/ROADMAP仍有实体扩张、读者BYOK、移动端等长队列。内容站的基线应是稳定出刊、来源透明和更正，非桌面安装器。 | 本轮执行 issue 待登记 |
-| yinwang-archive | P2 | 这是内容归档项目，不应用桌面更新/收费基线；最新master与gh-pages分支均需保留其部署用途。 | 本轮执行 issue 待登记 |
-| racket-programming | P2 | 在线书属于免费社区内容，需用示例可运行、导航和勘误作为交付标准。代码书不应继承桌面产品的移动/许可队列。 | 本轮执行 issue 待登记 |
+| taskly | P1 | Taskly 是较好的交付样板，但 main 的 rivet-acceptance requirements 没有 release kind；反馈 #55/#56 与 Windows 快捷键 #57 仍在推进。AGENTS/CLI 有些断言和计数是历史快照。 | [审查 issue](https://github.com/turinglambdaai/taskly/issues/58) |
+| autarx | P1 | docs/ROADMAP.md 的 M9 仍列 licensing、大 OEM 性能与签名/公证；早期 M0 还把 Avalonia 写成当前基础。三平台 native 和 acceptance 已存在，应在现有路径收尾。 | [审查 issue](https://github.com/turinglambdaai/autarx/issues/22) |
+| flashpilot | P1 | main 已声明 AGPL、Rivet GUI 和模拟 ECU acceptance；v0.1.0 发布资产是独立 zip，未见 update manifest。README 的 license-free 定位需与官方 Pro 计划解释一致；#3 正在新增 ODX/MCP，当前共享层有写入者。 | [审查 issue](https://github.com/turinglambdaai/flashpilot/issues/4) |
+| gptp-studio | P0 | 默认分支 docs/index.html 仍写 GTK3+WebKitGTK4.1，与 Rivet/GTK4 当前架构冲突。PRICING 的“5席”解释为5台设备，named seats/devices 语义未分清；#33/#34 正在补分发产物，不能重复。 | [审查 issue](https://github.com/turinglambdaai/gptp-studio/issues/35) |
+| movebit | P1 | main README 仍把 native in-app update 列为待办，而本地/远端提交标题和 CHANGELOG 已描述0.5.0更新适配。快照最新 published release 仍为0.4.0；main、tag、published 必须分别表述。 | [审查 issue](https://github.com/turinglambdaai/movebit/issues/48) |
+| hackdigest | P1 | backend/main.rkt 仅 macOS 默认 native，Windows/Linux 默认 HTTP；框架1.0计划已把该差距列为 gate。README 的 fair-use unlimited 没有可核验预算，AGENTS 很短，缺完整入口。 当前默认分支树未见 glaze.rktd/schema baseline，与框架计划中的消费者进度叙述不符，须复核。 | [审查 issue](https://github.com/turinglambdaai/hackdigest/issues/2) |
+| threadly | P1 | README 仍称 read-only/no credentials/macOS shell，同时 M1–M3 勾选三端登录回帖、通知与AI；仓库没有 rivet-acceptance.rktd。维护产品需要真实交付证据，无需自动扩展移动端。 | [审查 issue](https://github.com/turinglambdaai/threadly/issues/1) |
+| regexmate | P0 | LICENSE Additional Use Grant 明确允许 internal production、CI 与 agents；主站 PORTFOLIO 却把团队/商业 CI 作为收费边界。已有 #3 记录换照，不能把现行许可描述成企业内部使用需付费。 | [审查 issue](https://github.com/turinglambdaai/regexmate/issues/4) |
+| fulcrum | P1 | 已有 cross-platform-interaction.md 与 #36 收敛交互，#72/#73 是公证/真实更新门禁，多条新功能PR正在推进。未来 Pro 若直接收费既有剪贴板/快捷键会破坏免费基线。 | [审查 issue](https://github.com/turinglambdaai/fulcrum/issues/88) |
+| publy | P1 | README/AGENTS 的 M0 design 标记与0.8.3发布/日常dogfooding冲突。AGENTS 记录 WebSocket query key，需要审计URL/代理日志泄漏；它是TypeScript发布服务加Racket旁路，不应为统一技术栈重写。 | [审查 issue](https://github.com/turinglambdaai/publy/issues/7) |
+| syncpilot | P2 | README诚实说明更新只下载验签tar.gz、应用需手动解压；已有0.8.4分发和acceptance。该产品被组合列为保活，不应再扩大重写或跨端工作。 | [审查 issue](https://github.com/turinglambdaai/syncpilot/issues/10) |
+| relaypilot | P2 | 源码仓库可访问、README明确无可运行VPN/TUN/UI，而PORTFOLIO仍写无公开仓库。许可是专有，源码可访问不等于开源。 | [审查 issue](https://github.com/turinglambdaai/relaypilot/issues/1) |
+| podlens | P1 | README与app/core/config.rkt明确将api-key存本地JSON；现有#11/#12补Linux功能和试听，不能重写活动共享层。平台图仍只有macOS/Windows，当前有Linux宿主。 | [审查 issue](https://github.com/turinglambdaai/podlens/issues/13) |
+| payback | P0 | PRICING仍规划桌面10设备限制/付费导出/全平台包与早鸟，site/index.html也预告桌面Pro；与PORTFOLIO的MIT桌面永久免费相冲突。#17/#18/#19正在统一同步与三端布局。 | [审查 issue](https://github.com/turinglambdaai/payback/issues/20) |
+| booklight | P1 | README把三端阅读/主题/批注统称完成，#17/#19仍在做PDF night/EPUB annotations；必须区分main功能与已发布包。reader有数据/编辑风险，不宜直接扩手机端。 | [审查 issue](https://github.com/turinglambdaai/booklight/issues/20) |
+| keyward | P1 | #1/#2分别记录多私钥只校验首项及缺少用途说明；README宣称Deep check较宽。快照0.2.0有hash sidecars但无update manifest，且没有rivet-acceptance契约。 | [审查 issue](https://github.com/turinglambdaai/keyward/issues/3) |
+| pitboard | P2 | PORTFOLIO把产品列为保活，docs/ROADMAP仍有实体扩张、读者BYOK、移动端等长队列。内容站的基线应是稳定出刊、来源透明和更正，非桌面安装器。 | [审查 issue](https://github.com/turinglambdaai/pitboard/issues/1) |
+| yinwang-archive | P2 | 这是内容归档项目，不应用桌面更新/收费基线；最新master与gh-pages分支均需保留其部署用途。 | [审查 issue](https://github.com/turinglambdaai/yinwang-archive/issues/5) |
+| racket-programming | P2 | 在线书属于免费社区内容，需用示例可运行、导航和勘误作为交付标准。代码书不应继承桌面产品的移动/许可队列。 | [审查 issue](https://github.com/turinglambdaai/racket-programming/issues/8) |
 
 Keepsake / Moonbeam 的主页入口存在，但本轮连接按项目名搜索为空，仓库读取返回 404。
 无法据此判断仓库是私有、改名或缺权限；不能称其不存在。源码、维护者、规范/发布
@@ -99,6 +107,9 @@ yinwang-archive 的 gh-pages 是部署分支，不是无用分支。
 复制一份家族架构。产品标准、主页简报和各库规范互相链接。
 
 ## 主页
+
+主页实施沿 [#2](https://github.com/turinglambdaai/turinglambdaai.github.io/issues/2)，
+分支/来源盘点沿 [#3](https://github.com/turinglambdaai/turinglambdaai.github.io/issues/3)。
 
 [HOME-PAGE-PLAN](HOME-PAGE-PLAN.md) 规定主站的精选故事、完整目录、实验区、builder区，
 以及产品页统一的任务/下载/隐私/收费/支持结构。保留双语、静态和自托管字体。
