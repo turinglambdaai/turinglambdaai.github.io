@@ -71,5 +71,7 @@ source SHA. Preserve the last deployed commit for rollback.
 First fix the observed gPTP Studio old GTK/WebView claims, Payback desktop-Pro
 promise and source/license wording conflicts. Then ship the main-site hierarchy,
 then the commercial/consumer canary product pages, then the remaining catalog.
-Missing-source products remain honest progress entries until their source and
-release evidence are available.
+Keepsake and Moonbeam were confirmed deleted by the owner. Remove their
+remaining cards, progress CTAs, navigation and bilingual text from the main
+site and current product catalog. Do not retain them as upcoming products or
+create source-recovery work for them.
