@@ -35,8 +35,6 @@
         .product-card:hover .product-cta { transform: translateX(3px); }
 
         /* Edition chips — the licensing form of each product, factual only */
-        .product-edition { font-size: 0.72em; font-weight: 500; padding: 3px 8px; border-radius: 100px; border: 1px solid var(--border); color: var(--text-3); }
-        .product-edition--pro { border-color: color-mix(in srgb, var(--accent) 40%, transparent); color: var(--accent); background: color-mix(in srgb, var(--accent) 7%, transparent); }
 
         /* Works section — three groups, roomier rhythm */
         #works { padding: 76px 0 64px; scroll-margin-top: 40px; }
@@ -245,7 +243,6 @@ var _hmt = _hmt || [];
                         <div class="product-name-row">
                             <h3 class="product-name">FlashPilot</h3>
                             <span class="product-layer">Rivet</span>
-                            <span class="product-edition" data-i18n="ed_open">开源</span>
                         </div>
                         <p class="product-tagline" data-i18n="fp_tag">Agent 原生的 ECU 刷写引擎</p>
                         <p class="product-desc" data-i18n="fp_desc">把 ECU 刷写交给 agent：UDS 诊断与刷写走 CAN（ISO-TP）/DoIP/LIN，声明式刷写计划可版本化、可评审，agent-first CLI 带稳定退出码与失败证据。对标 vFlash 的 AI 时代替代品。</p>
@@ -255,7 +252,6 @@ var _hmt = _hmt || [];
                         <div class="product-name-row">
                             <h3 class="product-name">Pitboard</h3>
                             <span class="product-layer">Racket</span>
-                            <span class="product-edition" data-i18n="ed_open">开源</span>
                         </div>
                         <p class="product-tagline" data-i18n="pb_tag">汽车行业的每日热点日报站</p>
                         <p class="product-desc" data-i18n="pb_desc">把开源项目、行业资讯、前沿论文抓到一起，聚簇去重，按独立来源数与时间衰减算热度，每天出刊一张「pit 板」。Racket web-server 全栈、单进程自托管、零外部依赖，RSS/JSON/Markdown/llms.txt/SSE 全套 Agent 出口。</p>
@@ -265,7 +261,6 @@ var _hmt = _hmt || [];
                         <div class="product-name-row">
                             <h3 class="product-name">Autarx</h3>
                             <span class="product-layer">Rivet</span>
-                            <span class="product-edition product-edition--pro" data-i18n="ed_proprietary">专有许可</span>
                         </div>
                         <p class="product-tagline" data-i18n="ax_tag">AUTOSAR 集成工作台</p>
                         <p class="product-desc" data-i18n="ax_desc">语义索引 OEM 交付的 ARXML：引用图追溯、两版交付语义 diff、ECU 影响分析、通信链路投影；受控编辑全程语义 diff 门禁，AI agent 走 MCP 接口，现已发布。</p>
@@ -275,10 +270,9 @@ var _hmt = _hmt || [];
                         <div class="product-name-row">
                             <h3 class="product-name">gPTP Studio</h3>
                             <span class="product-layer">Rivet</span>
-                            <span class="product-edition product-edition--pro" data-i18n="ed_open_core_pro">开源核心 + Pro</span>
                         </div>
                         <p class="product-tagline" data-i18n="gs_tag">Linux 原生的 gPTP 调试工作台</p>
-                        <p class="product-desc" data-i18n="gs_desc">gPTP / IEEE 802.1AS 调试利器：GrandMaster / Slave / Listener 一键切换、实时同步曲线、报文全字段解码，Doctor 环境体检，内置模拟器。开源核心 + Pro。</p>
+                        <p class="product-desc" data-i18n="gs_desc">gPTP / IEEE 802.1AS 调试利器：GrandMaster / Slave / Listener 一键切换、实时同步曲线、报文全字段解码，Doctor 环境体检，内置模拟器。</p>
                         <span class="product-cta" data-i18n="cta_download">立即下载 →</span>
                     </a>
                 </div>
@@ -291,7 +285,6 @@ var _hmt = _hmt || [];
                         <div class="product-name-row">
                             <h3 class="product-name">Taskly</h3>
                             <span class="product-layer">Rivet</span>
-                            <span class="product-edition" data-i18n="ed_open">开源</span>
                         </div>
                         <p class="product-tagline" data-i18n="tk_tag">跨平台任务管理，简洁专注</p>
                         <p class="product-desc" data-i18n="tk_desc">仿 macOS Reminders 的桌面任务管理器，Rivet 架构——一个 Racket 核心驱动三端原生宿主，数据就是本地 SQLite 单文件。三平台可下载；CLI 从源码运行，独立分发在路线图上。</p>
@@ -301,7 +294,6 @@ var _hmt = _hmt || [];
                         <div class="product-name-row">
                             <h3 class="product-name">MoveBit</h3>
                             <span class="product-layer">Rivet</span>
-                            <span class="product-edition" data-i18n="ed_open">开源</span>
                         </div>
                         <p class="product-tagline" data-i18n="mv_tag">强制你离开椅子的健康提醒</p>
                         <p class="product-desc" data-i18n="mv_desc">统计真实工作时长，到点用全屏倒计时锁定每台显示器请你起身；喝水提醒只做轻量 toast。Windows / macOS / Linux。</p>
@@ -311,7 +303,6 @@ var _hmt = _hmt || [];
                         <div class="product-name-row">
                             <h3 class="product-name">HackDigest</h3>
                             <span class="product-layer">Glaze</span>
-                            <span class="product-edition product-edition--pro" data-i18n="ed_free_pro">Free + Pro</span>
                         </div>
                         <p class="product-tagline" data-i18n="hd_tag">把 Hacker News 读成中文</p>
                         <p class="product-desc" data-i18n="hd_desc">给非英语开发者的 HN 阅读器：内置翻译与三层 AI 摘要——文章 TL;DR、评论区观点提炼、每日晨报。自带 API Key 全功能免费，Pro 提供托管翻译与同步。</p>
@@ -321,7 +312,6 @@ var _hmt = _hmt || [];
                         <div class="product-name-row">
                             <h3 class="product-name">Threadly</h3>
                             <span class="product-layer">Rivet</span>
-                            <span class="product-edition" data-i18n="ed_open">开源</span>
                         </div>
                         <p class="product-tagline" data-i18n="th_tag">Racket 社区论坛的原生客户端</p>
                         <p class="product-desc" data-i18n="th_desc">给 racket.discourse.group 的原生阅读器：匿名公开 JSON API 加礼貌的磁盘缓存，在浏览器之外读长帖、搜归档；论坛原色分类、帖子头像与 680px 阅读栏宽。Rivet 线——一个 Racket 引擎驱动三端原生壳，macOS / Windows / Linux 安装包已可下载，读帖回帖之外还带 AI 摘要与翻译；移动端在路上。</p>
@@ -331,7 +321,6 @@ var _hmt = _hmt || [];
                         <div class="product-name-row">
                             <h3 class="product-name">RegexMate</h3>
                             <span class="product-layer">Rivet</span>
-                            <span class="product-edition product-edition--pro" data-i18n="ed_source">源码可得</span>
                         </div>
                         <p class="product-tagline" data-i18n="rm_tag">面向人与 agent 的正则工作台</p>
                         <p class="product-desc" data-i18n="rm_desc">一条命令搞定正则的校验、匹配、解释、替换、铁路图、批量测试与风险 lint；MCP server 七个工具原生接入智能体，版本化 JSON 契约与明确退出码为 agent 与 CI 设计。三平台独立二进制，免装运行时。</p>
@@ -341,7 +330,6 @@ var _hmt = _hmt || [];
                         <div class="product-name-row">
                             <h3 class="product-name">Fulcrum</h3>
                             <span class="product-layer">Rivet</span>
-                            <span class="product-edition product-edition--pro" data-i18n="ed_source">源码可得</span>
                         </div>
                         <p class="product-tagline" data-i18n="fc_tag">一次按键，直达一切</p>
                         <p class="product-desc" data-i18n="fc_desc">键盘优先的三平台启动器：模糊搜索应用、剪贴板历史与片段，内联计算、Web 搜索 bang 与系统命令。一个 Racket 大脑，WinUI 3 / SwiftUI / GTK4 三套原生 UI，无 WebView，数据不出本机。</p>
@@ -351,7 +339,6 @@ var _hmt = _hmt || [];
                         <div class="product-name-row">
                             <h3 class="product-name">Publy</h3>
                             <span class="product-layer">TypeScript</span>
-                            <span class="product-edition" data-i18n="ed_open_core">开源核心</span>
                         </div>
                         <p class="product-tagline" data-i18n="py_tag">agent 时代的公众号发布管线</p>
                         <p class="product-desc" data-i18n="py_desc">写作留在 Obsidian，发布交给 agent：一条命令完成排版与小绿书卡片渲染，主题即 npm 包，托管服务负责稳定发布。只走官方 API，开源核心不做锁定。</p>
@@ -361,7 +348,6 @@ var _hmt = _hmt || [];
                         <div class="product-name-row">
                             <h3 class="product-name">SyncPilot</h3>
                             <span class="product-layer">Rivet</span>
-                            <span class="product-edition" data-i18n="ed_open">开源</span>
                         </div>
                         <p class="product-tagline" data-i18n="sp_tag">Resilio Sync 的 Linux 原生桌面</p>
                         <p class="product-desc" data-i18n="sp_desc">内嵌官方 Resilio Web UI 的 Linux 桌面壳：Racket 领域核心驱动 GTK4 原生宿主，托管 rslsync 守护进程——生命周期、崩溃看护、开机自启、首次运行一键装官方二进制。仅走环回代理，密钥与文件不出本机。</p>
@@ -371,7 +357,6 @@ var _hmt = _hmt || [];
                         <div class="product-name-row">
                             <h3 class="product-name">RelayPilot</h3>
                             <span class="product-layer">Rivet</span>
-                            <span class="product-edition" data-i18n="ed_planned">规划中</span>
                         </div>
                         <p class="product-tagline" data-i18n="rp_tag">一套 Profile，覆盖每一台设备</p>
                         <p class="product-desc" data-i18n="rp_desc">Local-first 原生网络工具箱：一套 Racket 控制平面统一 Profile、规则与策略组，每条路由都有确定性 DecisionTrace，Xray 只是第一个可替换引擎。桌面与移动端规划中，当前为架构 Alpha。</p>
@@ -381,7 +366,6 @@ var _hmt = _hmt || [];
                         <div class="product-name-row">
                             <h3 class="product-name">PodLens</h3>
                             <span class="product-layer">Rivet</span>
-                            <span class="product-edition" data-i18n="ed_open">开源</span>
                         </div>
                         <p class="product-tagline" data-i18n="pl_tag">听得懂的英文播客</p>
                         <p class="product-desc" data-i18n="pl_desc">跨平台桌面播客应用：用你自己的大模型 API key，把英文单集转写、逐句翻译、自动总结——为「读得懂、听不懂」的听众而生。Rivet 原生架构，转录、翻译与摘要全部缓存在本机。</p>
@@ -391,7 +375,6 @@ var _hmt = _hmt || [];
                         <div class="product-name-row">
                             <h3 class="product-name">Payback</h3>
                             <span class="product-layer">Rivet</span>
-                            <span class="product-edition" data-i18n="ed_open">开源</span>
                         </div>
                         <p class="product-tagline" data-i18n="pay_tag">每一台设备，都在一天天回本</p>
                         <p class="product-desc" data-i18n="pay_desc">记下购买价格，看每日成本一天天下落；设定「一天值多少钱」，看回本进度环一点点走满。Rivet 原生应用（macOS / Windows / Linux），数据存于单份可读文件。</p>
@@ -402,7 +385,6 @@ var _hmt = _hmt || [];
                             <div class="product-name-row">
                                 <h3 class="product-name">Booklight</h3>
                                 <span class="product-layer">Rivet</span>
-                                <span class="product-edition" data-i18n="ed_open">开源</span>
                             </div>
                             <p class="product-tagline" data-i18n="pg_tag">把安静的书架，带给每个桌面</p>
                         </div>
@@ -413,7 +395,6 @@ var _hmt = _hmt || [];
                         <div class="product-name-row">
                             <h3 class="product-name">Keyward</h3>
                             <span class="product-layer">Rivet</span>
-                            <span class="product-edition" data-i18n="ed_open">开源</span>
                         </div>
                         <p class="product-tagline" data-i18n="kw_tag">自更新应用的签名钥保险库</p>
                         <p class="product-desc" data-i18n="kw_desc">私钥签更新清单、公钥嵌在已装应用里验签——Sparkle、Tauri、electron-updater 全是这一套，缺的是私钥的日常托管。值永不显示只进剪贴板，每次改动先快照，深度校验（解析/配对/指纹），生成即入库。同步盘明文 INI 单源，引擎零网络。macOS / Windows / Linux。</p>
@@ -495,14 +476,6 @@ var _hmt = _hmt || [];
                     <p class="oss-desc" data-i18n="oss_commerce">独立软件的中立商业编排层：支付事件持久入库、重复投递无害，商业结果签成 Permit 权利——产品不碰渠道密钥，换支付渠道不改产品。</p>
                 </a>
 
-                <a href="https://github.com/turinglambdaai?tab=repositories" class="oss-card" target="_blank" rel="noopener">
-                    <div class="oss-head">
-                        <h3 class="oss-name">Racket 库族</h3>
-                        <span class="product-layer">Racket</span>
-                    </div>
-                    <p class="oss-desc" data-i18n="oss_libs">汽车协议与数据格式的纯 Racket 实现族：UDS / ISO-TP / DBC / OBD2、pcap / PCD / TIFF / FlatBuffers / nanoarrow、CRC / LZF / 四元数、ONNX Runtime、HTTP/2 / WebSocket / feed——产品线的地基，也是社区可直接取用的积木。</p>
-                </a>
-
             </div>
         </div>
     </section>
@@ -552,7 +525,7 @@ var _hmt = _hmt || [];
             rm_tag: { zh: "面向人与 agent 的正则工作台", en: "The regex workbench for humans and agents" },
             rm_desc: { zh: "一条命令搞定正则的校验、匹配、解释、替换、铁路图、批量测试与风险 lint；MCP server 七个工具原生接入智能体，版本化 JSON 契约与明确退出码为 agent 与 CI 设计。三平台独立二进制，免装运行时。", en: "Validate, match, explain, replace, graph, batch-test and lint regexes from one CLI; an MCP server exposes seven native agent tools over a versioned JSON contract with honest exit codes. Standalone binaries for three platforms." },
             gs_tag: { zh: "Linux 原生的 gPTP 调试工作台", en: "The Linux-native gPTP debugging workstation" },
-            gs_desc: { zh: "gPTP / IEEE 802.1AS 调试利器：GrandMaster / Slave / Listener 一键切换、实时同步曲线、报文全字段解码，Doctor 环境体检，内置模拟器。开源核心 + Pro。", en: "Linux-native gPTP / IEEE 802.1AS debugging: GrandMaster / Slave / Listener in one click, live sync curves, full packet decode, a Doctor readiness check, and a built-in simulator. Open-source core + Pro." },
+            gs_desc: { zh: "gPTP / IEEE 802.1AS 调试利器：GrandMaster / Slave / Listener 一键切换、实时同步曲线、报文全字段解码，Doctor 环境体检，内置模拟器。", en: "Linux-native gPTP / IEEE 802.1AS debugging: GrandMaster / Slave / Listener in one click, live sync curves, full packet decode, a Doctor readiness check, and a built-in simulator." },
             tk_tag: { zh: "跨平台任务管理，简洁专注", en: "Cross-platform tasks, simple and focused" },
             tk_desc: { zh: "仿 macOS Reminders 的桌面任务管理器，Rivet 架构——一个 Racket 核心驱动三端原生宿主，数据就是本地 SQLite 单文件。三平台可下载；CLI 从源码运行，独立分发在路线图上。", en: "A macOS Reminders-style task manager on the Rivet architecture — one Racket core behind three native hosts, with data in a single local SQLite file. Downloadable on all three platforms; the CLI runs from source, standalone distribution is on the roadmap." },
             cta_download: { zh: "立即下载 →", en: "Download →" },
@@ -593,14 +566,6 @@ var _hmt = _hmt || [];
             pl_desc: { zh: "跨平台桌面播客应用：用你自己的大模型 API key，把英文单集转写、逐句翻译、自动总结——为「读得懂、听不懂」的听众而生。Rivet 原生架构，转录、翻译与摘要全部缓存在本机。", en: "A cross-platform podcast player that transcribes, translates and summarizes English episodes with your own LLM API key — for listeners who understand far more reading than hearing. Rivet-native, with transcripts, translations and summaries cached on your machine." },
             pay_tag: { zh: "每一台设备，都在一天天回本", en: "Every device pays itself back, one day at a time" },
             pay_desc: { zh: "记下购买价格，看每日成本一天天下落；设定「一天值多少钱」，看回本进度环一点点走满。Rivet 原生应用（macOS / Windows / Linux），数据存于单份可读文件。", en: "Record what you paid and watch the daily cost tick down; set what a day with the device is worth to you and fill the payback ring. A Rivet-native app for macOS, Windows and Linux, storing one human-readable file." },
-            ed_open: { zh: "开源", en: "Open source" },
-            ed_open_core_pro: { zh: "开源核心 + Pro", en: "Open core + Pro" },
-            ed_open_core: { zh: "开源核心", en: "Open core" },
-            ed_free_pro: { zh: "Free + Pro", en: "Free + Pro" },
-            ed_source: { zh: "源码可得", en: "Source-available" },
-            ed_proprietary: { zh: "专有许可", en: "Proprietary" },
-            ed_planned: { zh: "规划中", en: "Planned" },
-            oss_libs: { zh: "汽车协议与数据格式的纯 Racket 实现族：UDS / ISO-TP / DBC / OBD2、pcap / PCD / TIFF / FlatBuffers / nanoarrow、CRC / LZF / 四元数、ONNX Runtime、HTTP/2 / WebSocket / feed——产品线的地基，也是社区可直接取用的积木。", en: "A pure-Racket family for automotive protocols and data formats: UDS / ISO-TP / DBC / OBD2, pcap / PCD / TIFF / FlatBuffers / nanoarrow, CRC / LZF / quaternions, ONNX Runtime, HTTP/2 / WebSocket / feeds — the ground the product line stands on, and building blocks the community can take directly." },
             meta_title: { zh: "TuringLambdaAI — 深度技术写作与独立开发", en: "TuringLambdaAI — Deep-dive technical writing & indie tools" },
             meta_desc: { zh: "车载软件工程师的深度技术写作与独立开发。把复杂的技术，做得直观好用。", en: "Automotive software engineer — deep-dive technical writing and indie developer tools. Making complex technology intuitive." }
         };
