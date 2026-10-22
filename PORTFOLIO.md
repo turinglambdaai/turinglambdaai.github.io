@@ -44,7 +44,7 @@ offer/policy/issuance，产品侧零改动。
 
 | 产品 | 许可 | 定位 |
 |---|---|---|
-| Fulcrum | BUSL-1.1 → MIT（2030-09-28 起或各版本首发四周年，以先到者为准） | 竞争品类（启动器），源码可得建信任、防闭源竞品；BUSL 期间定位免费 |
+| Fulcrum | BUSL-1.1 → MIT（2030-09-28 起或各版本首发四周年，以先到者为准） | 竞争品类（启动器），源码可得建信任、防闭源竞品；现阶段免费获客，保留 Pro 化期权（BUSL 不阻止版权人随时商业化，装机量证明需求后可加 Pro 层） |
 | Taskly | AGPL-3.0 | 免费；Pro 功能（如有）观望 |
 | MoveBit / Payback | MIT | 完全赠送，建口碑 |
 | Threadly / SyncPilot | AGPL-3.0 | 社区善意；SyncPilot 依附第三方 Resilio，不作为生意 |
@@ -59,6 +59,17 @@ RelayPilot：架构 Alpha、无公开仓库，网络工具敏感度高——私�
 
 rivet / glaze / keel（MIT）、permit / commerce（Apache-2.0）、
 Racket 协议与数据格式库族（uds / isotp / dbc / crc / pcap / …）。
+
+## 收入架构
+
+收入支柱只有轨道 1：Autarx / FlashPilot / gPTP Studio 的 B2B 席位经济——单价高、
+客户少也能覆盖独立开发的生活线（对标 DaVinci / tresos / vFlash 是数万元级许可）。
+轨道 2 消费买断与轨道 3 托管订阅是补充。
+
+轨道 4 与基础设施**不背收入指标**：Fulcrum 是 Rivet 技术旗舰展示位，Keyward 开源是
+安全信任状，RegexMate 做 agent 生态分发，其余是真实自用与社区/内容漏斗。
+免费层是营销成本，不是收入损失；判断某产品该不该收费，只看它是否属于轨道 1–3，
+不看它「能不能收」。
 
 ## 授权形态词汇（与 Permit/commerce 一一对应）
 
