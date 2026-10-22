@@ -83,3 +83,7 @@ turinglambdaai.github.io/
 185.199.110.153
 185.199.111.153
 ```
+
+## Maintainer map
+
+Product investment and commercial categories live in [PORTFOLIO.md](PORTFOLIO.md). The [delivery standard](docs/PRODUCT-STANDARD.md), [product review](docs/PRODUCT-REVIEW-2026-10.md), and [homepage brief](docs/HOME-PAGE-PLAN.md) route architecture and product work to its owning repository.

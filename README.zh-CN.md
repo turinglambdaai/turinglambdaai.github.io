@@ -83,3 +83,7 @@ turinglambdaai.github.io/
 185.199.110.153
 185.199.111.153
 ```
+
+## 维护导航
+
+产品投入和商业分类以 [PORTFOLIO.md](PORTFOLIO.md) 为准。[交付标准](docs/PRODUCT-STANDARD.md)、[逐产品审查](docs/PRODUCT-REVIEW-2026-10.md)和[主页规划](docs/HOME-PAGE-PLAN.md)将架构与产品工作路由到实际负责的仓库。
