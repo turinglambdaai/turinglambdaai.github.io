@@ -70,3 +70,18 @@ Taskly/Fulcrum 先证明愿意购买的成果；Booklight 不在阅读可靠性�
 2026-10-23 查阅：[Alfred 官方商店](https://www.alfredapp.com/shop/) 展示版本许可和升级型产品；[Raycast 官方价格](https://www.raycast.com/pricing) 展示免费核心与持续服务/AI 订阅。这些只证明市场存在多种包装方式，不证明我们的转化率或定价。选择有限买断主力、免费生态工具、托管才订阅，是结合本组合成本与独立维护能力作出的判断。
 
 共用交付要求见 [PRODUCT-STANDARD](docs/PRODUCT-STANDARD.md)，初始审查见 [PRODUCT-REVIEW](docs/PRODUCT-REVIEW-2026-10.md)，网站结构见 [HOME-PAGE-PLAN](docs/HOME-PAGE-PLAN.md)。代理开工以本文件和各仓 PRICING 为准；旧 dated review 中的商业分类只作审查历史，不再作为有效收费规则。
+
+## 授权接入路由
+
+决策修订：`2026-10-auth-1`，2026-10-23。这是维护者路由，不是用户收费导航，也不是运行时已经完成的证据。各应用中英文 PRICING 文档负责完整授权决定与验收门禁。
+
+| 产品 | 选定接法 |
+| --- | --- |
+| Taskly、Fulcrum、Booklight、gPTP Studio、Autarx、FlashPilot | 离线 Permit 权益，已获资格版本永久使用，付费更新/功能窗口；不采用激活租约、硬件绑定或设备上限。五席方案为命名分配，不是浮动并发 |
+| HackDigest、Publy | 账户绑定的托管订阅权益；服务端校验签名、当前修订/支付状态与原子配额。不提供离线托管额度，不使用桌面激活租约 |
+| Payback、PodLens、RegexMate、MoveBit、Keyward、Threadly、SyncPilot、RelayPilot | 不接商业 Permit/Commerce，不加授权账户或收费设备/席位门禁；移除冲突的历史限制后才能宣传无限制安装包 |
+| Pitboard、Racket 程序设计、Yinwang Archive | 免费内容/社区，不签发商业凭据，不加收费墙 |
+| Rivet、Glaze、Keel、Permit、Commerce | 基础库保留现行源码许可。产品授权方案留在产品，不给框架加收费墙 |
+
+授权实施切片开始前，读取本仓授权决定、对应 issue 与当前协议，记录源码/政策 SHA 和决策修订。文件或 issue 更新**不代表运行中的 agent 已确认阅读**；既有会话须在下一个切片边界刷新。Taskly #60 与 Payback #21 合并前仍是政策交接入口，默认 AGENTS 已指向；其余应用默认分支已落入本地决定。
+

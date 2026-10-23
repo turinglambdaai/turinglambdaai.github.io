@@ -46,6 +46,20 @@ Rivet, Glaze and Keel (MIT), Permit and Commerce (Apache-2.0), and the protocol-
 
 Source rights and official service rights are different. License credentials cannot revoke AGPL/Apache/MIT rights already granted; free use does not relabel BUSL source as MIT. Any future separately licensed component needs a clear boundary before development, rather than an improvised license change used as a moat.
 
+## Authorization integration map
+
+Decision revision: `2026-10-auth-1`, 2026-10-23. This is a maintainer routing map, not customer pricing navigation or evidence of runtime completion. Each application's paired PRICING documents own its complete authorization decision and acceptance gates.
+
+| Products | Chosen integration |
+| --- | --- |
+| Taskly, Fulcrum, Booklight, gPTP Studio, Autarx, FlashPilot | Offline Permit entitlement, perpetual eligible use plus a paid update/feature window; no activation lease, hardware binding or device cap. Five-seat offers use named assignments, not floating concurrency |
+| HackDigest, Publy | Account-scoped hosted subscription right; server verifies signed rights, current revision/payment state and atomic quota. No offline hosted-service allowance or desktop activation lease |
+| Payback, PodLens, RegexMate, MoveBit, Keyward, Threadly, SyncPilot, RelayPilot | No commercial Permit/Commerce integration, licensing accounts or paid device/seat gates; remove conflicting legacy restrictions before advertising an unrestricted build |
+| Pitboard, Racket Programming, Yinwang Archive | Free content/community; no commercial credentials or paywall |
+| Rivet, Glaze, Keel, Permit, Commerce | Infrastructure keeps existing source licenses. Product authorization profiles stay with products; no framework-owned paywall |
+
+Before a licensing slice, read the local authorization decision, relevant implementation issue and current protocol contract, then record source/policy SHAs and the decision revision. A live agent has **not** acknowledged this merely because a file or issue was updated. Existing conversations must refresh at their next bounded slice. Taskly #60 and Payback #21 remain the policy handoff until merged; their default AGENTS route there. Other applications have the decision on their default branches.
+
 ## Shared commercial and technical rules
 
 - **Local product purchases:** perpetual use with 12 months of new-version eligibility. Renewal is optional, does not charge automatically and does not back-bill gaps. Start a renewal from the later of payment time and the current expiry. Named users, devices and concurrent sessions are different concepts. No hardware fingerprints; no claim that fully offline credentials support prompt revocation.

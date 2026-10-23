@@ -138,6 +138,10 @@ owner and recovery ref. Keep open PRs and unmerged work. Prune only individually
 proven, recoverable candidates in a separate housekeeping change. Never rewrite
 published tags/history or remove an old installer needed for update testing.
 
+## Authorization decision before implementation
+
+Before changing trials, paid gates, credential import, renewal or update eligibility, read the product's complete authorization decision in its paired PRICING documents and the linked implementation issue. Explicitly select no commercial integration, offline perpetual entitlement, or server-verified hosted rights; activation leases are opt-in and need a named business reason. Record decision revision and actual source/policy SHAs, plus offline/outage/expiry/recovery evidence. No policy-file or issue update proves a running agent has acknowledged it. Keep these maintainer decisions outside customer website navigation.
+
 ## Commercial readiness
 
 Product features remain useful offline after an update window closes. Explicitly
