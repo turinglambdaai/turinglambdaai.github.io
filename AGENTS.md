@@ -43,6 +43,14 @@ Do not add external JS/CSS frameworks. Fonts stay self-hosted; external Google F
 
 `PORTFOLIO.md` and `PORTFOLIO.zh-CN.md` describe the same portfolio decisions. Delivery rules live in `docs/PRODUCT-STANDARD.md`, the dated product evidence/issue map in `docs/PRODUCT-REVIEW-2026-10.md`, and the website brief in `docs/HOME-PAGE-PLAN.md`. The dependency graph remains owned by Keel's `docs/family-architecture.md`; do not duplicate protocols or product implementation queues here.
 
+For packaging, updates, public distribution or commerce, also read
+[publisher identity and the portfolio channel matrix](docs/DISTRIBUTION.md)
+([中文](docs/DISTRIBUTION.zh-CN.md)). Account/certificate purchase is deferred;
+credential-dependent gates remain pending, and Store MSIX is a proposed pilot,
+not an existing framework capability. Record the policy SHA and local channel
+decision in the product's existing handoff. Keep this maintainer policy outside
+customer website navigation.
+
 ## Documentation languages
 
 Follow [the language policy](docs/DOCUMENTATION-LANGUAGES.md). Default public docs are English with complete Chinese entry paths, reciprocal links and the same user promises. API/protocol references have one normative English meaning; localized guides must preserve commands, identifiers and limits. Prices, quotas, expiry, cancellation, support scope, privacy and platform maturity must agree in both languages. Historical internal notes are not automatically a translation obligation.

@@ -36,6 +36,8 @@ turinglambdaai 家族主站（jrtx.site）——纯静态 HTML/CSS 单页，零�
 
 组合归属以 `PORTFOLIO.md` 为准；交付基线见 `docs/PRODUCT-STANDARD.md`，本轮逐产品证据与 issue 入口见 `docs/PRODUCT-REVIEW-2026-10.md`，主页改版执行简报见 `docs/HOME-PAGE-PLAN.md`。库间依赖图仍以 Keel 的 `docs/family-architecture.md` 为准，不在主站另造协议或复制各仓实施队列。
 
+涉及打包、更新、公开发行或收费时，还需读取[发行者身份与全产品渠道矩阵](docs/DISTRIBUTION.zh-CN.md)（[English](docs/DISTRIBUTION.md)）。当前暂缓账号/证书采购，依赖凭据的门禁明确待验证；Store MSIX 仅是试点规划，不是框架已实现能力。产品既有 handoff 记录政策 SHA 与本地渠道决定。此维护规范不进入面向用户的网页导航。
+
 ## 文档语言
 
 遵循[文档语言规范](docs/DOCUMENTATION-LANGUAGES.zh-CN.md)：公开默认英文、完整中文用户入口，双向链接与承诺一致。技术协议只维护一个英文规范含义；译文保持命令、标识和限制。价格、配额、到期、取消、支持、隐私和平台状态中英一致；历史内部记录不必全部翻译。

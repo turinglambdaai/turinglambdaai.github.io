@@ -105,4 +105,6 @@ turinglambdaai.github.io/
 
 产品投入和商业分类以 [PORTFOLIO.md](PORTFOLIO.zh-CN.md) 为准。[交付标准](docs/PRODUCT-STANDARD.md)、[逐产品审查](docs/PRODUCT-REVIEW-2026-10.md)和[主页规划](docs/HOME-PAGE-PLAN.md)将架构与产品工作路由到实际负责的仓库。
 
+发行账号、暂缓采购时机、签名边界与每个产品的初始渠道候选见[发行规范](docs/DISTRIBUTION.zh-CN.md) · [English policy](docs/DISTRIBUTION.md)。这是维护决策，不表示已经上架商店或完成生产签名验证。
+
 文档语言：[中文规范](docs/DOCUMENTATION-LANGUAGES.zh-CN.md) · [English policy](docs/DOCUMENTATION-LANGUAGES.md)。组合策略：[简体中文](PORTFOLIO.zh-CN.md) · [English](PORTFOLIO.md)。

@@ -12,6 +12,19 @@ Follow the [English/Chinese language policy](DOCUMENTATION-LANGUAGES.md) / [中�
 
 At every bounded slice boundary, safely refresh repository state, re-read the root AGENTS file and local implementation handoff, then read this standard, the [language policy](DOCUMENTATION-LANGUAGES.md) and [portfolio](../PORTFOLIO.md). Record the repository starting SHA and central-policy commit/revision actually read in the PR or handoff. A stale checkout or existing conversation does not automatically receive policy changes; a link alone is not an agent acknowledgement. Preserve another writer's dirty worktree and use isolation where needed. If policy inputs are offline or missing, mark them unverified rather than claiming current adoption. Keep product behavior, normative protocols and active implementation queues with their existing owners.
 
+## Publisher identity and release-channel decisions
+
+For every packaging, release, update or commercial slice, read the current
+[distribution policy and whole-portfolio channel matrix](DISTRIBUTION.md) /
+[中文规范与全产品渠道矩阵](DISTRIBUTION.zh-CN.md). Record its actual revision/SHA
+and the product's channel decision in the existing release handoff. Account
+purchase is deferred during development; missing production credentials remain
+an explicit release gate. Library/source and website releases do not inherit
+desktop Store-account requirements. Store-hosted MSIX is a candidate requiring
+real qualification, not an implemented Rivet/Glaze capability. Preserve existing
+production checks and permanent rights across automatic updates. A central link
+does not prove that an already running agent has read or implemented the policy.
+
 ## Ownership and composition
 
 The five-library graph and release order remain in
