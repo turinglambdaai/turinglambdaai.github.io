@@ -137,6 +137,10 @@
             .wechat-layout { flex-direction: column; gap: 36px; }
             .wechat-points { max-width: 100%; }
         }
+        #works .section-desc { color: var(--text-2); }
+        a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+        @media (max-width: 480px) { .nav-links { gap: 6px; } .nav-logo-text { font-size: 13px; } .nav-inner { padding: 0 12px; } .lang-btn { padding: 6px 4px; white-space: nowrap; font-size: .75rem; } .nav-links > a[href*="github.com"] { display: none; } .hero-title { font-size: clamp(1.75rem, 7.5vw, 2rem); text-wrap: balance; } .oss-grid { grid-template-columns: minmax(0, 1fr); } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
     </style>
 <script>
 var _hmt = _hmt || [];
@@ -156,9 +160,9 @@ var _hmt = _hmt || [];
                 <span class="nav-logo-text">TuringLambdaAI</span>
             </a>
             <div class="nav-links">
+                <a href="#works" data-i18n="nav_works">工具</a>
                 <a href="#wechat" data-i18n="nav_wechat" data-lang-block="zh">公众号</a>
-                <a href="#works" data-i18n="nav_works">作品</a>
-                <a href="#oss" data-i18n="nav_oss">开源</a>
+                <a href="#oss" data-i18n="nav_oss">开发者</a>
                 <a href="https://github.com/turinglambdaai" target="_blank" rel="noopener">GitHub</a>
                 <div class="lang-dropdown-wrapper">
                     <button class="lang-btn" type="button" onclick="void 0" aria-label="Switch language">
@@ -180,15 +184,208 @@ var _hmt = _hmt || [];
 
     <header class="hero">
         <div class="container">
-            <h1 class="hero-title" data-i18n="tagline">把复杂技术做直观</h1>
-            <p class="hero-desc" data-i18n="subtitle">车载软件工程师，在公众号把 AUTOSAR、嵌入式与编程语言讲透；业余时间，造些趁手的工具。</p>
+            <h1 class="hero-title" data-i18n="tagline">让日常顺手，让复杂直观</h1>
+            <p class="hero-desc" data-i18n="subtitle">独立开发的桌面工具，让任务、阅读与工程工作更顺手。数据与选择留给你，复杂的技术由我打磨。</p>
             <div class="hero-actions">
-                <a href="#wechat" class="btn btn-primary" data-i18n="cta_follow" data-lang-block="zh">关注公众号</a>
-                <a href="https://github.com/turinglambdaai" target="_blank" rel="noopener" class="btn btn-primary" data-lang-block="en" hidden>Follow on GitHub</a>
-                <a href="#works" class="btn btn-secondary" data-i18n="cta_works">看看作品</a>
+                <a href="#works" class="btn btn-primary" data-i18n="cta_works">寻找趁手的工具</a>
+                <a href="#wechat" class="btn btn-secondary" data-i18n="cta_writing" data-lang-block="zh">阅读技术文章</a>
+                <a href="https://racket.jrtx.site" class="btn btn-secondary" data-i18n="cta_writing" data-lang-block="en" hidden>Read the writing</a>
             </div>
         </div>
     </header>
+
+
+    <section class="products-section" id="works">
+        <div class="container-wide">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="works_title">从你要做的事开始</h2>
+                <p class="section-desc" data-i18n="works_desc">按用途寻找产品；实验项目单独标明，当前下载与平台信息见各产品主页。</p>
+            </div>
+
+<div class="work-group"><h3 class="work-group-title" data-i18n="grp_daily">日常效率</h3><div class="product-grid product-grid--2">
+<a href="https://taskly.jrtx.site" class="product-card" target="_blank" rel="noopener">
+                        <div class="product-name-row">
+                            <h3 class="product-name">Taskly</h3>
+                            <span class="product-layer">Rivet</span>
+                        </div>
+                        <p class="product-tagline" data-i18n="tk_tag">跨平台任务管理，简洁专注</p>
+                        <p class="product-desc" data-i18n="tk_desc">把清单、提醒和日常任务放在一个清爽的桌面里。支持 macOS、Windows、Linux，数据保存在本地 SQLite 文件；CLI 可从源码运行。</p>
+                        <span class="product-cta" data-i18n="cta_download">立即下载 →</span>
+                    </a>
+<a href="https://fulcrum.jrtx.site" class="product-card" target="_blank" rel="noopener">
+                        <div class="product-name-row">
+                            <h3 class="product-name">Fulcrum</h3>
+                            <span class="product-layer">Rivet</span>
+                        </div>
+                        <p class="product-tagline" data-i18n="fc_tag">一次按键，直达一切</p>
+                        <p class="product-desc" data-i18n="fc_desc">一次快捷键打开应用、找回剪贴板、运行计算和常用命令。macOS、Windows、Linux 原生界面，本地数据由你掌握。</p>
+                        <span class="product-cta" data-i18n="cta_online">在线了解 →</span>
+                    </a>
+<a href="https://regexmate.jrtx.site" class="product-card" target="_blank" rel="noopener">
+                        <div class="product-name-row">
+                            <h3 class="product-name">RegexMate</h3>
+                            <span class="product-layer">Rivet</span>
+                        </div>
+                        <p class="product-tagline" data-i18n="rm_tag">面向人与 agent 的正则工作台</p>
+                        <p class="product-desc" data-i18n="rm_desc">一条命令搞定正则的校验、匹配、解释、替换、铁路图、批量测试与风险 lint；MCP server 七个工具原生接入智能体，版本化 JSON 契约与明确退出码为 agent 与 CI 设计。三平台独立二进制，免装运行时。</p>
+                        <span class="product-cta" data-i18n="cta_progress">了解进展 →</span>
+                    </a>
+<a href="https://movebit.jrtx.site" class="product-card" target="_blank" rel="noopener">
+                        <div class="product-name-row">
+                            <h3 class="product-name">MoveBit</h3>
+                            <span class="product-layer">Rivet</span>
+                        </div>
+                        <p class="product-tagline" data-i18n="mv_tag">强制你离开椅子的健康提醒</p>
+                        <p class="product-desc" data-i18n="mv_desc">统计真实工作时长，到点用全屏倒计时锁定每台显示器请你起身；喝水提醒只做轻量 toast。Windows / macOS / Linux。</p>
+                        <span class="product-cta" data-i18n="cta_download">立即下载 →</span>
+                    </a>
+<a href="https://payback.jrtx.site" class="product-card" target="_blank" rel="noopener">
+                        <div class="product-name-row">
+                            <h3 class="product-name">Payback</h3>
+                            <span class="product-layer">Rivet</span>
+                        </div>
+                        <p class="product-tagline" data-i18n="pay_tag">每一台设备，都在一天天回本</p>
+                        <p class="product-desc" data-i18n="pay_desc">记下设备价格，看每日成本和回本进度慢慢变化。桌面版本永久免费，数据保存在本机；macOS、Windows、Linux。</p>
+                        <span class="product-cta" data-i18n="cta_online">在线了解 →</span>
+                    </a>
+<a href="https://publy.jrtx.site" class="product-card" target="_blank" rel="noopener">
+                        <div class="product-name-row">
+                            <h3 class="product-name">Publy</h3>
+                            <span class="product-layer">TypeScript</span>
+                        </div>
+                        <p class="product-tagline" data-i18n="py_tag">agent 时代的公众号发布管线</p>
+                        <p class="product-desc" data-i18n="py_desc">写作留在 Obsidian，发布交给 agent：一条命令完成排版与小绿书卡片渲染，主题即 npm 包，托管服务负责稳定发布。只走官方 API，开源核心不做锁定。</p>
+                        <span class="product-cta" data-i18n="cta_progress">了解进展 →</span>
+                    </a>
+</div></div>
+<div class="work-group"><h3 class="work-group-title" data-i18n="grp_reading">阅读与学习</h3><div class="product-grid product-grid--2">
+<a href="https://booklight.jrtx.site" class="product-card product-card--wide" target="_blank" rel="noopener">
+                        <div class="product-wide-head">
+                            <div class="product-name-row">
+                                <h3 class="product-name">Booklight</h3>
+                                <span class="product-layer">Rivet</span>
+                            </div>
+                            <p class="product-tagline" data-i18n="pg_tag">把安静的书架，带给每个桌面</p>
+                        </div>
+                        <p class="product-desc" data-i18n="pg_desc">把 PDF 和 EPUB 收进自己的书架，继续上次阅读，记录批注。需要帮助时，用自己的模型 key 翻译、总结或与文档对话。三桌面平台可下载。</p>
+                        <span class="product-cta" data-i18n="cta_download">立即下载 →</span>
+                    </a>
+<a href="https://podlens.jrtx.site" class="product-card" target="_blank" rel="noopener">
+                        <div class="product-name-row">
+                            <h3 class="product-name">PodLens</h3>
+                            <span class="product-layer">Rivet</span>
+                        </div>
+                        <p class="product-tagline" data-i18n="pl_tag">听得懂的英文播客</p>
+                        <p class="product-desc" data-i18n="pl_desc">跨平台桌面播客应用：用你自己的大模型 API key，把英文单集转写、逐句翻译、自动总结——为「读得懂、听不懂」的听众而生。Rivet 原生架构，转录、翻译与摘要全部缓存在本机。</p>
+                        <span class="product-cta" data-i18n="cta_download">立即下载 →</span>
+                    </a>
+<a href="https://hackdigest.jrtx.site" class="product-card" target="_blank" rel="noopener">
+                        <div class="product-name-row">
+                            <h3 class="product-name">HackDigest</h3>
+                            <span class="product-layer">Glaze</span>
+                        </div>
+                        <p class="product-tagline" data-i18n="hd_tag">把 Hacker News 读成中文</p>
+                        <p class="product-desc" data-i18n="hd_desc">阅读 Hacker News，按需翻译文章、提炼评论与晨报。自带模型 key 的路径全功能免费；托管服务与同步仍按交付路线推进。</p>
+                        <span class="product-cta" data-i18n="cta_download">立即下载 →</span>
+                    </a>
+</div></div>
+<div class="work-group"><h3 class="work-group-title" data-i18n="grp_auto">汽车工程</h3><div class="product-grid product-grid--2">
+<a href="https://autarx.jrtx.site" class="product-card" target="_blank" rel="noopener">
+                        <div class="product-name-row">
+                            <h3 class="product-name">Autarx</h3>
+                            <span class="product-layer">Rivet</span>
+                        </div>
+                        <p class="product-tagline" data-i18n="ax_tag">AUTOSAR 集成工作台</p>
+                        <p class="product-desc" data-i18n="ax_desc">语义索引 OEM 交付的 ARXML：引用图追溯、两版交付语义 diff、ECU 影响分析、通信链路投影；受控编辑全程语义 diff 门禁，AI agent 走 MCP 接口，现已发布。</p>
+                        <span class="product-cta" data-i18n="cta_online">在线了解 →</span>
+                    </a>
+<a href="https://flashpilot.jrtx.site" class="product-card" target="_blank" rel="noopener">
+                        <div class="product-name-row">
+                            <h3 class="product-name">FlashPilot</h3>
+                            <span class="product-layer">Rivet</span>
+                        </div>
+                        <p class="product-tagline" data-i18n="fp_tag">Agent 原生的 ECU 刷写引擎</p>
+                        <p class="product-desc" data-i18n="fp_desc">把 ECU 刷写交给 agent：UDS 诊断与刷写走 CAN（ISO-TP）/DoIP/LIN，声明式刷写计划可版本化、可评审，agent-first CLI 带稳定退出码与失败证据。</p>
+                        <span class="product-cta" data-i18n="cta_online">在线了解 →</span>
+                    </a>
+<a href="https://gptp-studio.jrtx.site" class="product-card" target="_blank" rel="noopener">
+                        <div class="product-name-row">
+                            <h3 class="product-name">gPTP Studio</h3>
+                            <span class="product-layer">Rivet</span>
+                        </div>
+                        <p class="product-tagline" data-i18n="gs_tag">Linux 原生的 gPTP 调试工作台</p>
+                        <p class="product-desc" data-i18n="gs_desc">gPTP / IEEE 802.1AS 调试利器：GrandMaster / Slave / Listener 一键切换、实时同步曲线、报文全字段解码，Doctor 环境体检，内置模拟器。</p>
+                        <span class="product-cta" data-i18n="cta_download">立即下载 →</span>
+                    </a>
+</div></div>
+<div class="work-group"><h3 class="work-group-title" data-i18n="grp_community">社区与免费工具</h3><div class="product-grid product-grid--2">
+<a href="https://threadly.jrtx.site" class="product-card" target="_blank" rel="noopener">
+                        <div class="product-name-row">
+                            <h3 class="product-name">Threadly</h3>
+                            <span class="product-layer">Rivet</span>
+                        </div>
+                        <p class="product-tagline" data-i18n="th_tag">Racket 社区论坛的原生客户端</p>
+                        <p class="product-desc" data-i18n="th_desc">在桌面阅读和搜索 Racket 社区长帖，登录后回帖与查看通知；可用自己的模型 key 做摘要与翻译。社区工具永久免费，当前维护桌面版本。</p>
+                        <span class="product-cta" data-i18n="cta_download">立即下载 →</span>
+                    </a>
+<a href="https://keyward.jrtx.site" class="product-card" target="_blank" rel="noopener">
+                        <div class="product-name-row">
+                            <h3 class="product-name">Keyward</h3>
+                            <span class="product-layer">Rivet</span>
+                        </div>
+                        <p class="product-tagline" data-i18n="kw_tag">自更新应用的签名钥保险库</p>
+                        <p class="product-desc" data-i18n="kw_desc">管理自己的发布签名钥：复制而不展示，每次修改先快照，检查私钥与公钥配对。文件是自己同步盘里的明文 INI，需要信任设备和磁盘保护。</p>
+                        <span class="product-cta" data-i18n="cta_online">在线了解 →</span>
+                    </a>
+<a href="https://syncpilot.jrtx.site" class="product-card" target="_blank" rel="noopener">
+                        <div class="product-name-row">
+                            <h3 class="product-name">SyncPilot</h3>
+                            <span class="product-layer">Rivet</span>
+                        </div>
+                        <p class="product-tagline" data-i18n="sp_tag">Resilio Sync 的 Linux 原生桌面</p>
+                        <p class="product-desc" data-i18n="sp_desc">内嵌官方 Resilio Web UI 的 Linux 桌面壳：Racket 领域核心驱动 GTK4 原生宿主，托管 rslsync 守护进程——生命周期、崩溃看护、开机自启、首次运行一键装官方二进制。仅走环回代理，密钥与文件不出本机。</p>
+                        <span class="product-cta" data-i18n="cta_online">在线了解 →</span>
+                    </a>
+<a href="https://pitboard.jrtx.site" class="product-card" target="_blank" rel="noopener">
+                        <div class="product-name-row">
+                            <h3 class="product-name">Pitboard</h3>
+                            <span class="product-layer">Racket</span>
+                        </div>
+                        <p class="product-tagline" data-i18n="pb_tag">汽车行业的每日热点日报站</p>
+                        <p class="product-desc" data-i18n="pb_desc">把开源项目、行业资讯、前沿论文抓到一起，聚簇去重，按独立来源数与时间衰减算热度，每天出刊一张「pit 板」。Racket web-server 全栈、单进程自托管、零外部依赖，RSS/JSON/Markdown/llms.txt/SSE 全套 Agent 出口。</p>
+                        <span class="product-cta" data-i18n="cta_online">在线了解 →</span>
+                    </a>
+<a href="https://yinwang.jrtx.site" class="product-card" target="_blank" rel="noopener">
+                        <div class="product-name-row">
+                            <h3 class="product-name">Yinwang Blog Archive</h3>
+                            <span class="product-layer">Racket</span>
+                        </div>
+                        <p class="product-tagline" data-i18n="yw_tag">王垠博客的自动归档镜像</p>
+                        <p class="product-desc" data-i18n="yw_desc">每周自动增量抓取 yinwang.org 全部文章存为 Markdown：图片本地化、中文标题进 frontmatter；被删的文章靠 Git 历史永久保留，静态站全文可搜，GitHub Actions 全自动运行。</p>
+                        <span class="product-cta" data-i18n="cta_online">在线了解 →</span>
+                    </a>
+<a href="https://racket.jrtx.site" class="product-card product-card--wide" target="_blank" rel="noopener">
+                        <div class="product-wide-head">
+                            <h3 class="product-name">Racket 程序设计</h3>
+                            <p class="product-tagline" data-i18n="rk_tag">从语法到语言设计的在线技术书</p>
+                        </div>
+                        <p class="product-desc" data-i18n="rk_desc">覆盖 Racket 核心语法、宏系统、并发与契约编程，以及用 #lang 创造新语言。</p>
+                        <span class="product-cta" data-i18n="cta_read">在线阅读 →</span>
+                    </a>
+</div></div>
+<div class="work-group"><h3 class="work-group-title" data-i18n="grp_lab">实验室</h3><div class="product-grid product-grid--2">
+<a href="https://relaypilot.jrtx.site" class="product-card" target="_blank" rel="noopener">
+                        <div class="product-name-row">
+                            <h3 class="product-name">RelayPilot</h3>
+                            <span class="product-layer">Rivet</span>
+                        </div>
+                        <p class="product-tagline" data-i18n="rp_tag">一套 Profile，覆盖每一台设备</p>
+                        <p class="product-desc" data-i18n="rp_desc">Local-first 原生网络工具箱：一套 Racket 控制平面统一 Profile、规则与策略组，每条路由都有确定性 DecisionTrace，Xray 只是第一个可替换引擎。桌面与移动端规划中，当前为架构 Alpha。</p>
+                        <span class="product-cta" data-i18n="cta_progress">了解进展 →</span>
+                    </a>
+</div></div>
+        </div>
+    </section>
 
     <section class="wechat-section" id="wechat" data-lang-block="zh">
         <div class="container">
@@ -229,210 +426,10 @@ var _hmt = _hmt || [];
         </div>
     </section>
 
-    <section class="products-section" id="works">
-        <div class="container-wide">
-            <div class="section-header">
-                <h2 class="section-title" data-i18n="works_title">作品</h2>
-                <p class="section-desc" data-i18n="works_desc">业余时间独立开发的工具与书籍。</p>
-            </div>
-
-            <div class="work-group">
-                <h3 class="work-group-title" data-i18n="grp_auto">汽车电子</h3>
-                <div class="product-grid product-grid--3">
-                    <a href="https://flashpilot.jrtx.site" class="product-card" target="_blank" rel="noopener">
-                        <div class="product-name-row">
-                            <h3 class="product-name">FlashPilot</h3>
-                            <span class="product-layer">Rivet</span>
-                        </div>
-                        <p class="product-tagline" data-i18n="fp_tag">Agent 原生的 ECU 刷写引擎</p>
-                        <p class="product-desc" data-i18n="fp_desc">把 ECU 刷写交给 agent：UDS 诊断与刷写走 CAN（ISO-TP）/DoIP/LIN，声明式刷写计划可版本化、可评审，agent-first CLI 带稳定退出码与失败证据。</p>
-                        <span class="product-cta" data-i18n="cta_online">在线了解 →</span>
-                    </a>
-                    <a href="https://pitboard.jrtx.site" class="product-card" target="_blank" rel="noopener">
-                        <div class="product-name-row">
-                            <h3 class="product-name">Pitboard</h3>
-                            <span class="product-layer">Racket</span>
-                        </div>
-                        <p class="product-tagline" data-i18n="pb_tag">汽车行业的每日热点日报站</p>
-                        <p class="product-desc" data-i18n="pb_desc">把开源项目、行业资讯、前沿论文抓到一起，聚簇去重，按独立来源数与时间衰减算热度，每天出刊一张「pit 板」。Racket web-server 全栈、单进程自托管、零外部依赖，RSS/JSON/Markdown/llms.txt/SSE 全套 Agent 出口。</p>
-                        <span class="product-cta" data-i18n="cta_online">在线了解 →</span>
-                    </a>
-                    <a href="https://autarx.jrtx.site" class="product-card" target="_blank" rel="noopener">
-                        <div class="product-name-row">
-                            <h3 class="product-name">Autarx</h3>
-                            <span class="product-layer">Rivet</span>
-                        </div>
-                        <p class="product-tagline" data-i18n="ax_tag">AUTOSAR 集成工作台</p>
-                        <p class="product-desc" data-i18n="ax_desc">语义索引 OEM 交付的 ARXML：引用图追溯、两版交付语义 diff、ECU 影响分析、通信链路投影；受控编辑全程语义 diff 门禁，AI agent 走 MCP 接口，现已发布。</p>
-                        <span class="product-cta" data-i18n="cta_online">在线了解 →</span>
-                    </a>
-                    <a href="https://gptp-studio.jrtx.site" class="product-card" target="_blank" rel="noopener">
-                        <div class="product-name-row">
-                            <h3 class="product-name">gPTP Studio</h3>
-                            <span class="product-layer">Rivet</span>
-                        </div>
-                        <p class="product-tagline" data-i18n="gs_tag">Linux 原生的 gPTP 调试工作台</p>
-                        <p class="product-desc" data-i18n="gs_desc">gPTP / IEEE 802.1AS 调试利器：GrandMaster / Slave / Listener 一键切换、实时同步曲线、报文全字段解码，Doctor 环境体检，内置模拟器。</p>
-                        <span class="product-cta" data-i18n="cta_download">立即下载 →</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="work-group">
-                <h3 class="work-group-title" data-i18n="grp_tools">效率与开发工具</h3>
-                <div class="product-grid product-grid--2">
-                    <a href="https://taskly.jrtx.site" class="product-card" target="_blank" rel="noopener">
-                        <div class="product-name-row">
-                            <h3 class="product-name">Taskly</h3>
-                            <span class="product-layer">Rivet</span>
-                        </div>
-                        <p class="product-tagline" data-i18n="tk_tag">跨平台任务管理，简洁专注</p>
-                        <p class="product-desc" data-i18n="tk_desc">仿 macOS Reminders 的桌面任务管理器，Rivet 架构——一个 Racket 核心驱动三端原生宿主，数据就是本地 SQLite 单文件。三平台可下载；CLI 从源码运行，独立分发在路线图上。</p>
-                        <span class="product-cta" data-i18n="cta_download">立即下载 →</span>
-                    </a>
-                    <a href="https://movebit.jrtx.site" class="product-card" target="_blank" rel="noopener">
-                        <div class="product-name-row">
-                            <h3 class="product-name">MoveBit</h3>
-                            <span class="product-layer">Rivet</span>
-                        </div>
-                        <p class="product-tagline" data-i18n="mv_tag">强制你离开椅子的健康提醒</p>
-                        <p class="product-desc" data-i18n="mv_desc">统计真实工作时长，到点用全屏倒计时锁定每台显示器请你起身；喝水提醒只做轻量 toast。Windows / macOS / Linux。</p>
-                        <span class="product-cta" data-i18n="cta_download">立即下载 →</span>
-                    </a>
-                    <a href="https://hackdigest.jrtx.site" class="product-card" target="_blank" rel="noopener">
-                        <div class="product-name-row">
-                            <h3 class="product-name">HackDigest</h3>
-                            <span class="product-layer">Glaze</span>
-                        </div>
-                        <p class="product-tagline" data-i18n="hd_tag">把 Hacker News 读成中文</p>
-                        <p class="product-desc" data-i18n="hd_desc">给非英语开发者的 HN 阅读器：内置翻译与三层 AI 摘要——文章 TL;DR、评论区观点提炼、每日晨报。自带 API Key 全功能免费，Pro 提供托管翻译与同步。</p>
-                        <span class="product-cta" data-i18n="cta_download">立即下载 →</span>
-                    </a>
-                    <a href="https://threadly.jrtx.site" class="product-card" target="_blank" rel="noopener">
-                        <div class="product-name-row">
-                            <h3 class="product-name">Threadly</h3>
-                            <span class="product-layer">Rivet</span>
-                        </div>
-                        <p class="product-tagline" data-i18n="th_tag">Racket 社区论坛的原生客户端</p>
-                        <p class="product-desc" data-i18n="th_desc">给 racket.discourse.group 的原生阅读器：匿名公开 JSON API 加礼貌的磁盘缓存，在浏览器之外读长帖、搜归档；论坛原色分类、帖子头像与 680px 阅读栏宽。Rivet 线——一个 Racket 引擎驱动三端原生壳，macOS / Windows / Linux 安装包已可下载，读帖回帖之外还带 AI 摘要与翻译；移动端在路上。</p>
-                        <span class="product-cta" data-i18n="cta_download">立即下载 →</span>
-                    </a>
-                    <a href="https://regexmate.jrtx.site" class="product-card" target="_blank" rel="noopener">
-                        <div class="product-name-row">
-                            <h3 class="product-name">RegexMate</h3>
-                            <span class="product-layer">Rivet</span>
-                        </div>
-                        <p class="product-tagline" data-i18n="rm_tag">面向人与 agent 的正则工作台</p>
-                        <p class="product-desc" data-i18n="rm_desc">一条命令搞定正则的校验、匹配、解释、替换、铁路图、批量测试与风险 lint；MCP server 七个工具原生接入智能体，版本化 JSON 契约与明确退出码为 agent 与 CI 设计。三平台独立二进制，免装运行时。</p>
-                        <span class="product-cta" data-i18n="cta_progress">了解进展 →</span>
-                    </a>
-                    <a href="https://fulcrum.jrtx.site" class="product-card" target="_blank" rel="noopener">
-                        <div class="product-name-row">
-                            <h3 class="product-name">Fulcrum</h3>
-                            <span class="product-layer">Rivet</span>
-                        </div>
-                        <p class="product-tagline" data-i18n="fc_tag">一次按键，直达一切</p>
-                        <p class="product-desc" data-i18n="fc_desc">键盘优先的三平台启动器：模糊搜索应用、剪贴板历史与片段，内联计算、Web 搜索 bang 与系统命令。一个 Racket 大脑，WinUI 3 / SwiftUI / GTK4 三套原生 UI，无 WebView，数据不出本机。</p>
-                        <span class="product-cta" data-i18n="cta_online">在线了解 →</span>
-                    </a>
-                    <a href="https://publy.jrtx.site" class="product-card" target="_blank" rel="noopener">
-                        <div class="product-name-row">
-                            <h3 class="product-name">Publy</h3>
-                            <span class="product-layer">TypeScript</span>
-                        </div>
-                        <p class="product-tagline" data-i18n="py_tag">agent 时代的公众号发布管线</p>
-                        <p class="product-desc" data-i18n="py_desc">写作留在 Obsidian，发布交给 agent：一条命令完成排版与小绿书卡片渲染，主题即 npm 包，托管服务负责稳定发布。只走官方 API，开源核心不做锁定。</p>
-                        <span class="product-cta" data-i18n="cta_progress">了解进展 →</span>
-                    </a>
-                    <a href="https://syncpilot.jrtx.site" class="product-card" target="_blank" rel="noopener">
-                        <div class="product-name-row">
-                            <h3 class="product-name">SyncPilot</h3>
-                            <span class="product-layer">Rivet</span>
-                        </div>
-                        <p class="product-tagline" data-i18n="sp_tag">Resilio Sync 的 Linux 原生桌面</p>
-                        <p class="product-desc" data-i18n="sp_desc">内嵌官方 Resilio Web UI 的 Linux 桌面壳：Racket 领域核心驱动 GTK4 原生宿主，托管 rslsync 守护进程——生命周期、崩溃看护、开机自启、首次运行一键装官方二进制。仅走环回代理，密钥与文件不出本机。</p>
-                        <span class="product-cta" data-i18n="cta_online">在线了解 →</span>
-                    </a>
-                    <a href="https://relaypilot.jrtx.site" class="product-card" target="_blank" rel="noopener">
-                        <div class="product-name-row">
-                            <h3 class="product-name">RelayPilot</h3>
-                            <span class="product-layer">Rivet</span>
-                        </div>
-                        <p class="product-tagline" data-i18n="rp_tag">一套 Profile，覆盖每一台设备</p>
-                        <p class="product-desc" data-i18n="rp_desc">Local-first 原生网络工具箱：一套 Racket 控制平面统一 Profile、规则与策略组，每条路由都有确定性 DecisionTrace，Xray 只是第一个可替换引擎。桌面与移动端规划中，当前为架构 Alpha。</p>
-                        <span class="product-cta" data-i18n="cta_progress">了解进展 →</span>
-                    </a>
-                    <a href="https://podlens.jrtx.site" class="product-card" target="_blank" rel="noopener">
-                        <div class="product-name-row">
-                            <h3 class="product-name">PodLens</h3>
-                            <span class="product-layer">Rivet</span>
-                        </div>
-                        <p class="product-tagline" data-i18n="pl_tag">听得懂的英文播客</p>
-                        <p class="product-desc" data-i18n="pl_desc">跨平台桌面播客应用：用你自己的大模型 API key，把英文单集转写、逐句翻译、自动总结——为「读得懂、听不懂」的听众而生。Rivet 原生架构，转录、翻译与摘要全部缓存在本机。</p>
-                        <span class="product-cta" data-i18n="cta_download">立即下载 →</span>
-                    </a>
-                    <a href="https://payback.jrtx.site" class="product-card" target="_blank" rel="noopener">
-                        <div class="product-name-row">
-                            <h3 class="product-name">Payback</h3>
-                            <span class="product-layer">Rivet</span>
-                        </div>
-                        <p class="product-tagline" data-i18n="pay_tag">每一台设备，都在一天天回本</p>
-                        <p class="product-desc" data-i18n="pay_desc">记下购买价格，看每日成本一天天下落；设定「一天值多少钱」，看回本进度环一点点走满。Rivet 原生应用（macOS / Windows / Linux），数据存于单份可读文件。</p>
-                        <span class="product-cta" data-i18n="cta_online">在线了解 →</span>
-                    </a>
-                    <a href="https://booklight.jrtx.site" class="product-card product-card--wide" target="_blank" rel="noopener">
-                        <div class="product-wide-head">
-                            <div class="product-name-row">
-                                <h3 class="product-name">Booklight</h3>
-                                <span class="product-layer">Rivet</span>
-                            </div>
-                            <p class="product-tagline" data-i18n="pg_tag">把安静的书架，带给每个桌面</p>
-                        </div>
-                        <p class="product-desc" data-i18n="pg_desc">跨平台的书架与阅读器：启动即书架，书永远留在你的文件夹里；PDF / EPUB 沉浸阅读，划词翻译、总结、与文档对话全程流式；批注高亮、朗读、打印、分屏、轻编辑三端同款。兼容任意 OpenAI 协议端点，API Key 只存本机。macOS / Windows / Linux。</p>
-                        <span class="product-cta" data-i18n="cta_download">立即下载 →</span>
-                    </a>
-                    <a href="https://keyward.jrtx.site" class="product-card" target="_blank" rel="noopener">
-                        <div class="product-name-row">
-                            <h3 class="product-name">Keyward</h3>
-                            <span class="product-layer">Rivet</span>
-                        </div>
-                        <p class="product-tagline" data-i18n="kw_tag">自更新应用的签名钥保险库</p>
-                        <p class="product-desc" data-i18n="kw_desc">私钥签更新清单、公钥嵌在已装应用里验签——Sparkle、Tauri、electron-updater 全是这一套，缺的是私钥的日常托管。值永不显示只进剪贴板，每次改动先快照，深度校验（解析/配对/指纹），生成即入库。同步盘明文 INI 单源，引擎零网络。macOS / Windows / Linux。</p>
-                        <span class="product-cta" data-i18n="cta_online">在线了解 →</span>
-                    </a>
-
-                    <a href="https://yinwang.jrtx.site" class="product-card" target="_blank" rel="noopener">
-                        <div class="product-name-row">
-                            <h3 class="product-name">Yinwang Blog Archive</h3>
-                            <span class="product-layer">Racket</span>
-                        </div>
-                        <p class="product-tagline" data-i18n="yw_tag">王垠博客的自动归档镜像</p>
-                        <p class="product-desc" data-i18n="yw_desc">每周自动增量抓取 yinwang.org 全部文章存为 Markdown：图片本地化、中文标题进 frontmatter；被删的文章靠 Git 历史永久保留，静态站全文可搜，GitHub Actions 全自动运行。</p>
-                        <span class="product-cta" data-i18n="cta_online">在线了解 →</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="work-group">
-                <h3 class="work-group-title" data-i18n="grp_writing">写作</h3>
-                <div class="product-grid product-grid--feature">
-                    <a href="https://racket.jrtx.site" class="product-card product-card--wide" target="_blank" rel="noopener">
-                        <div class="product-wide-head">
-                            <h3 class="product-name">Racket 程序设计</h3>
-                            <p class="product-tagline" data-i18n="rk_tag">从语法到语言设计的在线技术书</p>
-                        </div>
-                        <p class="product-desc" data-i18n="rk_desc">覆盖 Racket 核心语法、宏系统、并发与契约编程，以及用 #lang 创造新语言。</p>
-                        <span class="product-cta" data-i18n="cta_read">在线阅读 →</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section class="products-section oss-section" id="oss">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title" data-i18n="oss_title">开源项目</h2>
+                <h2 class="section-title" data-i18n="oss_title">为开发者构建的基础库</h2>
             </div>
 
             <div class="oss-grid">
@@ -465,7 +462,7 @@ var _hmt = _hmt || [];
                         <h3 class="oss-name">permit</h3>
                         <span class="product-layer">Racket</span>
                     </div>
-                    <p class="oss-desc" data-i18n="oss_permit">签名产品授权的开放协议：买断、订阅、试用都签成 Ed25519 凭证，应用用内置公钥离线验证，授权永不依赖在线服务。</p>
+                    <p class="oss-desc" data-i18n="oss_permit">签名产品权益的开放协议：应用内置公钥，离线验证买断、试用与订阅凭据；需要及时撤销时显式选择在线租约。</p>
                 </a>
 
                 <a href="https://github.com/turinglambdaai/commerce" class="oss-card" target="_blank" rel="noopener">
@@ -496,13 +493,19 @@ var _hmt = _hmt || [];
 
     <script>
         var I18N = {
+            cta_writing: { zh: "阅读技术文章", en: "Read the writing" },
+            grp_daily: { zh: "日常效率", en: "Everyday productivity" },
+            grp_reading: { zh: "阅读与学习", en: "Reading & learning" },
+            grp_community: { zh: "社区与免费工具", en: "Community & free tools" },
+            grp_lab: { zh: "实验室 · 尚未交付", en: "In the lab \u00b7 not yet shipped" },
+
             nav_wechat: { zh: "公众号", en: "WeChat" },
-            nav_works: { zh: "作品", en: "Work" },
-            nav_oss: { zh: "开源", en: "Open Source" },
-            tagline: { zh: "把复杂技术做直观", en: "Making complex technology intuitive" },
-            subtitle: { zh: "车载软件工程师，在公众号把 AUTOSAR、嵌入式与编程语言讲透；业余时间，造些趁手的工具。", en: "Automotive software engineer — deep dives on AUTOSAR, embedded systems & programming languages, plus indie tools built after hours." },
+            nav_works: { zh: "工具", en: "Tools" },
+            nav_oss: { zh: "开发者", en: "For builders" },
+            tagline: { zh: "让日常顺手，让复杂直观", en: "Thoughtful tools for everyday work" },
+            subtitle: { zh: "独立开发的桌面工具，让任务、阅读与工程工作更顺手。数据与选择留给你，复杂的技术由我打磨。", en: "Independent desktop tools for tasks, reading and engineering. Keep control of your data and choose the tools that fit your work." },
             cta_follow: { zh: "关注公众号", en: "Follow on GitHub" },
-            cta_works: { zh: "看看作品", en: "See my work" },
+            cta_works: { zh: "寻找趁手的工具", en: "Explore the tools" },
             wechat_title: { zh: "公众号 · TuringLambdaAI", en: "WeChat · TuringLambdaAI" },
             wechat_desc: { zh: "车载软件工程师的深度技术写作。", en: "In-depth technical writing for automotive software engineers." },
             wechat_f1_title: { zh: "深度解析", en: "Deep dives" },
@@ -513,21 +516,21 @@ var _hmt = _hmt || [];
             wechat_f3_desc: { zh: "只写本质，帮你把最难啃的技术真正搞懂。", en: "Just the essentials — so the hardest topics finally click." },
             wechat_scan: { zh: "扫码关注", en: "Scan to follow" },
             wechat_id: { zh: "微信搜索 TuringLambdaAI", en: "WeChat ID: TuringLambdaAI" },
-            works_title: { zh: "作品", en: "Work" },
-            works_desc: { zh: "业余时间独立开发的工具与书籍。", en: "Indie tools and a book, built after hours." },
+            works_title: { zh: "从你要做的事开始", en: "Find your next useful tool" },
+            works_desc: { zh: "按用途寻找产品；实验项目单独标明，当前下载与平台信息见各产品主页。", en: "Browse by task. Experimental work is labelled separately; each product page has current downloads and platform details." },
             grp_auto: { zh: "汽车电子", en: "Automotive" },
             grp_tools: { zh: "效率与开发工具", en: "Productivity & Dev Tools" },
             grp_writing: { zh: "写作", en: "Writing" },
             hd_tag: { zh: "把 Hacker News 读成中文", en: "Hacker News, in your language" },
-            hd_desc: { zh: "给非英语开发者的 HN 阅读器：内置翻译与三层 AI 摘要——文章 TL;DR、评论区观点提炼、每日晨报。自带 API Key 全功能免费，Pro 提供托管翻译与同步。", en: "An HN reader for non-English devs: built-in translation plus three AI digests — article TL;DR, thread summaries, and a daily briefing. Free with your own API key; Pro adds hosted translation and sync." },
+            hd_desc: { zh: "阅读 Hacker News，按需翻译文章、提炼评论与晨报。自带模型 key 的路径全功能免费；托管服务与同步仍按交付路线推进。", en: "Read Hacker News with article translation, thread digests and a daily briefing. The BYOK path is fully free; hosted service and sync follow their delivery roadmap." },
             th_tag: { zh: "Racket 社区论坛的原生客户端", en: "A native client for the Racket community forum" },
-            th_desc: { zh: "给 racket.discourse.group 的原生阅读器：匿名公开 JSON API 加礼貌的磁盘缓存，在浏览器之外读长帖、搜归档；论坛原色分类、帖子头像与 680px 阅读栏宽。Rivet 线——一个 Racket 引擎驱动三端原生壳，macOS / Windows / Linux 安装包已可下载，读帖回帖之外还带 AI 摘要与翻译；移动端在路上。", en: "A native reader for racket.discourse.group: anonymous public JSON API with a polite disk cache — long threads and archive search, outside the browser. Forum-authentic category colors, post avatars and a 680px reading column. A Rivet-line app: one Racket engine behind three native hosts; macOS, Windows and Linux installers are up for download, with AI summaries and translation alongside reading and replying — mobile on the way." },
+            th_desc: { zh: "在桌面阅读和搜索 Racket 社区长帖，登录后回帖与查看通知；可用自己的模型 key 做摘要与翻译。社区工具永久免费，当前维护桌面版本。", en: "Read and search Racket discussions, sign in to reply and view notifications, and bring your own model key for summaries and translation. A free community tool maintained for desktop." },
             rm_tag: { zh: "面向人与 agent 的正则工作台", en: "The regex workbench for humans and agents" },
             rm_desc: { zh: "一条命令搞定正则的校验、匹配、解释、替换、铁路图、批量测试与风险 lint；MCP server 七个工具原生接入智能体，版本化 JSON 契约与明确退出码为 agent 与 CI 设计。三平台独立二进制，免装运行时。", en: "Validate, match, explain, replace, graph, batch-test and lint regexes from one CLI; an MCP server exposes seven native agent tools over a versioned JSON contract with honest exit codes. Standalone binaries for three platforms." },
             gs_tag: { zh: "Linux 原生的 gPTP 调试工作台", en: "The Linux-native gPTP debugging workstation" },
             gs_desc: { zh: "gPTP / IEEE 802.1AS 调试利器：GrandMaster / Slave / Listener 一键切换、实时同步曲线、报文全字段解码，Doctor 环境体检，内置模拟器。", en: "Linux-native gPTP / IEEE 802.1AS debugging: GrandMaster / Slave / Listener in one click, live sync curves, full packet decode, a Doctor readiness check, and a built-in simulator." },
             tk_tag: { zh: "跨平台任务管理，简洁专注", en: "Cross-platform tasks, simple and focused" },
-            tk_desc: { zh: "仿 macOS Reminders 的桌面任务管理器，Rivet 架构——一个 Racket 核心驱动三端原生宿主，数据就是本地 SQLite 单文件。三平台可下载；CLI 从源码运行，独立分发在路线图上。", en: "A macOS Reminders-style task manager on the Rivet architecture — one Racket core behind three native hosts, with data in a single local SQLite file. Downloadable on all three platforms; the CLI runs from source, standalone distribution is on the roadmap." },
+            tk_desc: { zh: "把清单、提醒和日常任务放在一个清爽的桌面里。支持 macOS、Windows、Linux，数据保存在本地 SQLite 文件；CLI 可从源码运行。", en: "Lists, reminders and daily tasks in a focused desktop app. Available for macOS, Windows and Linux, with a local SQLite file and a source-based CLI." },
             cta_download: { zh: "立即下载 →", en: "Download →" },
             mv_tag: { zh: "强制你离开椅子的健康提醒", en: "Health reminders you can't click away" },
             mv_desc: { zh: "统计真实工作时长，到点用全屏倒计时锁定每台显示器请你起身；喝水提醒只做轻量 toast。Windows / macOS / Linux。", en: "Measures active work time, then locks every monitor with a countdown break; water reminders stay as toasts. Windows / macOS / Linux." },
@@ -539,16 +542,16 @@ var _hmt = _hmt || [];
             yw_tag: { zh: "王垠博客的自动归档镜像", en: "An auto-archived mirror of Wang Yin's blog" },
             yw_desc: { zh: "每周自动增量抓取 yinwang.org 全部文章存为 Markdown：图片本地化、中文标题进 frontmatter；被删的文章靠 Git 历史永久保留，静态站全文可搜，GitHub Actions 全自动运行。", en: "A weekly incremental crawl archives every yinwang.org post as Markdown — images localized, Chinese titles in frontmatter. Deleted posts live on in Git history; the static site is fully searchable, all via GitHub Actions." },
             cta_read: { zh: "在线阅读 →", en: "Read online →" },
-            oss_title: { zh: "开源项目", en: "Open Source" },
+            oss_title: { zh: "为开发者构建的基础库", en: "For builders" },
             oss_glaze: { zh: "Racket 写逻辑、Web 做 UI 的桌面应用框架：原生窗口内嵌系统 WebView，纯 FFI 免原生工具链，页面经 GLZ1 直调 Racket。", en: "Desktop apps with Racket logic and a web UI: native windows hosting the system WebView, pure FFI with no native toolchain, the page calling Racket directly over GLZ1." },
             oss_rivet: { zh: "Racket 写逻辑，交付一等原生应用：WinUI 3 / SwiftUI / GTK4 宿主内嵌 Racket 运行时，构建期生成 Swift / C++ / Kotlin 类型化客户端。", en: "Racket logic in first-party native apps: the Racket runtime embedded in WinUI 3 / SwiftUI / GTK4 hosts, with typed Swift / C++ / Kotlin clients generated at build time." },
             oss_keel: { zh: "Rivet 与 Glaze 共享的传输无关应用契约：一个值模型、一套规范字节编码、一个结构化错误形状，两端永远说同一种字节。", en: "The transport-neutral contract shared by Rivet and Glaze: one value model, one canonical byte encoding, one structured error shape — both runtimes speak the same bytes." },
-            oss_permit: { zh: "签名产品授权的开放协议：买断、订阅、试用都签成 Ed25519 凭证，应用用内置公钥离线验证，授权永不依赖在线服务。", en: "An open protocol for signed product rights: purchases, subscriptions and trials become Ed25519 credentials verified offline with an embedded public key — authorization never depends on an online service." },
+            oss_permit: { zh: "签名产品权益的开放协议：应用内置公钥，离线验证买断、试用与订阅凭据；需要及时撤销时显式选择在线租约。", en: "An open protocol for signed product rights: apps verify purchases, trials and subscriptions offline; timely enforcement uses an explicit managed lease." },
             oss_commerce: { zh: "独立软件的中立商业编排层：支付事件持久入库、重复投递无害，商业结果签成 Permit 权利——产品不碰渠道密钥，换支付渠道不改产品。", en: "Provider-neutral commerce orchestration for independent software: durable payment events in, signed Permit rights out — duplicate delivery is harmless, and switching payment providers never touches the product." },
             fp_tag: { zh: "Agent 原生的 ECU 刷写引擎", en: "Agent-native ECU flashing engine" },
             fp_desc: { zh: "把 ECU 刷写交给 agent：UDS 诊断与刷写走 CAN（ISO-TP）/DoIP/LIN，声明式刷写计划可版本化、可评审，agent-first CLI 带稳定退出码与失败证据。", en: "ECU flashing for agents: UDS diagnostics and flashing over CAN (ISO-TP), DoIP and LIN; declarative, versionable flash plans; an agent-first CLI with stable exit codes and failure evidence." },
             kw_tag: { zh: "自更新应用的签名钥保险库", en: "The signing-key vault for self-updating apps" },
-            kw_desc: { zh: "私钥签更新清单、公钥嵌在已装应用里验签——Sparkle、Tauri、electron-updater 全是这一套，缺的是私钥的日常托管。值永不显示只进剪贴板，每次改动先快照，深度校验（解析/配对/指纹），生成即入库。同步盘明文 INI 单源，引擎零网络。macOS / Windows / Linux。", en: "A private key signs the update manifest, an embedded public key verifies it — Sparkle, Tauri and electron-updater all work this way; what's missing is everyday custody of the private half. Values are copy-to-clipboard only, every write snapshots first, deep checks parse/pair/fingerprint, generation lands in the vault. Plain INI in your sync folder as the single source; zero network in the engine. Available on macOS, Windows and Linux." },
+            kw_desc: { zh: "管理自己的发布签名钥：复制而不展示，每次修改先快照，检查私钥与公钥配对。文件是自己同步盘里的明文 INI，需要信任设备和磁盘保护。", en: "Manage your release-signing keys: copy without displaying values, snapshot before writes, and check key pairing. The vault is plaintext INI in your sync folder and relies on trusted devices and disk protection." },
             pb_tag: { zh: "汽车行业的每日热点日报站", en: "The daily hot-list site for the automotive industry" },
             pb_desc: { zh: "把开源项目、行业资讯、前沿论文抓到一起，聚簇去重，按独立来源数与时间衰减算热度，每天出刊一张「pit 板」。Racket web-server 全栈、单进程自托管、零外部依赖，RSS/JSON/Markdown/llms.txt/SSE 全套 Agent 出口。", en: "Open-source projects, industry news and frontier papers, clustered and deduplicated, ranked by independent-source count with recency decay — one pit board a day. Full-stack Racket web-server, single-process self-hosting, zero external dependencies, with RSS/JSON/Markdown/llms.txt/SSE agent exits." },
             sp_tag: { zh: "Resilio Sync 的 Linux 原生桌面", en: "Native Linux desktop for Resilio Sync" },
@@ -556,16 +559,16 @@ var _hmt = _hmt || [];
             rp_tag: { zh: "一套 Profile，覆盖每一台设备", en: "One profile, every device" },
             rp_desc: { zh: "Local-first 原生网络工具箱：一套 Racket 控制平面统一 Profile、规则与策略组，每条路由都有确定性 DecisionTrace，Xray 只是第一个可替换引擎。桌面与移动端规划中，当前为架构 Alpha。", en: "A local-first native network toolbox: one Racket control plane unifies profiles, rules and policy groups, every route gets a deterministic DecisionTrace, and Xray is just the first replaceable engine. Desktop and mobile hosts planned — architecture alpha today." },
             pg_tag: { zh: "把安静的书架，带给每个桌面", en: "A calm bookshelf, for every desktop" },
-            pg_desc: { zh: "跨平台的书架与阅读器：启动即书架，书永远留在你的文件夹里；PDF / EPUB 沉浸阅读，划词翻译、总结、与文档对话全程流式；批注高亮、朗读、打印、分屏、轻编辑三端同款。兼容任意 OpenAI 协议端点，API Key 只存本机。macOS / Windows / Linux。", en: "A calm cross-platform bookshelf and reader: launch into your shelf, and your books stay your files. Immersive PDF / EPUB reading with streamed selection translation, summaries and document chat; highlights, TTS, printing, split view and light editing on every platform. Works with any OpenAI-compatible endpoint. Your API key never leaves your machine. macOS, Windows and Linux." },
+            pg_desc: { zh: "把 PDF 和 EPUB 收进自己的书架，继续上次阅读，记录批注。需要帮助时，用自己的模型 key 翻译、总结或与文档对话。三桌面平台可下载。", en: "Keep PDFs and EPUBs on your own shelf, resume reading and annotate. Bring your own model key for translation, summaries and document chat. Available on all three desktops." },
             cta_online: { zh: "在线了解 →", en: "Learn more →" },
             fc_tag: { zh: "一次按键，直达一切", en: "One keystroke. Everything within reach." },
-            fc_desc: { zh: "键盘优先的三平台启动器：模糊搜索应用、剪贴板历史与片段，内联计算、Web 搜索 bang 与系统命令。一个 Racket 大脑，WinUI 3 / SwiftUI / GTK4 三套原生 UI，无 WebView，数据不出本机。", en: "A keyboard-first launcher for three platforms: fuzzy-search apps, clipboard history and snippets, inline math, web-search bangs and system commands. One Racket brain with first-party native UIs in WinUI 3 / SwiftUI / GTK4 — no WebView, nothing leaves your machine." },
+            fc_desc: { zh: "一次快捷键打开应用、找回剪贴板、运行计算和常用命令。macOS、Windows、Linux 原生界面，本地数据由你掌握。", en: "Launch apps, find clipboard history, calculate and run commands from one shortcut. Native on macOS, Windows and Linux, with local data under your control." },
             py_tag: { zh: "agent 时代的公众号发布管线", en: "The agent-era publishing pipeline for WeChat" },
             py_desc: { zh: "写作留在 Obsidian，发布交给 agent：一条命令完成排版与小绿书卡片渲染，主题即 npm 包，托管服务负责稳定发布。只走官方 API，开源核心不做锁定。", en: "Write in Obsidian, publish with your agent: one command for Markdown typesetting and xiaolvshu card rendering, themes as npm packages, and a hosted service for reliable publishing. Official API only; open core, no lock-in." },
             pl_tag: { zh: "听得懂的英文播客", en: "Podcasts, in your language" },
             pl_desc: { zh: "跨平台桌面播客应用：用你自己的大模型 API key，把英文单集转写、逐句翻译、自动总结——为「读得懂、听不懂」的听众而生。Rivet 原生架构，转录、翻译与摘要全部缓存在本机。", en: "A cross-platform podcast player that transcribes, translates and summarizes English episodes with your own LLM API key — for listeners who understand far more reading than hearing. Rivet-native, with transcripts, translations and summaries cached on your machine." },
             pay_tag: { zh: "每一台设备，都在一天天回本", en: "Every device pays itself back, one day at a time" },
-            pay_desc: { zh: "记下购买价格，看每日成本一天天下落；设定「一天值多少钱」，看回本进度环一点点走满。Rivet 原生应用（macOS / Windows / Linux），数据存于单份可读文件。", en: "Record what you paid and watch the daily cost tick down; set what a day with the device is worth to you and fill the payback ring. A Rivet-native app for macOS, Windows and Linux, storing one human-readable file." },
+            pay_desc: { zh: "记下设备价格，看每日成本和回本进度慢慢变化。桌面版本永久免费，数据保存在本机；macOS、Windows、Linux。", en: "Record a purchase and watch daily cost and payback progress change over time. Desktop editions stay free, with local data on macOS, Windows and Linux." },
             meta_title: { zh: "TuringLambdaAI — 深度技术写作与独立开发", en: "TuringLambdaAI — Deep-dive technical writing & indie tools" },
             meta_desc: { zh: "车载软件工程师的深度技术写作与独立开发。把复杂的技术，做得直观好用。", en: "Automotive software engineer — deep-dive technical writing and indie developer tools. Making complex technology intuitive." }
         };
