@@ -1,68 +1,70 @@
-# 产品组合与首发商业设计
+# Portfolio and launch business design
 
-版本：**2026-10-v2**，2026-10-23。用户确认：全部产品仍在开发，尚无实际用户；只有 Rivet、Payback、Taskly 正在持续修改。本文件取代之前的收费归属、固定节奏、早鸟与预售设想。定价可以基于证据迭代，不再遵循“推广前定死、以后不许调整”的旧规则。既已发布源码的许可继续有效。
+**English** · [简体中文](PORTFOLIO.zh-CN.md)
 
-这里决定组合角色、投入顺序与共用规则；各产品仓库 `PRICING.md` 是具体价格、权益和开卖门禁的唯一权威。文档中的首发目标不是已上线商品，不将开发功能、支付部署或一张许可证等同于商业交付。
+Version **2026-10-v2**, 2026-10-23. The owner confirmed that all products are still in development, with no actual users; only Rivet, Payback and Taskly are actively changing. This document replaces previous commercial classifications, fixed launch sequences, early-bird plans and presales. Prices can evolve with evidence; the previous rule of fixing the structure permanently before promotion no longer applies. Licenses already granted for released source remain effective.
 
-Taskly / Payback 的新文档先以独立 PR #60 / #21 交接，等待 CI 与合并；下表链接在合并前指向对应 PR。其他方案已直接写入停更仓库默认分支。
+This document owns portfolio roles, investment order and shared rules. Each product's `PRICING.md` and complete `PRICING.zh-CN.md` translation describe its prices, rights and launch gates. Launch targets are not live offers. Development features, a deployed payment service or a signed credential do not by themselves establish commercial delivery. Follow the [documentation language policy](docs/DOCUMENTATION-LANGUAGES.md).
 
-## 选择少数收入主力
+Taskly and Payback documentation is handed off in separate PRs #60 and #21, awaiting CI and merge; the table links to those PRs until then. Other plans have been written to the default branches of repositories whose development has stopped.
 
-| 产品 | 决策 | 用户为什么付钱 | 执行顺序 |
-|---|---|---|---|
-| [Taskly](https://github.com/turinglambdaai/taskly/pull/60) | 完整官方桌面版买断，14 天试用；不把提醒/自然语言输入拆卖 | 稳定、顺手、可恢复的日常任务系统 | 消费主力 1；先完成现有交互/更新/恢复 |
-| [Fulcrum](https://github.com/turinglambdaai/fulcrum/blob/main/PRICING.md) | 免费现有启动器 + 新增工作流 Pro 买断 | 多步骤自动化的编辑、调试和失败恢复 | 消费主力 2；先证明一个新增付费闭环 |
-| [Booklight](https://github.com/turinglambdaai/booklight/blob/main/PRICING.md) | 免费现有阅读器 + 新增研究工作台 Pro 买断 | 有可追溯引用的跨书研究成果 | 第二梯队；先把阅读/批注恢复做稳 |
-| [gPTP Studio](https://github.com/turinglambdaai/gptp-studio/blob/main/PRICING.md) | Linux 官方 Pro 买断 + 可选更新续购 | 真实时间同步控制、参考硬件验证与工程证据 | 商业链技术试点；不等于最早能获得市场收入 |
-| [Autarx](https://github.com/turinglambdaai/autarx/blob/main/PRICING.md) | 完整工程工作台买断 + 可选更新续购 | 可验证的配置/校验/生成闭环 | 长线；不急于扩平台或销售渠道 |
-| [FlashPilot](https://github.com/turinglambdaai/flashpilot/blob/main/PRICING.md) | 免费 AGPL 引擎 + 官方验证资产/发行版买断 | 具体 ECU/适配器上的刷写、失败与恢复证据 | 长线；真实硬件在环通过才可立 offer |
-| [HackDigest](https://github.com/turinglambdaai/hackdigest/blob/main/PRICING.md) | 免费 BYOK；限额托管翻译/摘要订阅 | 不配置 key 的持续计算服务 | 先完成传输/密钥/成本验证；无终身托管 |
-| [Publy](https://github.com/turinglambdaai/publy/blob/main/PRICING.md) | 免费 CLI/插件/自托管；托管发布订阅 | 稳定出口、排程、凭据管理与恢复 | 自用可靠性通过后小规模试点；不开主题市场 |
+## Concentrate revenue work on a few products
 
-Taskly 的完整商品形式可减少人为免费/Pro 矩阵。Fulcrum、Booklight 现有免费功能已多，新增付费层应交付工作流成果，不能把 BYOK、导出、基础搜索重新围起来。以上判断是本组合的产品决策，不是已验证的需求或销量预测。
+| Product | Decision | What a customer pays for | Execution order |
+| --- | --- | --- | --- |
+| [Taskly](https://github.com/turinglambdaai/taskly/pull/60) | Purchase of the complete official desktop product; 14-day trial; reminders and natural-language entry are not separate extras | A dependable daily task system with good interaction and recovery | Consumer flagship 1; complete existing interaction/update/recovery work first |
+| [Fulcrum](https://github.com/turinglambdaai/fulcrum/blob/main/PRICING.md) | Existing launcher stays free; purchase of new workflow Pro | Multi-step automation authoring, debugging and failure recovery | Consumer flagship 2; demonstrate one new paid workflow first |
+| [Booklight](https://github.com/turinglambdaai/booklight/blob/main/PRICING.md) | Existing reader stays free; purchase of a new research workbench | Cross-book research with traceable citations | Second tier; stabilize reading and annotation recovery first |
+| [gPTP Studio](https://github.com/turinglambdaai/gptp-studio/blob/main/PRICING.md) | Linux official Pro purchase with optional update renewal | Real time-synchronization control, reference-hardware qualification and engineering evidence | Technical commerce pilot; this does not predict the earliest market revenue |
+| [Autarx](https://github.com/turinglambdaai/autarx/blob/main/PRICING.md) | Complete engineering workbench purchase with optional update renewal | Verifiable configuration/validation/generation | Long term; no rush to add platforms or sales channels |
+| [FlashPilot](https://github.com/turinglambdaai/flashpilot/blob/main/PRICING.md) | Free AGPL engine; purchase of official validation assets/distribution | Flashing, failure and recovery evidence for specific ECU/adapter combinations | Long term; real hardware-in-the-loop evidence before a paid offer |
+| [HackDigest](https://github.com/turinglambdaai/hackdigest/blob/main/PRICING.md) | Free BYOK; capped hosted translation/digest subscription | Ongoing compute without configuring a key | Verify transport, secret custody and costs first; no lifetime hosting |
+| [Publy](https://github.com/turinglambdaai/publy/blob/main/PRICING.md) | Free CLI/plugin/self-hosting; hosted publishing subscription | Stable egress, scheduling, credential custody and recovery | Small pilot after reliable internal use; no theme marketplace |
 
-## 免费入口、保活与实验
+Taskly's complete-product model reduces an artificial Free/Pro feature matrix. Fulcrum and Booklight already have substantial free functionality: a new paid layer must deliver workflow outcomes rather than put BYOK, export or basic search behind a new wall. These are portfolio decisions, not validated demand or sales forecasts.
 
-| 产品 | 决策与投入边界 |
-|---|---|
-| [Payback](https://github.com/turinglambdaai/payback/pull/21) | 所有实际交付平台免费，不再计划手机单独收费。移除现存 10 台/PB1 门禁；不以备份、导出或 BYO 同步收费 |
-| [PodLens](https://github.com/turinglambdaai/podlens/blob/main/PRICING.md) | 免费 BYOK 听读工具；不建设另一套音频计费/托管服务；先验证重复收听 |
-| [RegexMate](https://github.com/turinglambdaai/regexmate/blob/main/PRICING.md) | 免费 CLI/GUI/MCP 和内部生产/CI/agent；取消近期待办中的团队 Pro，不因企业身份追收费；现有 BUSL grant 不变 |
-| [MoveBit](https://github.com/turinglambdaai/movebit/blob/main/PRICING.md) | 免费社区工具，完成更新/跨屏/恢复即可，保持小体量 |
-| [Keyward](https://github.com/turinglambdaai/keyward/blob/main/PRICING.md) | 免费安全及自用发布基础设施，不按密钥数或安全功能收费 |
-| [Threadly](https://github.com/turinglambdaai/threadly/blob/main/PRICING.md) | 免费桌面社区工具；登录、回帖、通知与 BYOK 免费，保活 |
-| [SyncPilot](https://github.com/turinglambdaai/syncpilot/blob/main/PRICING.md) | 免费保活，不为第三方 Resilio 的控制壳再建立授权体系 |
-| [RelayPilot](https://github.com/turinglambdaai/relaypilot/blob/main/PRICING.md) | 架构实验，不预售 VPN、节点或流量，不宣称有现成服务 |
-| Pitboard | 免费内容入口，维护事实、来源与勘误，不新建订阅墙 |
-| Racket 程序设计 / Yinwang Archive | 免费内容与社区入口；不将第三方归档内容包装为独家付费资源 |
+## Free entry points, maintenance and experiments
 
-Keepsake / Moonbeam 已删除，退出组合；不恢复开发。免费角色减少每个小产品单独运营账号、订单、激活和客服的负担。免费不能替代数据恢复、安全更新与可访问性的交付标准。
+| Product | Decision and investment boundary |
+| --- | --- |
+| [Payback](https://github.com/turinglambdaai/payback/pull/21) | Every delivered platform is free; no separate mobile sale is planned. Remove the existing ten-device/PB1 gate. Do not charge for backup, export or BYO sync |
+| [PodLens](https://github.com/turinglambdaai/podlens/blob/main/PRICING.md) | Free BYOK listening/reading tool. Do not build another hosted-audio billing service. Validate repeat listening first |
+| [RegexMate](https://github.com/turinglambdaai/regexmate/blob/main/PRICING.md) | Free CLI/GUI/MCP and internal production/CI/agent use. Cancel near-term team Pro; no corporate-identity fee. Existing BUSL grant stays in force |
+| [MoveBit](https://github.com/turinglambdaai/movebit/blob/main/PRICING.md) | Free community utility; finish updates, multi-display interaction and recovery, and keep it small |
+| [Keyward](https://github.com/turinglambdaai/keyward/blob/main/PRICING.md) | Free security and internal release infrastructure. No charges for key count or security features |
+| [Threadly](https://github.com/turinglambdaai/threadly/blob/main/PRICING.md) | Free desktop community tool, in maintenance mode; sign-in, replies, notifications and BYOK stay free |
+| [SyncPilot](https://github.com/turinglambdaai/syncpilot/blob/main/PRICING.md) | Free maintenance mode. No separate entitlement business for a shell controlling third-party Resilio |
+| [RelayPilot](https://github.com/turinglambdaai/relaypilot/blob/main/PRICING.md) | Architecture experiment; no VPN, node or traffic presales and no claim of an existing service |
+| Pitboard | Free content entry point; maintain accuracy, sources and corrections, without a new subscription wall |
+| Racket Programming / Yinwang Archive | Free content/community entry points; do not package third-party archived content as exclusive paid material |
 
-## 基础设施与开源
+Keepsake and Moonbeam were deleted and are outside the portfolio; do not restart them. Free roles reduce separate account, order, activation and support operations for every small product. Free pricing does not replace recovery, security updates or accessibility standards.
 
-Rivet / Glaze / Keel（MIT）、Permit / Commerce（Apache-2.0）及协议库族保持当前许可，不加入商业门禁，不先做付费 SDK。它们提高全部产品的交付效率。五库依赖和职责的唯一权威仍是 Keel 的 `docs/family-architecture.md`；产品商业设计不向 Rivet/Glaze 注入价格、支付 SDK 或产品专属规则。
+## Infrastructure and open source
 
-源码许可不等于官方服务权益。AGPL/Apache/MIT 已授予的权利不能用许可证文件收回；BUSL 不因免费使用而改称 MIT。未来单独许可的组件须在开发前清楚划界，不能临时换照充当护城河。
+Rivet, Glaze and Keel (MIT), Permit and Commerce (Apache-2.0), and the protocol-library family keep their current licenses. Add no commercial gates or paid SDK first. These libraries multiply delivery efficiency across the products. The only authoritative five-library dependency/ownership graph remains Keel's `docs/family-architecture.md`. Product business design must not inject prices, payment SDKs or product-specific policy into Rivet or Glaze.
 
-## 收费与技术共用规则
+Source rights and official service rights are different. License credentials cannot revoke AGPL/Apache/MIT rights already granted; free use does not relabel BUSL source as MIT. Any future separately licensed component needs a clear boundary before development, rather than an improvised license change used as a moat.
 
-- **本地产品买断**：永久使用资格 + 12 个月新版本资格；续购可选、不自动扣款、不补缴中断月份。续购从支付时间与现有截止时间的较晚者起算。命名用户与设备/并发是三回事，不采硬件指纹，不假装纯离线授权能实时撤销。
-- **托管订阅**：仅为真实持续服务收费；明确账户、周期、模型/调用长度、配额、失败是否计数、超额停止、取消和数据出口。无无限 AI、终身服务器或隐性超额账单。
-- **免费产品不接商业链**：不为了展示 Permit/Commerce 而增加登录、激活或账号。模型 key、发布签名 key、商业签发 key、支付渠道 key 分域管理。
-- **Commerce** 管 offer/policy/payment evidence/issuance，使用版本化且不可变的 offer；**Permit** 表达产品权益/更新窗，平台安全存储和领域代码做本地判断。托管消耗必须由服务端计量，不能把可复制离线凭据当并发计数器。
-- 不售未交付平台。当前价格是独立设定的人民币/美元首发目标，不是汇率换算；真实结账须明确税费、支持、退款与总价。没有实际用户，也不设计虚构“老用户迁移”。
-- 不推出全家桶终身授权、长期早鸟或订阅捆绑：成熟度与成本不同，先用单品验证需求。未来组合优惠不能让一个退订/退款误伤其他产品权益。
+## Shared commercial and technical rules
 
-## 如何判断方案是否成立
+- **Local product purchases:** perpetual use with 12 months of new-version eligibility. Renewal is optional, does not charge automatically and does not back-bill gaps. Start a renewal from the later of payment time and the current expiry. Named users, devices and concurrent sessions are different concepts. No hardware fingerprints; no claim that fully offline credentials support prompt revocation.
+- **Hosted subscriptions:** charge only for an actual continuous service. Specify accounts, periods, models/input lengths, quotas, failure accounting, exhaustion behavior, cancellation and data export. No unlimited AI, lifetime servers or hidden overage bills.
+- **Free products stay outside the commercial chain:** do not add sign-in, activation or accounts merely to demonstrate Permit/Commerce. BYOK, update-signing, entitlement-signing and payment-provider keys are separate trust domains.
+- **Commerce** owns offers/policies/payment evidence/issuance with versioned, immutable offers. **Permit** expresses product rights and update windows. Products use platform secure storage and domain code for local decisions. Hosted consumption is metered on the server; a copyable offline credential is not a concurrency counter.
+- Do not sell undelivered platforms. CNY/USD prices are independent regional launch targets, not exchange-rate conversions. Real checkout must state taxes, support, refunds and the final total. There are no actual users, so do not invent an existing-customer migration exercise.
+- Do not offer a lifetime whole-portfolio bundle, prolonged early-bird sale or bundled subscriptions. Maturity and costs differ; validate individual products first. A future bundle's refund/cancellation must not revoke unrelated product rights.
 
-现在的主要风险是没有真实使用反馈。先让少量试用者完成关键任务，记录主动提供的反馈：首次成功、7/30 天重复使用、导致放弃的失败、支持时间与购买意愿；不声称已有这些数据，不默认添加遥测。
+## How to test these decisions
 
-Taskly/Fulcrum 先证明愿意购买的成果；Booklight 不在阅读可靠性前扩研究功能；汽车产品用真实参考组合与有边界的验证资产证明专业价值。托管两项开卖前须实测最坏配额成本、可用性、滥用和退款/取消，目标可变成本（模型、存储、出口、支付费）低于收入 30%，其中 HackDigest 推理成本低于标价 25%。这是开卖门禁，不是当前盈利结论。
+The main risk is the absence of real usage feedback. Have a small number of trial users complete key tasks, then collect feedback they choose to provide: first success, repeat use at 7/30 days, failures that cause abandonment, support time and purchase intent. Do not imply that this evidence already exists or add telemetry by default.
 
-每次只启动一个商业实现切片：gPTP 先做支付到权益/更新的技术试点，Taskly 做首个消费商品；不让所有 agent 同时给所有产品装收费墙。现阶段仍以 Rivet、Taskly、Payback 活跃工作为主，停更项目先完成文档和明确门禁，不自动复活全部路线。
+Taskly/Fulcrum must demonstrate outcomes people will buy. Booklight must establish reading reliability before expanding research features. Automotive products demonstrate professional value with real reference combinations and bounded validation assets. Before either hosted service is sold, measure worst-case allowed-quota costs, availability, abuse and refund/cancellation behavior. Target variable costs for models, storage, egress and payment fees below 30% of revenue; HackDigest inference should be below 25% of its target price. These are launch gates, not present profitability claims.
 
-## 来源与判断
+Start one commercial implementation slice at a time: gPTP is the payment-to-rights/update technical pilot; Taskly is the first consumer product. Do not have agents install paywalls across the whole portfolio at once. Rivet, Taskly and Payback remain the active work. Other projects first get documentation and explicit gates, rather than automatically restarting every roadmap.
 
-2026-10-23 查阅：[Alfred 官方商店](https://www.alfredapp.com/shop/) 展示版本许可和升级型产品；[Raycast 官方价格](https://www.raycast.com/pricing) 展示免费核心与持续服务/AI 订阅。这些只证明市场存在多种包装方式，不证明我们的转化率或定价。选择有限买断主力、免费生态工具、托管才订阅，是结合本组合成本与独立维护能力作出的判断。
+## Sources and judgment
 
-共用交付要求见 [PRODUCT-STANDARD](docs/PRODUCT-STANDARD.md)，初始审查见 [PRODUCT-REVIEW](docs/PRODUCT-REVIEW-2026-10.md)，网站结构见 [HOME-PAGE-PLAN](docs/HOME-PAGE-PLAN.md)。代理开工以本文件和各仓 PRICING 为准；旧 dated review 中的商业分类只作审查历史，不再作为有效收费规则。
+Reviewed on 2026-10-23: the [official Alfred shop](https://www.alfredapp.com/shop/) offers version licenses/upgrades; [official Raycast pricing](https://www.raycast.com/pricing) combines a free core with continuing-service/AI subscriptions. These establish that different packages exist, not our conversion rate or price. A few paid flagships, free ecosystem tools and subscriptions only for hosting are decisions based on this portfolio's costs and solo-maintainer capacity.
+
+Shared delivery rules: [PRODUCT-STANDARD](docs/PRODUCT-STANDARD.md). Initial evidence: [PRODUCT-REVIEW](docs/PRODUCT-REVIEW-2026-10.md). Website structure: [HOME-PAGE-PLAN](docs/HOME-PAGE-PLAN.md). Agents follow this policy and each product's pricing documents. Commercial categories in the dated initial review are historical evidence, not current pricing instructions.

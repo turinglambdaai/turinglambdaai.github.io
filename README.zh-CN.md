@@ -1,6 +1,6 @@
 # TuringLambdaAI
 
-**TuringLambdaAI** 的门面主页 — 上线于 **[jrtx.site](https://jrtx.site)**。把读者导向微信公众号技术专栏，展示业余时间独立开发的工具，围绕同一个理念：把复杂技术做直观。
+**TuringLambdaAI** 的门面主页 — 上线于 **[jrtx.site](https://jrtx.site)**。帮助用户找到独立开发的桌面工具、技术写作与可复用基础库，围绕同一个理念：把复杂技术做直观。
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
 
@@ -20,7 +20,7 @@
 
 - **中英双语** — 完整的中 / 英文切换，自动识别浏览器语言
 - **明暗主题** — 跟随系统偏好，可手动切换，跨次访问保持记忆
-- **公众号优先引流** — 中文访客展示公众号专区块（价值点 + 二维码卡片），其他地区展示 GitHub
+- **按用途展示产品** — 日常效率、阅读、工程与社区分别组织，写作和开发基础库独立分区
 - **统一设计系统** — Anthropic 风格的暖色调
 - **零依赖** — 纯手写 HTML/CSS 加一层极简 vanilla-JS 国际化，无需构建
 - **响应式** — 从桌面到移动端布局自适应
@@ -86,4 +86,6 @@ turinglambdaai.github.io/
 
 ## 维护导航
 
-产品投入和商业分类以 [PORTFOLIO.md](PORTFOLIO.md) 为准。[交付标准](docs/PRODUCT-STANDARD.md)、[逐产品审查](docs/PRODUCT-REVIEW-2026-10.md)和[主页规划](docs/HOME-PAGE-PLAN.md)将架构与产品工作路由到实际负责的仓库。
+产品投入和商业分类以 [PORTFOLIO.md](PORTFOLIO.zh-CN.md) 为准。[交付标准](docs/PRODUCT-STANDARD.md)、[逐产品审查](docs/PRODUCT-REVIEW-2026-10.md)和[主页规划](docs/HOME-PAGE-PLAN.md)将架构与产品工作路由到实际负责的仓库。
+
+文档语言：[中文规范](docs/DOCUMENTATION-LANGUAGES.zh-CN.md) · [English policy](docs/DOCUMENTATION-LANGUAGES.md)。组合策略：[简体中文](PORTFOLIO.zh-CN.md) · [English](PORTFOLIO.md)。

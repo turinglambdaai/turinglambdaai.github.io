@@ -1,6 +1,6 @@
 # TuringLambdaAI
 
-The front door of **TuringLambdaAI** — live at **[jrtx.site](https://jrtx.site)**. It funnels readers to the WeChat technical column and showcases the indie tools built after hours, all around a single idea: make complex technology intuitive.
+The front door of **TuringLambdaAI** — live at **[jrtx.site](https://jrtx.site)**. It helps people find independent desktop tools, writing and reusable libraries, around one idea: make complex technology intuitive.
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
 
@@ -20,7 +20,7 @@ The front door of **TuringLambdaAI** — live at **[jrtx.site](https://jrtx.site
 
 - **Bilingual** — full Chinese / English toggle with automatic browser-language detection
 - **Light & dark themes** — follows the system preference, manually switchable, remembered across visits
-- **WeChat-first funnel** — dedicated QR section (value props + QR card) for Chinese visitors; GitHub CTA for everyone else
+- **Outcome-first catalog** — products by everyday tasks, reading, engineering and community; writing and developer libraries have separate sections
 - **Shared design system** — an Anthropic-inspired warm palette
 - **Zero dependencies** — hand-written HTML/CSS with a small vanilla-JS i18n layer; no build step
 - **Responsive** — lays out cleanly from desktop down to mobile
@@ -87,3 +87,5 @@ turinglambdaai.github.io/
 ## Maintainer map
 
 Product investment and commercial categories live in [PORTFOLIO.md](PORTFOLIO.md). The [delivery standard](docs/PRODUCT-STANDARD.md), [product review](docs/PRODUCT-REVIEW-2026-10.md), and [homepage brief](docs/HOME-PAGE-PLAN.md) route architecture and product work to its owning repository.
+
+Documentation languages: [English policy](docs/DOCUMENTATION-LANGUAGES.md) · [中文规范](docs/DOCUMENTATION-LANGUAGES.zh-CN.md). Portfolio: [English](PORTFOLIO.md) · [简体中文](PORTFOLIO.zh-CN.md).

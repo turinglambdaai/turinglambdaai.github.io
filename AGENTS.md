@@ -1,30 +1,28 @@
-# AGENTS.md
+# Main-site maintainer contract
 
-turinglambdaai 家族主站（jrtx.site）——纯静态 HTML/CSS 单页，零依赖零构建，GitHub Pages 直出。
+**English** · [简体中文](AGENTS.zh-CN.md)
 
-## 结构
+This repository is the TuringLambdaAI family front door at jrtx.site: hand-written static HTML/CSS, no dependencies or build step, served by GitHub Pages.
 
-- `index.html` — 主页全部内容（产品卡片、i18n 文案都在这一个文件）
-- `assets/` — 字体（自托管可变字体）与图片
-- `CNAME` — jrtx.site 域名绑定
-- `README.md` / `README.zh-CN.md` — 双语说明
+## Source map and local preview
 
-## 常用命令
+- `index.html`: page structure, product cards and the Chinese/English i18n dictionaries.
+- `assets/`: self-hosted variable fonts and images.
+- `CNAME`: custom-domain binding.
+- `README.md` / `README.zh-CN.md`: paired public introductions.
 
-无构建系统：本机直接开 `index.html` 或起任意静态服务器预览（如 `python3 -m http.server`）。
+Open the HTML locally or use a static server such as `python3 -m http.server`.
 
-## 验证与发版
+## Verification and release
 
-- push master（默认分支）即部署 GitHub Pages，**推送即发布**。
-- 改 HTML 后必须跑标签配平检查——历史上丢 `</p>` 导致产品卡渲染成空壳的事故发生过，改动大时逐卡预览。
-- 产品卡与 GitHub About/产品站是三个检查面：改文案时核对主站卡片、对应产品站、rivet docs 是否同步。
+Pushing the default branch `master` deploys GitHub Pages: a push is a publication action. Check tag balance after every HTML edit; a missing closing paragraph previously broke product cards. For broad changes, preview every affected card. Check homepage cards, the corresponding product site, GitHub About and relevant Rivet documentation when product claims change.
 
-## 仓库特定规矩
+Do not add external JS/CSS frameworks. Fonts stay self-hosted; external Google Fonts can block the first render in mainland China. Keep versions out of the main header; version details belong to product repositories/About. Update Chinese/English `data-i18n` content together.
 
-- 零依赖：不引外部 JS/CSS 框架；字体只走自托管（禁 Google Fonts，大陆阻塞首屏）。
-- 页面含 data-i18n 双语文案，改动须中英同步。
-- 头部不放版本号（版本信息只在各产品仓库/About 承载）。
+## Portfolio and delivery ownership
 
-## 产品组合与交付治理
+`PORTFOLIO.md` and `PORTFOLIO.zh-CN.md` describe the same portfolio decisions. Delivery rules live in `docs/PRODUCT-STANDARD.md`, the dated product evidence/issue map in `docs/PRODUCT-REVIEW-2026-10.md`, and the website brief in `docs/HOME-PAGE-PLAN.md`. The dependency graph remains owned by Keel's `docs/family-architecture.md`; do not duplicate protocols or product implementation queues here.
 
-组合归属以 `PORTFOLIO.md` 为准；交付基线见 `docs/PRODUCT-STANDARD.md`，本轮逐产品证据与 issue 入口见 `docs/PRODUCT-REVIEW-2026-10.md`，主页改版执行简报见 `docs/HOME-PAGE-PLAN.md`。库间依赖图仍以 Keel 的 `docs/family-architecture.md` 为准，不在主站另造协议或复制各仓实施队列。
+## Documentation languages
+
+Follow [the language policy](docs/DOCUMENTATION-LANGUAGES.md). Default public docs are English with complete Chinese entry paths, reciprocal links and the same user promises. API/protocol references have one normative English meaning; localized guides must preserve commands, identifiers and limits. Prices, quotas, expiry, cancellation, support scope, privacy and platform maturity must agree in both languages. Historical internal notes are not automatically a translation obligation.

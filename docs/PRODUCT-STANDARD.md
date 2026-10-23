@@ -5,6 +5,10 @@ delivery policy. It does not replace a library protocol, a product specification
 or an existing implementation handoff. Adopt it through the linked product
 issues, after any active shared-file writer finishes its bounded slice.
 
+## Documentation languages
+
+Follow the [English/Chinese language policy](DOCUMENTATION-LANGUAGES.md) / [中文规范](DOCUMENTATION-LANGUAGES.zh-CN.md). Default public entry points are English with complete Chinese user paths; paired product promises must agree. Library API/protocol semantics remain one normative English source. Keep code identifiers and examples unchanged, update both user-facing languages in the same change, and record missing translations honestly.
+
 ## Ownership and composition
 
 The five-library graph and release order remain in
