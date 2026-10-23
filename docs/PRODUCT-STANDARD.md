@@ -60,6 +60,10 @@ rollback, backup/restore, queue recovery and public health evidence. For a
 content site use publishing freshness, source attribution, broken-link checks,
 correction reporting and recovery from a failed scheduled publication.
 
+## Public website boundary
+
+User-facing navigation and footers route to products, downloads, user documentation, feedback and actual commercial terms. Portfolio investment decisions, draft prices, authorization implementation plans and agent handoffs belong in repository maintainer maps and AGENTS. Keep launch hypotheses out of customer pricing navigation. A product may publish an outcome-oriented roadmap that clearly distinguishes plans from delivered behavior; this is separate from its internal execution queue.
+
 ## Product experience contract
 
 Reuse an existing canonical product/design document. Do not add another one

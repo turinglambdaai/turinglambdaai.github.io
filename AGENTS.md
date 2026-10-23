@@ -46,3 +46,7 @@ Do not add external JS/CSS frameworks. Fonts stay self-hosted; external Google F
 ## Documentation languages
 
 Follow [the language policy](docs/DOCUMENTATION-LANGUAGES.md). Default public docs are English with complete Chinese entry paths, reciprocal links and the same user promises. API/protocol references have one normative English meaning; localized guides must preserve commands, identifiers and limits. Prices, quotas, expiry, cancellation, support scope, privacy and platform maturity must agree in both languages. Historical internal notes are not automatically a translation obligation.
+
+## Customer navigation boundary
+
+The main site is a product discovery front door. Keep portfolio strategy, draft pricing, authorization implementation plans and agent handoffs in repository maintainer documentation, outside customer navigation and footers. Product sites explain current availability and link to public prices/terms only when the offer is ready; a future price is not a live offer. Public progress pages, when useful, describe user outcomes and distinguish shipped work from plans without exposing internal execution queues.

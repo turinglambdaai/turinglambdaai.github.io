@@ -27,6 +27,13 @@ weight. Released products link to their product site; unreleased products use
 Rivet/Glaze choice and Keel/Permit/Commerce roles stated briefly. Framework
 names become secondary metadata on product cards, not the sales argument.
 
+
+## Customer information versus maintainer decisions
+
+jrtx.site is the user-facing directory of the whole product family. Its navigation and footer must not link to PORTFOLIO, draft PRICING policies, agent handoffs or internal implementation plans. Keep those discoverable through the repository's maintainer map and AGENTS. A public repository does not make every document a customer journey.
+
+The main site answers what a product does, who it serves, what is available and where to try it. Each product site owns the actual public offer: price, included rights, trial, renewal/cancellation and support when ready for sale. Before then, state current free/development availability and honest maturity. Do not add a portfolio-wide pricing center while product offers remain hypotheses. A public roadmap is optional and explains user outcomes rather than internal tasks.
+
 ## Product page template
 
 1. Hero: audience + job + outcome, real screenshot, platform/maturity line,
