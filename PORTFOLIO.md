@@ -4,11 +4,13 @@
 
 这里决定组合角色、投入顺序与共用规则；各产品仓库 `PRICING.md` 是具体价格、权益和开卖门禁的唯一权威。文档中的首发目标不是已上线商品，不将开发功能、支付部署或一张许可证等同于商业交付。
 
+Taskly / Payback 的新文档先以独立 PR #60 / #21 交接，等待 CI 与合并；下表链接在合并前指向对应 PR。其他方案已直接写入停更仓库默认分支。
+
 ## 选择少数收入主力
 
 | 产品 | 决策 | 用户为什么付钱 | 执行顺序 |
 |---|---|---|---|
-| [Taskly](https://github.com/turinglambdaai/taskly/blob/main/PRICING.md) | 完整官方桌面版买断，14 天试用；不把提醒/自然语言输入拆卖 | 稳定、顺手、可恢复的日常任务系统 | 消费主力 1；先完成现有交互/更新/恢复 |
+| [Taskly](https://github.com/turinglambdaai/taskly/pull/60) | 完整官方桌面版买断，14 天试用；不把提醒/自然语言输入拆卖 | 稳定、顺手、可恢复的日常任务系统 | 消费主力 1；先完成现有交互/更新/恢复 |
 | [Fulcrum](https://github.com/turinglambdaai/fulcrum/blob/main/PRICING.md) | 免费现有启动器 + 新增工作流 Pro 买断 | 多步骤自动化的编辑、调试和失败恢复 | 消费主力 2；先证明一个新增付费闭环 |
 | [Booklight](https://github.com/turinglambdaai/booklight/blob/main/PRICING.md) | 免费现有阅读器 + 新增研究工作台 Pro 买断 | 有可追溯引用的跨书研究成果 | 第二梯队；先把阅读/批注恢复做稳 |
 | [gPTP Studio](https://github.com/turinglambdaai/gptp-studio/blob/main/PRICING.md) | Linux 官方 Pro 买断 + 可选更新续购 | 真实时间同步控制、参考硬件验证与工程证据 | 商业链技术试点；不等于最早能获得市场收入 |
@@ -23,7 +25,7 @@ Taskly 的完整商品形式可减少人为免费/Pro 矩阵。Fulcrum、Booklig
 
 | 产品 | 决策与投入边界 |
 |---|---|
-| [Payback](https://github.com/turinglambdaai/payback/blob/main/PRICING.md) | 所有实际交付平台免费，不再计划手机单独收费。移除现存 10 台/PB1 门禁；不以备份、导出或 BYO 同步收费 |
+| [Payback](https://github.com/turinglambdaai/payback/pull/21) | 所有实际交付平台免费，不再计划手机单独收费。移除现存 10 台/PB1 门禁；不以备份、导出或 BYO 同步收费 |
 | [PodLens](https://github.com/turinglambdaai/podlens/blob/main/PRICING.md) | 免费 BYOK 听读工具；不建设另一套音频计费/托管服务；先验证重复收听 |
 | [RegexMate](https://github.com/turinglambdaai/regexmate/blob/main/PRICING.md) | 免费 CLI/GUI/MCP 和内部生产/CI/agent；取消近期待办中的团队 Pro，不因企业身份追收费；现有 BUSL grant 不变 |
 | [MoveBit](https://github.com/turinglambdaai/movebit/blob/main/PRICING.md) | 免费社区工具，完成更新/跨屏/恢复即可，保持小体量 |
