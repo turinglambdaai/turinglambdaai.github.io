@@ -1,9 +1,8 @@
 # Product delivery standard / 产品交付标准
 
-Status: proposed adoption baseline, 2026-10-23. This document owns portfolio-wide
+Status: adopted documentation and delivery baseline, 2026-10-23. This document owns portfolio-wide
 delivery policy. It does not replace a library protocol, a product specification,
-or an existing implementation handoff. Adopt it through the linked product
-issues, after any active shared-file writer finishes its bounded slice.
+or an existing implementation handoff. Implementation remains tracked in the linked product issues; documentation adoption does not mean the required runtime gates have passed.
 
 ## Documentation languages
 

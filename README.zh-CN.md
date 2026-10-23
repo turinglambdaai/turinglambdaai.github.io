@@ -8,13 +8,30 @@
 
 ---
 
-## 精选项目
+## 产品入口
 
-| 渠道 / 项目 | 简介 |
-|------|------|
-| **公众号 TuringLambdaAI**（微信） | AUTOSAR、嵌入式、编程语言与 AI 的深度技术专栏 — 当前主线 |
-| **[Taskly](https://taskly.jrtx.site)** | 跨平台任务管理桌面应用（Windows / macOS / Linux） |
-| **[Racket 程序设计](https://racket.jrtx.site)** | 一本关于 Racket 编程语言的在线技术书 |
+多数应用仍为开发预览；实际发布平台、安装、数据与帮助见各自主页和中英文使用指南。
+
+| 产品 | 用途 |
+|---|---|
+| [Taskly](https://taskly.jrtx.site/) | 用清单、快速录入和定时提醒管理本地待办。 |
+| [Payback](https://payback.jrtx.site/) | 记录已有设备的每日成本，以及你赋予使用它们的价值。 |
+| [Fulcrum](https://fulcrum.jrtx.site/) | 在一个原生命令窗口中启动应用、搜索并使用键盘工具。 |
+| [Booklight](https://booklight.jrtx.site/) | 阅读 PDF 和 EPUB、添加批注，并可选使用自己的 AI 服务处理文档。 |
+| [gPTP Studio](https://gptp-studio.jrtx.site/) | 在 Linux 工作站上观察和调试 gPTP / IEEE 802.1AS。 |
+| [Autarx](https://autarx.jrtx.site/) | 在实施经审阅的变更前，检查、比较并追踪 AUTOSAR 交付数据。 |
+| [FlashPilot](https://flashpilot.jrtx.site/) | 用确定性引擎、CLI/MCP 和原生桌面宿主验证声明式 ECU 烧录计划。 |
+| [HackDigest](https://hackdigest.jrtx.site/) | 通过按需标题翻译、文章摘要和讨论总结阅读 Hacker News。 |
+| [Publy](https://publy.jrtx.site/) | 将 Markdown 转为微信公众号文章草稿与图片卡片，提供本地预览和自托管投递服务。 |
+| [PodLens](https://podlens.jrtx.site/) | 收听播客，并可用自己的模型密钥生成逐句转写、翻译和总结。 |
+| [RegexMate](https://regexmate.jrtx.site/) | 通过 CLI、原生 GUI 或 MCP 在本地验证、测试、解释和检查正则。 |
+| [MoveBit](https://movebit.jrtx.site/) | 配置工作休息与喝水提醒，并查看本地活动历史。 |
+| [Keyward](https://keyward.jrtx.site/) | 在本地密钥库中整理和检查桌面软件发布签名密钥。 |
+| [Threadly](https://threadly.jrtx.site/) | 在原生桌面窗口中阅读和搜索 Racket 社区论坛。 |
+| [SyncPilot](https://syncpilot.jrtx.site/) | 在 Linux 桌面窗口中管理官方 Resilio Sync 守护进程。 |
+| [RelayPilot](https://relaypilot.jrtx.site/) | 探索统一网络配置、确定性路由决策和受监督的引擎适配器。 |
+
+[关于与隐私](docs/ABOUT.zh-CN.md)。中文书站和第三方归档保留原文语言。
 
 ## 特性
 

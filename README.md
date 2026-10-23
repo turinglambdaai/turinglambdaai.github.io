@@ -8,13 +8,30 @@ The front door of **TuringLambdaAI** — live at **[jrtx.site](https://jrtx.site
 
 ---
 
-## Featured Projects
+## Product directory
 
-| Channel / Project | What it is |
-|---------|------------|
-| **公众号 TuringLambdaAI** (WeChat) | Deep-dive column on AUTOSAR, embedded systems, programming languages & AI — the flagship |
-| **[Taskly](https://taskly.jrtx.site)** | Cross-platform desktop task manager (Windows / macOS / Linux) |
-| **[Racket 程序设计](https://racket.jrtx.site)** | An online book on the Racket programming language |
+Most applications remain development previews. Each page and paired user guide describes actual releases, installation, data and support.
+
+| Product | Purpose |
+|---|---|
+| [Taskly](https://taskly.jrtx.site/) | A local task manager for lists, quick capture and scheduled reminders. |
+| [Payback](https://payback.jrtx.site/) | Understand the daily cost of devices you own and the value you assign to using them. |
+| [Fulcrum](https://fulcrum.jrtx.site/) | Launch apps, search and use keyboard tools from one native command window. |
+| [Booklight](https://booklight.jrtx.site/) | Read PDF and EPUB files, annotate them and optionally ask your own AI provider about a document. |
+| [gPTP Studio](https://gptp-studio.jrtx.site/) | Inspect and debug gPTP / IEEE 802.1AS behavior on a Linux workstation. |
+| [Autarx](https://autarx.jrtx.site/) | Inspect, compare and trace AUTOSAR delivery data before making a reviewed change. |
+| [FlashPilot](https://flashpilot.jrtx.site/) | Validate declarative ECU flash plans with a deterministic engine, CLI/MCP and native desktop hosts. |
+| [HackDigest](https://hackdigest.jrtx.site/) | Read Hacker News with on-demand title translation, article digests and thread summaries. |
+| [Publy](https://publy.jrtx.site/) | Turn Markdown into WeChat article drafts and image-post cards, with local preview and a self-hosted delivery server. |
+| [PodLens](https://podlens.jrtx.site/) | Listen to podcasts and optionally create sentence-aligned transcripts, translations and summaries with your own model key. |
+| [RegexMate](https://regexmate.jrtx.site/) | Validate, test, explain and lint regular expressions locally through a CLI, native GUI or MCP. |
+| [MoveBit](https://movebit.jrtx.site/) | Configure work-break and water reminders with local activity history. |
+| [Keyward](https://keyward.jrtx.site/) | Organize and check desktop release-signing keys in a local vault. |
+| [Threadly](https://threadly.jrtx.site/) | Read and search the Racket community forum in a native desktop window. |
+| [SyncPilot](https://syncpilot.jrtx.site/) | Manage the official Resilio Sync daemon from a Linux desktop window. |
+| [RelayPilot](https://relaypilot.jrtx.site/) | Explore canonical network profiles, deterministic routing decisions and supervised engine adapters. |
+
+[About and privacy](docs/ABOUT.md). Chinese books and third-party archives retain the original content language.
 
 ## Features
 
