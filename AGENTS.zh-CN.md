@@ -1,5 +1,10 @@
 # AGENTS.md
 
+## 每个切片开始前必须读取政策
+
+安全刷新远端后，重新读取本仓根 AGENTS、既有实施 handoff，以及[家族交付标准](docs/PRODUCT-STANDARD.md)、[文档语言规范](docs/DOCUMENTATION-LANGUAGES.zh-CN.md)和[产品组合](PORTFOLIO.zh-CN.md)。PR/handoff 记录本仓起始 SHA 与实际阅读的中央政策 commit/revision；不能把“有链接”当作“agent 已阅读”。运行中的会话和旧 checkout 不会自动接收政策，下一切片边界需重新读取。保留其他 agent 的脏工作树，必要时用独立 checkout，不 stash/reset/覆盖现场。离线或缺失政策时明确未验证，不能假称最新。产品规格、协议和实施队列仍由各自仓库负责。
+
+
 [English](AGENTS.md) · **简体中文**
 
 turinglambdaai 家族主站（jrtx.site）——纯静态 HTML/CSS 单页，零依赖零构建，GitHub Pages 直出。

@@ -9,6 +9,10 @@ issues, after any active shared-file writer finishes its bounded slice.
 
 Follow the [English/Chinese language policy](DOCUMENTATION-LANGUAGES.md) / [中文规范](DOCUMENTATION-LANGUAGES.zh-CN.md). Default public entry points are English with complete Chinese user paths; paired product promises must agree. Library API/protocol semantics remain one normative English source. Keep code identifiers and examples unchanged, update both user-facing languages in the same change, and record missing translations honestly.
 
+## Agent startup and policy acknowledgement
+
+At every bounded slice boundary, safely refresh repository state, re-read the root AGENTS file and local implementation handoff, then read this standard, the [language policy](DOCUMENTATION-LANGUAGES.md) and [portfolio](../PORTFOLIO.md). Record the repository starting SHA and central-policy commit/revision actually read in the PR or handoff. A stale checkout or existing conversation does not automatically receive policy changes; a link alone is not an agent acknowledgement. Preserve another writer's dirty worktree and use isolation where needed. If policy inputs are offline or missing, mark them unverified rather than claiming current adoption. Keep product behavior, normative protocols and active implementation queues with their existing owners.
+
 ## Ownership and composition
 
 The five-library graph and release order remain in
