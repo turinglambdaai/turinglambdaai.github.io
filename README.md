@@ -103,6 +103,10 @@ turinglambdaai.github.io/
 
 ## Maintainer map
 
+Current product interaction findings and bounded implementation tasks:
+[whole-portfolio design review](docs/INTERACTION-REVIEW-2026-10.md) ·
+[中文审查](docs/INTERACTION-REVIEW-2026-10.zh-CN.md).
+
 Product investment and commercial categories live in [PORTFOLIO.md](PORTFOLIO.md). The [delivery standard](docs/PRODUCT-STANDARD.md), [product review](docs/PRODUCT-REVIEW-2026-10.md), and [homepage brief](docs/HOME-PAGE-PLAN.md) route architecture and product work to its owning repository.
 
 Publisher accounts, deferred purchase timing, signing boundaries and every product's initial channel candidate: [distribution policy](docs/DISTRIBUTION.md) · [中文规范](docs/DISTRIBUTION.zh-CN.md). These are maintainer decisions, not a claim of Store availability or verified production signatures.

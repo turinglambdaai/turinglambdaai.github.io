@@ -78,6 +78,15 @@ User-facing navigation and footers route to products, downloads, user documentat
 
 ## Product experience contract
 
+Before a design/interaction slice, consult the dated
+[whole-portfolio interaction review](INTERACTION-REVIEW-2026-10.md) /
+[中文审查](INTERACTION-REVIEW-2026-10.zh-CN.md), then refresh the product's linked
+issue, canonical contract and active PRs. The review owns findings/routing, not
+a second product specification. Distinguish source observations from native
+runtime proof, preserve later fixes and record policy/source SHAs in the
+existing handoff. Do not expand features ahead of the product's identified
+draft, persistence, user-control, keyboard or recovery gaps.
+
 Reuse an existing canonical product/design document. Do not add another one
 when it can hold the following table:
 
