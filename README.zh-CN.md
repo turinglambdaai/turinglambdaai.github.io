@@ -110,3 +110,8 @@ turinglambdaai.github.io/
 发行账号、暂缓采购时机、签名边界与每个产品的初始渠道候选见[发行规范](docs/DISTRIBUTION.zh-CN.md) · [English policy](docs/DISTRIBUTION.md)。这是维护决策，不表示已经上架商店或完成生产签名验证。
 
 文档语言：[中文规范](docs/DOCUMENTATION-LANGUAGES.zh-CN.md) · [English policy](docs/DOCUMENTATION-LANGUAGES.md)。组合策略：[简体中文](PORTFOLIO.zh-CN.md) · [English](PORTFOLIO.md)。
+
+
+## 官网、文档与截图保鲜
+
+[公开展示规范](docs/PUBLIC-PRESENTATION.zh-CN.md)定义了产品主页、中英文 README、用户手册与真实发布信息的统一核对方式，避免依赖截图教程，并规定截图来源、版本和随软件更新的复查规则。[English](docs/PUBLIC-PRESENTATION.md)。进度由[全产品文档 Issue #5](https://github.com/turinglambdaai/turinglambdaai.github.io/issues/5)追踪；规范落地不代表全部站点已验收。
