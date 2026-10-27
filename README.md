@@ -112,3 +112,8 @@ Product investment and commercial categories live in [PORTFOLIO.md](PORTFOLIO.md
 Publisher accounts, deferred purchase timing, signing boundaries and every product's initial channel candidate: [distribution policy](docs/DISTRIBUTION.md) · [中文规范](docs/DISTRIBUTION.zh-CN.md). These are maintainer decisions, not a claim of Store availability or verified production signatures.
 
 Documentation languages: [English policy](docs/DOCUMENTATION-LANGUAGES.md) · [中文规范](docs/DOCUMENTATION-LANGUAGES.zh-CN.md). Portfolio: [English](PORTFOLIO.md) · [简体中文](PORTFOLIO.zh-CN.md).
+
+
+## Public presentation and screenshot freshness
+
+Our [public presentation standard](docs/PUBLIC-PRESENTATION.md) explains how to keep product pages, bilingual READMEs, user guides and release claims aligned without screenshot-only tutorials. It also defines screenshot provenance and the release-bound documentation review. [中文规范](docs/PUBLIC-PRESENTATION.zh-CN.md). Progress: [portfolio documentation issue #5](https://github.com/turinglambdaai/turinglambdaai.github.io/issues/5). This is a standard, not a claim that all sites have passed it.
