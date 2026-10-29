@@ -57,8 +57,8 @@ Most applications remain development previews. Each page and paired user guide d
 ### 1. Clone
 
 ```bash
-git clone https://github.com/turlamai/turinglambdaai.github.io.git
-cd turinglambdaai.github.io
+git clone https://github.com/turlamai/turlamai.github.io.git
+cd turlamai.github.io
 ```
 
 ### 2. Run
@@ -78,7 +78,7 @@ Then open http://localhost:8000.
 ## Project Structure
 
 ```
-turinglambdaai.github.io/
+turlamai.github.io/
 ├── index.html              Homepage — markup, inline i18n strings, theme & language logic
 ├── CNAME                   Custom domain (jrtx.site) for GitHub Pages
 ├── README.md               English readme (this file)
@@ -116,6 +116,6 @@ Documentation languages: [English policy](docs/DOCUMENTATION-LANGUAGES.md) · [�
 
 ## Public presentation and screenshot freshness
 
-Our [public presentation standard](docs/PUBLIC-PRESENTATION.md) explains how to keep product pages, bilingual READMEs, user guides and release claims aligned without screenshot-only tutorials. It also defines screenshot provenance and the release-bound documentation review. [中文规范](docs/PUBLIC-PRESENTATION.zh-CN.md). Progress: [portfolio documentation issue #5](https://github.com/turlamai/turinglambdaai.github.io/issues/5). This is a standard, not a claim that all sites have passed it.
+Our [public presentation standard](docs/PUBLIC-PRESENTATION.md) explains how to keep product pages, bilingual READMEs, user guides and release claims aligned without screenshot-only tutorials. It also defines screenshot provenance and the release-bound documentation review. [中文规范](docs/PUBLIC-PRESENTATION.zh-CN.md). Progress: [portfolio documentation issue #5](https://github.com/turlamai/turlamai.github.io/issues/5). This is a standard, not a claim that all sites have passed it.
 
-Racket packages have a separate [package README / Scribble / tests standard](docs/RACKET-PACKAGE-STANDARD.md) ([简体中文](docs/RACKET-PACKAGE-STANDARD.zh-CN.md)) and [tracking issue #7](https://github.com/turlamai/turinglambdaai.github.io/issues/7). Libraries do **not** need customer-facing product homepages.
+Racket packages have a separate [package README / Scribble / tests standard](docs/RACKET-PACKAGE-STANDARD.md) ([简体中文](docs/RACKET-PACKAGE-STANDARD.zh-CN.md)) and [tracking issue #7](https://github.com/turlamai/turlamai.github.io/issues/7). Libraries do **not** need customer-facing product homepages.

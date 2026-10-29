@@ -57,8 +57,8 @@
 ### 1. 克隆
 
 ```bash
-git clone https://github.com/turlamai/turinglambdaai.github.io.git
-cd turinglambdaai.github.io
+git clone https://github.com/turlamai/turlamai.github.io.git
+cd turlamai.github.io
 ```
 
 ### 2. 运行
@@ -78,7 +78,7 @@ npx serve
 ## 项目结构
 
 ```
-turinglambdaai.github.io/
+turlamai.github.io/
 ├── index.html              主页 — 标记、内联 i18n 文案、主题与语言逻辑
 ├── CNAME                   GitHub Pages 自定义域名（jrtx.site）
 ├── README.md               英文说明
@@ -114,6 +114,6 @@ turinglambdaai.github.io/
 
 ## 官网、文档与截图保鲜
 
-[公开展示规范](docs/PUBLIC-PRESENTATION.zh-CN.md)定义了产品主页、中英文 README、用户手册与真实发布信息的统一核对方式，避免依赖截图教程，并规定截图来源、版本和随软件更新的复查规则。[English](docs/PUBLIC-PRESENTATION.md)。进度由[全产品文档 Issue #5](https://github.com/turlamai/turinglambdaai.github.io/issues/5)追踪；规范落地不代表全部站点已验收。
+[公开展示规范](docs/PUBLIC-PRESENTATION.zh-CN.md)定义了产品主页、中英文 README、用户手册与真实发布信息的统一核对方式，避免依赖截图教程，并规定截图来源、版本和随软件更新的复查规则。[English](docs/PUBLIC-PRESENTATION.md)。进度由[全产品文档 Issue #5](https://github.com/turlamai/turlamai.github.io/issues/5)追踪；规范落地不代表全部站点已验收。
 
-Racket 基础库采用独立的[包 README / Scribble / 测试规范](docs/RACKET-PACKAGE-STANDARD.zh-CN.md)（[English](docs/RACKET-PACKAGE-STANDARD.md)），由 [Issue #7](https://github.com/turlamai/turinglambdaai.github.io/issues/7) 跟踪；基础库**不需要产品式官网**。
+Racket 基础库采用独立的[包 README / Scribble / 测试规范](docs/RACKET-PACKAGE-STANDARD.zh-CN.md)（[English](docs/RACKET-PACKAGE-STANDARD.md)），由 [Issue #7](https://github.com/turlamai/turlamai.github.io/issues/7) 跟踪；基础库**不需要产品式官网**。
