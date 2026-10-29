@@ -1,6 +1,6 @@
 # Branch hygiene / 分支清理
 
-Source policy: [GitHub issue #7](https://github.com/turinglambdaai/turinglambdaai.github.io/issues/7) for Racket libraries and [site Issue #5](https://github.com/turinglambdaai/turinglambdaai.github.io/issues/5) for product documentation. This repo's **default branch is `master`**.
+Source policy: [GitHub issue #7](https://github.com/turlamai/turlamai.github.io/issues/7) for Racket libraries and [site Issue #5](https://github.com/turlamai/turlamai.github.io/issues/5) for product documentation. This repo's **default branch is `master`**.
 
 Keep the default branch, all protected branches, and every actively developed branch (including open PRs). A closed-but-unmerged branch and a branch with no corresponding merged PR **must not be deleted automatically**, because they can contain unpublished work. Never infer obsolescence solely from the branch name or age.
 

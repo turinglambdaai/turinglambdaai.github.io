@@ -2,7 +2,7 @@
 
 [English](RACKET-PACKAGE-STANDARD.md) · **简体中文**
 
-维护规范，2026-10-27。**这不是产品官网模板，也不要求无差别重构全部仓库。** Racket 库专项由 [Issue #7](https://github.com/turinglambdaai/turinglambdaai.github.io/issues/7) 跟踪；用户产品仍采用[公开展示规范](PUBLIC-PRESENTATION.zh-CN.md)及 [Issue #5](https://github.com/turinglambdaai/turinglambdaai.github.io/issues/5)。
+维护规范，2026-10-27。**这不是产品官网模板，也不要求无差别重构全部仓库。** Racket 库专项由 [Issue #7](https://github.com/turlamai/turlamai.github.io/issues/7) 跟踪；用户产品仍采用[公开展示规范](PUBLIC-PRESENTATION.zh-CN.md)及 [Issue #5](https://github.com/turlamai/turlamai.github.io/issues/5)。
 
 ## 先分类，后修改
 

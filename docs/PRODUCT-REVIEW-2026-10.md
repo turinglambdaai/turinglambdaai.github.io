@@ -25,13 +25,13 @@ inspect/doctor/schema/acceptance 已是正确基础，下一步是干净环境�
 
 ## 基础库现状
 
-执行入口：[Rivet #314](https://github.com/turinglambdaai/rivet/issues/314)、
-[Glaze #76](https://github.com/turinglambdaai/glaze/issues/76)、
-[Keel #6](https://github.com/turinglambdaai/keel/issues/6)、
-[Commerce #4](https://github.com/turinglambdaai/commerce/issues/4)。
-文档修正：[Rivet #313](https://github.com/turinglambdaai/rivet/pull/313)、
-[Permit #8](https://github.com/turinglambdaai/permit/pull/8)、
-[Commerce #3](https://github.com/turinglambdaai/commerce/pull/3)。
+执行入口：[Rivet #314](https://github.com/turlamai/rivet/issues/314)、
+[Glaze #76](https://github.com/turlamai/glaze/issues/76)、
+[Keel #6](https://github.com/turlamai/keel/issues/6)、
+[Commerce #4](https://github.com/turlamai/commerce/issues/4)。
+文档修正：[Rivet #313](https://github.com/turlamai/rivet/pull/313)、
+[Permit #8](https://github.com/turlamai/permit/pull/8)、
+[Commerce #3](https://github.com/turlamai/commerce/pull/3)。
 
 | 库 | 已有基础 | 本轮判断与下一步 |
 | --- | --- | --- |
@@ -56,25 +56,25 @@ Booklight #17/#19，以及 Fulcrum 的交互/发布与功能切片。开放 PR �
 
 | 产品 | 优先级 | 已核验差距 / 首要动作 | 执行入口 |
 | --- | --- | --- | --- |
-| taskly | P1 | Taskly 是较好的交付样板，但 main 的 rivet-acceptance requirements 没有 release kind；反馈 #55/#56 与 Windows 快捷键 #57 仍在推进。AGENTS/CLI 有些断言和计数是历史快照。 | [审查 issue](https://github.com/turinglambdaai/taskly/issues/58) |
-| autarx | P1 | docs/ROADMAP.md 的 M9 仍列 licensing、大 OEM 性能与签名/公证；早期 M0 还把 Avalonia 写成当前基础。三平台 native 和 acceptance 已存在，应在现有路径收尾。 | [审查 issue](https://github.com/turinglambdaai/autarx/issues/22) |
-| flashpilot | P1 | main 已声明 AGPL、Rivet GUI 和模拟 ECU acceptance；v0.1.0 发布资产是独立 zip，未见 update manifest。README 的 license-free 定位需与官方 Pro 计划解释一致；#3 正在新增 ODX/MCP，当前共享层有写入者。 | [审查 issue](https://github.com/turinglambdaai/flashpilot/issues/4) |
-| gptp-studio | P0 | 默认分支 docs/index.html 仍写 GTK3+WebKitGTK4.1，与 Rivet/GTK4 当前架构冲突。PRICING 的“5席”解释为5台设备，named seats/devices 语义未分清；#33/#34 正在补分发产物，不能重复。 | [审查 issue](https://github.com/turinglambdaai/gptp-studio/issues/35) |
-| movebit | P1 | main README 仍把 native in-app update 列为待办，而本地/远端提交标题和 CHANGELOG 已描述0.5.0更新适配。快照最新 published release 仍为0.4.0；main、tag、published 必须分别表述。 | [审查 issue](https://github.com/turinglambdaai/movebit/issues/48) |
-| hackdigest | P1 | backend/main.rkt 仅 macOS 默认 native，Windows/Linux 默认 HTTP；框架1.0计划已把该差距列为 gate。README 的 fair-use unlimited 没有可核验预算，AGENTS 很短，缺完整入口。 当前默认分支树未见 glaze.rktd/schema baseline，与框架计划中的消费者进度叙述不符，须复核。 | [审查 issue](https://github.com/turinglambdaai/hackdigest/issues/2) |
-| threadly | P1 | README 仍称 read-only/no credentials/macOS shell，同时 M1–M3 勾选三端登录回帖、通知与AI；仓库没有 rivet-acceptance.rktd。维护产品需要真实交付证据，无需自动扩展移动端。 | [审查 issue](https://github.com/turinglambdaai/threadly/issues/1) |
-| regexmate | P0 | LICENSE Additional Use Grant 明确允许 internal production、CI 与 agents；主站 PORTFOLIO 却把团队/商业 CI 作为收费边界。已有 #3 记录换照，不能把现行许可描述成企业内部使用需付费。 | [审查 issue](https://github.com/turinglambdaai/regexmate/issues/4) |
-| fulcrum | P1 | 已有 cross-platform-interaction.md 与 #36 收敛交互，#72/#73 是公证/真实更新门禁，多条新功能PR正在推进。未来 Pro 若直接收费既有剪贴板/快捷键会破坏免费基线。 | [审查 issue](https://github.com/turinglambdaai/fulcrum/issues/88) |
-| publy | P1 | README/AGENTS 的 M0 design 标记与0.8.3发布/日常dogfooding冲突。AGENTS 记录 WebSocket query key，需要审计URL/代理日志泄漏；它是TypeScript发布服务加Racket旁路，不应为统一技术栈重写。 | [审查 issue](https://github.com/turinglambdaai/publy/issues/7) |
-| syncpilot | P2 | README诚实说明更新只下载验签tar.gz、应用需手动解压；已有0.8.4分发和acceptance。该产品被组合列为保活，不应再扩大重写或跨端工作。 | [审查 issue](https://github.com/turinglambdaai/syncpilot/issues/10) |
-| relaypilot | P2 | 源码仓库可访问、README明确无可运行VPN/TUN/UI，而PORTFOLIO仍写无公开仓库。许可是专有，源码可访问不等于开源。 | [审查 issue](https://github.com/turinglambdaai/relaypilot/issues/1) |
-| podlens | P1 | README与app/core/config.rkt明确将api-key存本地JSON；现有#11/#12补Linux功能和试听，不能重写活动共享层。平台图仍只有macOS/Windows，当前有Linux宿主。 | [审查 issue](https://github.com/turinglambdaai/podlens/issues/13) |
-| payback | P0 | PRICING仍规划桌面10设备限制/付费导出/全平台包与早鸟，site/index.html也预告桌面Pro；与PORTFOLIO的MIT桌面永久免费相冲突。#17/#18/#19正在统一同步与三端布局。 | [审查 issue](https://github.com/turinglambdaai/payback/issues/20) |
-| booklight | P1 | README把三端阅读/主题/批注统称完成，#17/#19仍在做PDF night/EPUB annotations；必须区分main功能与已发布包。reader有数据/编辑风险，不宜直接扩手机端。 | [审查 issue](https://github.com/turinglambdaai/booklight/issues/20) |
-| keyward | P1 | #1/#2分别记录多私钥只校验首项及缺少用途说明；README宣称Deep check较宽。快照0.2.0有hash sidecars但无update manifest，且没有rivet-acceptance契约。 | [审查 issue](https://github.com/turinglambdaai/keyward/issues/3) |
-| pitboard | P2 | PORTFOLIO把产品列为保活，docs/ROADMAP仍有实体扩张、读者BYOK、移动端等长队列。内容站的基线应是稳定出刊、来源透明和更正，非桌面安装器。 | [审查 issue](https://github.com/turinglambdaai/pitboard/issues/1) |
-| yinwang-archive | P2 | 这是内容归档项目，不应用桌面更新/收费基线；最新master与gh-pages分支均需保留其部署用途。 | [审查 issue](https://github.com/turinglambdaai/yinwang-archive/issues/5) |
-| racket-programming | P2 | 在线书属于免费社区内容，需用示例可运行、导航和勘误作为交付标准。代码书不应继承桌面产品的移动/许可队列。 | [审查 issue](https://github.com/turinglambdaai/racket-programming/issues/8) |
+| taskly | P1 | Taskly 是较好的交付样板，但 main 的 rivet-acceptance requirements 没有 release kind；反馈 #55/#56 与 Windows 快捷键 #57 仍在推进。AGENTS/CLI 有些断言和计数是历史快照。 | [审查 issue](https://github.com/turlamai/taskly/issues/58) |
+| autarx | P1 | docs/ROADMAP.md 的 M9 仍列 licensing、大 OEM 性能与签名/公证；早期 M0 还把 Avalonia 写成当前基础。三平台 native 和 acceptance 已存在，应在现有路径收尾。 | [审查 issue](https://github.com/turlamai/autarx/issues/22) |
+| flashpilot | P1 | main 已声明 AGPL、Rivet GUI 和模拟 ECU acceptance；v0.1.0 发布资产是独立 zip，未见 update manifest。README 的 license-free 定位需与官方 Pro 计划解释一致；#3 正在新增 ODX/MCP，当前共享层有写入者。 | [审查 issue](https://github.com/turlamai/flashpilot/issues/4) |
+| gptp-studio | P0 | 默认分支 docs/index.html 仍写 GTK3+WebKitGTK4.1，与 Rivet/GTK4 当前架构冲突。PRICING 的“5席”解释为5台设备，named seats/devices 语义未分清；#33/#34 正在补分发产物，不能重复。 | [审查 issue](https://github.com/turlamai/gptp-studio/issues/35) |
+| movebit | P1 | main README 仍把 native in-app update 列为待办，而本地/远端提交标题和 CHANGELOG 已描述0.5.0更新适配。快照最新 published release 仍为0.4.0；main、tag、published 必须分别表述。 | [审查 issue](https://github.com/turlamai/movebit/issues/48) |
+| hackdigest | P1 | backend/main.rkt 仅 macOS 默认 native，Windows/Linux 默认 HTTP；框架1.0计划已把该差距列为 gate。README 的 fair-use unlimited 没有可核验预算，AGENTS 很短，缺完整入口。 当前默认分支树未见 glaze.rktd/schema baseline，与框架计划中的消费者进度叙述不符，须复核。 | [审查 issue](https://github.com/turlamai/hackdigest/issues/2) |
+| threadly | P1 | README 仍称 read-only/no credentials/macOS shell，同时 M1–M3 勾选三端登录回帖、通知与AI；仓库没有 rivet-acceptance.rktd。维护产品需要真实交付证据，无需自动扩展移动端。 | [审查 issue](https://github.com/turlamai/threadly/issues/1) |
+| regexmate | P0 | LICENSE Additional Use Grant 明确允许 internal production、CI 与 agents；主站 PORTFOLIO 却把团队/商业 CI 作为收费边界。已有 #3 记录换照，不能把现行许可描述成企业内部使用需付费。 | [审查 issue](https://github.com/turlamai/regexmate/issues/4) |
+| fulcrum | P1 | 已有 cross-platform-interaction.md 与 #36 收敛交互，#72/#73 是公证/真实更新门禁，多条新功能PR正在推进。未来 Pro 若直接收费既有剪贴板/快捷键会破坏免费基线。 | [审查 issue](https://github.com/turlamai/fulcrum/issues/88) |
+| publy | P1 | README/AGENTS 的 M0 design 标记与0.8.3发布/日常dogfooding冲突。AGENTS 记录 WebSocket query key，需要审计URL/代理日志泄漏；它是TypeScript发布服务加Racket旁路，不应为统一技术栈重写。 | [审查 issue](https://github.com/turlamai/publy/issues/7) |
+| syncpilot | P2 | README诚实说明更新只下载验签tar.gz、应用需手动解压；已有0.8.4分发和acceptance。该产品被组合列为保活，不应再扩大重写或跨端工作。 | [审查 issue](https://github.com/turlamai/syncpilot/issues/10) |
+| relaypilot | P2 | 源码仓库可访问、README明确无可运行VPN/TUN/UI，而PORTFOLIO仍写无公开仓库。许可是专有，源码可访问不等于开源。 | [审查 issue](https://github.com/turlamai/relaypilot/issues/1) |
+| podlens | P1 | README与app/core/config.rkt明确将api-key存本地JSON；现有#11/#12补Linux功能和试听，不能重写活动共享层。平台图仍只有macOS/Windows，当前有Linux宿主。 | [审查 issue](https://github.com/turlamai/podlens/issues/13) |
+| payback | P0 | PRICING仍规划桌面10设备限制/付费导出/全平台包与早鸟，site/index.html也预告桌面Pro；与PORTFOLIO的MIT桌面永久免费相冲突。#17/#18/#19正在统一同步与三端布局。 | [审查 issue](https://github.com/turlamai/payback/issues/20) |
+| booklight | P1 | README把三端阅读/主题/批注统称完成，#17/#19仍在做PDF night/EPUB annotations；必须区分main功能与已发布包。reader有数据/编辑风险，不宜直接扩手机端。 | [审查 issue](https://github.com/turlamai/booklight/issues/20) |
+| keyward | P1 | #1/#2分别记录多私钥只校验首项及缺少用途说明；README宣称Deep check较宽。快照0.2.0有hash sidecars但无update manifest，且没有rivet-acceptance契约。 | [审查 issue](https://github.com/turlamai/keyward/issues/3) |
+| pitboard | P2 | PORTFOLIO把产品列为保活，docs/ROADMAP仍有实体扩张、读者BYOK、移动端等长队列。内容站的基线应是稳定出刊、来源透明和更正，非桌面安装器。 | [审查 issue](https://github.com/turlamai/pitboard/issues/1) |
+| yinwang-archive | P2 | 这是内容归档项目，不应用桌面更新/收费基线；最新master与gh-pages分支均需保留其部署用途。 | [审查 issue](https://github.com/turlamai/yinwang-archive/issues/5) |
+| racket-programming | P2 | 在线书属于免费社区内容，需用示例可运行、导航和勘误作为交付标准。代码书不应继承桌面产品的移动/许可队列。 | [审查 issue](https://github.com/turlamai/racket-programming/issues/8) |
 
 用户已确认 Keepsake / Moonbeam 等本轮找不到的仓库已删除。Keepsake / Moonbeam
 退出当前产品组合，不再作为来源待补、待恢复或待收费项目。主站残留产品卡、进度入口、
@@ -110,8 +110,8 @@ yinwang-archive 的 gh-pages 是部署分支，不是无用分支。
 
 ## 主页
 
-主页实施沿 [#2](https://github.com/turinglambdaai/turinglambdaai.github.io/issues/2)，
-分支盘点与已删除项目引用清理沿 [#3](https://github.com/turinglambdaai/turinglambdaai.github.io/issues/3)。
+主页实施沿 [#2](https://github.com/turlamai/turlamai.github.io/issues/2)，
+分支盘点与已删除项目引用清理沿 [#3](https://github.com/turlamai/turlamai.github.io/issues/3)。
 
 [HOME-PAGE-PLAN](HOME-PAGE-PLAN.md) 规定主站的精选故事、完整目录、实验区、builder区，
 以及产品页统一的任务/下载/隐私/收费/支持结构。保留双语、静态和自托管字体。
@@ -127,33 +127,33 @@ cancelled 与 skipped 均未当作通过。执行前重新检查当前状态。
 
 | 仓库 | 默认分支 | SHA | 最新 published release |
 | --- | --- | --- | --- |
-| rivet | main | [5b1f346](https://github.com/turinglambdaai/rivet/tree/5b1f3466a6030592d63cec2d7f17f33ac9e1a76a) | v0.12.0 |
-| glaze | main | [2a16c66](https://github.com/turinglambdaai/glaze/tree/2a16c6689dcfe03e0a4e6a1db89589728e3ff7e9) | v0.16.0 |
-| keel | main | [6f6f6c9](https://github.com/turinglambdaai/keel/tree/6f6f6c9bcf7ffda506f555007cf9f623dc435ae5) | v0.3.1 |
-| permit | main | [7a52054](https://github.com/turinglambdaai/permit/tree/7a5205416562347130014e9075c2d17d5fdbf087) | v0.2.0 |
-| commerce | main | [8d46091](https://github.com/turinglambdaai/commerce/tree/8d4609170d0720e1c028c53875332997f6ba01ee) | 无可核验发布 |
-| taskly | main | [ed3ec26](https://github.com/turinglambdaai/taskly/tree/ed3ec2650b493a0cc46f80d5edb160ccf93b0432) | v0.2.3 |
-| autarx | main | [1b51cbc](https://github.com/turinglambdaai/autarx/tree/1b51cbc2790006ee1765a6df390e59e02a627573) | v0.5.0 |
-| flashpilot | main | [2b1cf76](https://github.com/turinglambdaai/flashpilot/tree/2b1cf76e6a44ccc52c8b6a2a0a39dd1280d7aee2) | v0.1.0 |
-| gptp-studio | main | [728c776](https://github.com/turinglambdaai/gptp-studio/tree/728c77646031d790b68e5b6f9257e8480382e669) | v0.3.0 |
-| movebit | main | [9be4869](https://github.com/turinglambdaai/movebit/tree/9be48696e2a2a5cf82d31cba1d2b8c2246b7c870) | v0.4.0 |
-| hackdigest | main | [fb5dc6b](https://github.com/turinglambdaai/hackdigest/tree/fb5dc6b28de7a73149017d5201c0ec7e40932951) | v0.3.1 |
-| threadly | main | [f305dbb](https://github.com/turinglambdaai/threadly/tree/f305dbbe9fa53703ca13d856aaf36eda590556dd) | v0.13.0 |
-| regexmate | main | [7886f7d](https://github.com/turinglambdaai/regexmate/tree/7886f7d22930121142918d8987082dee2df8b5d2) | v0.7.0 |
-| fulcrum | main | [f9b01e2](https://github.com/turinglambdaai/fulcrum/tree/f9b01e2be6b7d28f081aac8ee7b47979944d1c46) | v0.13.2 |
-| publy | main | [4be6099](https://github.com/turinglambdaai/publy/tree/4be60990cf6cb1a5ace08fe6278fdb7f4e917838) | 0.8.3 |
-| syncpilot | main | [1e485e1](https://github.com/turinglambdaai/syncpilot/tree/1e485e17599833fb0e31eba341fbedd59ab5b903) | v0.8.4 |
-| relaypilot | main | [a16463f](https://github.com/turinglambdaai/relaypilot/tree/a16463f68d275aa3aad7514a090e68cd61677bd5) | 无可核验发布 |
-| podlens | main | [40acec2](https://github.com/turinglambdaai/podlens/tree/40acec2cbdd22097ae7fdf26b023ceb57085aee5) | v0.3.0 |
-| payback | main | [33729c0](https://github.com/turinglambdaai/payback/tree/33729c01b50221d52324124f637373b3294ab5a2) | v1.10.3 |
-| booklight | main | [06e0331](https://github.com/turinglambdaai/booklight/tree/06e033192be4bbce3ad6e4781291c372af728a6d) | v0.7.0 |
+| rivet | main | [5b1f346](https://github.com/turlamai/rivet/tree/5b1f3466a6030592d63cec2d7f17f33ac9e1a76a) | v0.12.0 |
+| glaze | main | [2a16c66](https://github.com/turlamai/glaze/tree/2a16c6689dcfe03e0a4e6a1db89589728e3ff7e9) | v0.16.0 |
+| keel | main | [6f6f6c9](https://github.com/turlamai/keel/tree/6f6f6c9bcf7ffda506f555007cf9f623dc435ae5) | v0.3.1 |
+| permit | main | [7a52054](https://github.com/turlamai/permit/tree/7a5205416562347130014e9075c2d17d5fdbf087) | v0.2.0 |
+| commerce | main | [8d46091](https://github.com/turlamai/commerce/tree/8d4609170d0720e1c028c53875332997f6ba01ee) | 无可核验发布 |
+| taskly | main | [ed3ec26](https://github.com/turlamai/taskly/tree/ed3ec2650b493a0cc46f80d5edb160ccf93b0432) | v0.2.3 |
+| autarx | main | [1b51cbc](https://github.com/turlamai/autarx/tree/1b51cbc2790006ee1765a6df390e59e02a627573) | v0.5.0 |
+| flashpilot | main | [2b1cf76](https://github.com/turlamai/flashpilot/tree/2b1cf76e6a44ccc52c8b6a2a0a39dd1280d7aee2) | v0.1.0 |
+| gptp-studio | main | [728c776](https://github.com/turlamai/gptp-studio/tree/728c77646031d790b68e5b6f9257e8480382e669) | v0.3.0 |
+| movebit | main | [9be4869](https://github.com/turlamai/movebit/tree/9be48696e2a2a5cf82d31cba1d2b8c2246b7c870) | v0.4.0 |
+| hackdigest | main | [fb5dc6b](https://github.com/turlamai/hackdigest/tree/fb5dc6b28de7a73149017d5201c0ec7e40932951) | v0.3.1 |
+| threadly | main | [f305dbb](https://github.com/turlamai/threadly/tree/f305dbbe9fa53703ca13d856aaf36eda590556dd) | v0.13.0 |
+| regexmate | main | [7886f7d](https://github.com/turlamai/regexmate/tree/7886f7d22930121142918d8987082dee2df8b5d2) | v0.7.0 |
+| fulcrum | main | [f9b01e2](https://github.com/turlamai/fulcrum/tree/f9b01e2be6b7d28f081aac8ee7b47979944d1c46) | v0.13.2 |
+| publy | main | [4be6099](https://github.com/turlamai/publy/tree/4be60990cf6cb1a5ace08fe6278fdb7f4e917838) | 0.8.3 |
+| syncpilot | main | [1e485e1](https://github.com/turlamai/syncpilot/tree/1e485e17599833fb0e31eba341fbedd59ab5b903) | v0.8.4 |
+| relaypilot | main | [a16463f](https://github.com/turlamai/relaypilot/tree/a16463f68d275aa3aad7514a090e68cd61677bd5) | 无可核验发布 |
+| podlens | main | [40acec2](https://github.com/turlamai/podlens/tree/40acec2cbdd22097ae7fdf26b023ceb57085aee5) | v0.3.0 |
+| payback | main | [33729c0](https://github.com/turlamai/payback/tree/33729c01b50221d52324124f637373b3294ab5a2) | v1.10.3 |
+| booklight | main | [06e0331](https://github.com/turlamai/booklight/tree/06e033192be4bbce3ad6e4781291c372af728a6d) | v0.7.0 |
 | keepsake | — | 用户确认已删除 | 退出当前组合 |
 | moonbeam | — | 用户确认已删除 | 退出当前组合 |
-| keyward | main | [24ce217](https://github.com/turinglambdaai/keyward/tree/24ce2178449d9ac06ad067f57b8ee360ce33b6cd) | v0.2.0 |
-| pitboard | main | [e9eb0e4](https://github.com/turinglambdaai/pitboard/tree/e9eb0e4f3d8a8c00de2c8540c1dbdc8e7f7f0aa9) | 无可核验发布 |
-| yinwang-archive | master | [06b9ed9](https://github.com/turinglambdaai/yinwang-archive/tree/06b9ed9eb0cf7ad6717f1f7df6598cb2f110593d) | 无可核验发布 |
-| racket-programming | master | [16d0781](https://github.com/turinglambdaai/racket-programming/tree/16d078146a649e4c2d1375debdfce764db9534c4) | 无可核验发布 |
-| turinglambdaai.github.io | master | [3599df0](https://github.com/turinglambdaai/turinglambdaai.github.io/tree/3599df03fd75229bc6e966982d33d17ad52fcc04) | 无可核验发布 |
+| keyward | main | [24ce217](https://github.com/turlamai/keyward/tree/24ce2178449d9ac06ad067f57b8ee360ce33b6cd) | v0.2.0 |
+| pitboard | main | [e9eb0e4](https://github.com/turlamai/pitboard/tree/e9eb0e4f3d8a8c00de2c8540c1dbdc8e7f7f0aa9) | 无可核验发布 |
+| yinwang-archive | master | [06b9ed9](https://github.com/turlamai/yinwang-archive/tree/06b9ed9eb0cf7ad6717f1f7df6598cb2f110593d) | 无可核验发布 |
+| racket-programming | master | [16d0781](https://github.com/turlamai/racket-programming/tree/16d078146a649e4c2d1375debdfce764db9534c4) | 无可核验发布 |
+| turinglambdaai.github.io | master | [3599df0](https://github.com/turlamai/turlamai.github.io/tree/3599df03fd75229bc6e966982d33d17ad52fcc04) | 无可核验发布 |
 
 ## 执行纪律
 
