@@ -1,6 +1,6 @@
-# TuringLambdaAI
+# TurLamAI
 
-**TuringLambdaAI** 的门面主页 — 上线于 **[jrtx.site](https://jrtx.site)**。帮助用户找到独立开发的桌面工具、技术写作与可复用基础库，围绕同一个理念：把复杂技术做直观。
+**TurLamAI** 的门面主页 — 上线于 **[jrtx.site](https://jrtx.site)**。帮助用户找到独立开发的桌面工具、技术写作与可复用基础库，围绕同一个理念：把复杂技术做直观。
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
 
@@ -57,7 +57,7 @@
 ### 1. 克隆
 
 ```bash
-git clone https://github.com/turinglambdaai/turinglambdaai.github.io.git
+git clone https://github.com/turlamai/turinglambdaai.github.io.git
 cd turinglambdaai.github.io
 ```
 
@@ -114,6 +114,6 @@ turinglambdaai.github.io/
 
 ## 官网、文档与截图保鲜
 
-[公开展示规范](docs/PUBLIC-PRESENTATION.zh-CN.md)定义了产品主页、中英文 README、用户手册与真实发布信息的统一核对方式，避免依赖截图教程，并规定截图来源、版本和随软件更新的复查规则。[English](docs/PUBLIC-PRESENTATION.md)。进度由[全产品文档 Issue #5](https://github.com/turinglambdaai/turinglambdaai.github.io/issues/5)追踪；规范落地不代表全部站点已验收。
+[公开展示规范](docs/PUBLIC-PRESENTATION.zh-CN.md)定义了产品主页、中英文 README、用户手册与真实发布信息的统一核对方式，避免依赖截图教程，并规定截图来源、版本和随软件更新的复查规则。[English](docs/PUBLIC-PRESENTATION.md)。进度由[全产品文档 Issue #5](https://github.com/turlamai/turinglambdaai.github.io/issues/5)追踪；规范落地不代表全部站点已验收。
 
-Racket 基础库采用独立的[包 README / Scribble / 测试规范](docs/RACKET-PACKAGE-STANDARD.zh-CN.md)（[English](docs/RACKET-PACKAGE-STANDARD.md)），由 [Issue #7](https://github.com/turinglambdaai/turinglambdaai.github.io/issues/7) 跟踪；基础库**不需要产品式官网**。
+Racket 基础库采用独立的[包 README / Scribble / 测试规范](docs/RACKET-PACKAGE-STANDARD.zh-CN.md)（[English](docs/RACKET-PACKAGE-STANDARD.md)），由 [Issue #7](https://github.com/turlamai/turinglambdaai.github.io/issues/7) 跟踪；基础库**不需要产品式官网**。

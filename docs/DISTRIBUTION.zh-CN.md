@@ -61,4 +61,4 @@ Store 托管 MSIX 的更新由 Store/系统负责，应用内检查可以跳转�
 | 公开渠道 | 精确源码/依赖与最终产物摘要；支持系统上的全新安装、启动、权限；对应渠道的签名/公证/商店验收、N→N+1 更新、失败恢复、数据保留和卸载。须重验最终签名/商店产物，不能用先前开发包替代。 |
 | 收费商品 | 获批商户/主体与适用托管条件；购买、领取/导入、停机/退款/恢复、永久权益与更新窗口证据。免费产品发行不依赖先完成 Commerce 或付费产品备案。 |
 
-Rivet 既有官网生产机制仍由[生产签名文档](https://github.com/turinglambdaai/rivet/blob/main/docs/production-signing.md)负责，不移除检查，不把 MSIX 候选说成已实现。Glaze 的[库发行流程](https://github.com/turinglambdaai/glaze/blob/main/docs/RELEASING.md)不等于消费应用签名。试点证明可复用后，才将共用机制沉淀进框架；产品政策、账号选择、商店资料和商业条款由产品/发行者负责。
+Rivet 既有官网生产机制仍由[生产签名文档](https://github.com/turlamai/rivet/blob/main/docs/production-signing.md)负责，不移除检查，不把 MSIX 候选说成已实现。Glaze 的[库发行流程](https://github.com/turlamai/glaze/blob/main/docs/RELEASING.md)不等于消费应用签名。试点证明可复用后，才将共用机制沉淀进框架；产品政策、账号选择、商店资料和商业条款由产品/发行者负责。

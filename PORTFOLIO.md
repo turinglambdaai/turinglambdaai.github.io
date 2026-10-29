@@ -12,14 +12,14 @@ Taskly and Payback documentation is handed off in separate PRs #60 and #21, awai
 
 | Product | Decision | What a customer pays for | Execution order |
 | --- | --- | --- | --- |
-| [Taskly](https://github.com/turinglambdaai/taskly/pull/60) | Purchase of the complete official desktop product; 14-day trial; reminders and natural-language entry are not separate extras | A dependable daily task system with good interaction and recovery | Consumer flagship 1; complete existing interaction/update/recovery work first |
-| [Fulcrum](https://github.com/turinglambdaai/fulcrum/blob/main/PRICING.md) | Existing launcher stays free; purchase of new workflow Pro | Multi-step automation authoring, debugging and failure recovery | Consumer flagship 2; demonstrate one new paid workflow first |
-| [Booklight](https://github.com/turinglambdaai/booklight/blob/main/PRICING.md) | Existing reader stays free; purchase of a new research workbench | Cross-book research with traceable citations | Second tier; stabilize reading and annotation recovery first |
-| [gPTP Studio](https://github.com/turinglambdaai/gptp-studio/blob/main/PRICING.md) | Linux official Pro purchase with optional update renewal | Real time-synchronization control, reference-hardware qualification and engineering evidence | Technical commerce pilot; this does not predict the earliest market revenue |
-| [Autarx](https://github.com/turinglambdaai/autarx/blob/main/PRICING.md) | Complete engineering workbench purchase with optional update renewal | Verifiable configuration/validation/generation | Long term; no rush to add platforms or sales channels |
-| [FlashPilot](https://github.com/turinglambdaai/flashpilot/blob/main/PRICING.md) | Free AGPL engine; purchase of official validation assets/distribution | Flashing, failure and recovery evidence for specific ECU/adapter combinations | Long term; real hardware-in-the-loop evidence before a paid offer |
-| [HackDigest](https://github.com/turinglambdaai/hackdigest/blob/main/PRICING.md) | Free BYOK; capped hosted translation/digest subscription | Ongoing compute without configuring a key | Verify transport, secret custody and costs first; no lifetime hosting |
-| [Publy](https://github.com/turinglambdaai/publy/blob/main/PRICING.md) | Free CLI/plugin/self-hosting; hosted publishing subscription | Stable egress, scheduling, credential custody and recovery | Small pilot after reliable internal use; no theme marketplace |
+| [Taskly](https://github.com/turlamai/taskly/pull/60) | Purchase of the complete official desktop product; 14-day trial; reminders and natural-language entry are not separate extras | A dependable daily task system with good interaction and recovery | Consumer flagship 1; complete existing interaction/update/recovery work first |
+| [Fulcrum](https://github.com/turlamai/fulcrum/blob/main/PRICING.md) | Existing launcher stays free; purchase of new workflow Pro | Multi-step automation authoring, debugging and failure recovery | Consumer flagship 2; demonstrate one new paid workflow first |
+| [Booklight](https://github.com/turlamai/booklight/blob/main/PRICING.md) | Existing reader stays free; purchase of a new research workbench | Cross-book research with traceable citations | Second tier; stabilize reading and annotation recovery first |
+| [gPTP Studio](https://github.com/turlamai/gptp-studio/blob/main/PRICING.md) | Linux official Pro purchase with optional update renewal | Real time-synchronization control, reference-hardware qualification and engineering evidence | Technical commerce pilot; this does not predict the earliest market revenue |
+| [Autarx](https://github.com/turlamai/autarx/blob/main/PRICING.md) | Complete engineering workbench purchase with optional update renewal | Verifiable configuration/validation/generation | Long term; no rush to add platforms or sales channels |
+| [FlashPilot](https://github.com/turlamai/flashpilot/blob/main/PRICING.md) | Free AGPL engine; purchase of official validation assets/distribution | Flashing, failure and recovery evidence for specific ECU/adapter combinations | Long term; real hardware-in-the-loop evidence before a paid offer |
+| [HackDigest](https://github.com/turlamai/hackdigest/blob/main/PRICING.md) | Free BYOK; capped hosted translation/digest subscription | Ongoing compute without configuring a key | Verify transport, secret custody and costs first; no lifetime hosting |
+| [Publy](https://github.com/turlamai/publy/blob/main/PRICING.md) | Free CLI/plugin/self-hosting; hosted publishing subscription | Stable egress, scheduling, credential custody and recovery | Small pilot after reliable internal use; no theme marketplace |
 
 Taskly's complete-product model reduces an artificial Free/Pro feature matrix. Fulcrum and Booklight already have substantial free functionality: a new paid layer must deliver workflow outcomes rather than put BYOK, export or basic search behind a new wall. These are portfolio decisions, not validated demand or sales forecasts.
 
@@ -27,14 +27,14 @@ Taskly's complete-product model reduces an artificial Free/Pro feature matrix. F
 
 | Product | Decision and investment boundary |
 | --- | --- |
-| [Payback](https://github.com/turinglambdaai/payback/pull/21) | Every delivered platform is free; no separate mobile sale is planned. Remove the existing ten-device/PB1 gate. Do not charge for backup, export or BYO sync |
-| [PodLens](https://github.com/turinglambdaai/podlens/blob/main/PRICING.md) | Free BYOK listening/reading tool. Do not build another hosted-audio billing service. Validate repeat listening first |
-| [RegexMate](https://github.com/turinglambdaai/regexmate/blob/main/PRICING.md) | Free CLI/GUI/MCP and internal production/CI/agent use. Cancel near-term team Pro; no corporate-identity fee. Existing BUSL grant stays in force |
-| [MoveBit](https://github.com/turinglambdaai/movebit/blob/main/PRICING.md) | Free community utility; finish updates, multi-display interaction and recovery, and keep it small |
-| [Keyward](https://github.com/turinglambdaai/keyward/blob/main/PRICING.md) | Free security and internal release infrastructure. No charges for key count or security features |
-| [Threadly](https://github.com/turinglambdaai/threadly/blob/main/PRICING.md) | Free desktop community tool, in maintenance mode; sign-in, replies, notifications and BYOK stay free |
-| [SyncPilot](https://github.com/turinglambdaai/syncpilot/blob/main/PRICING.md) | Free maintenance mode. No separate entitlement business for a shell controlling third-party Resilio |
-| [RelayPilot](https://github.com/turinglambdaai/relaypilot/blob/main/PRICING.md) | Architecture experiment; no VPN, node or traffic presales and no claim of an existing service |
+| [Payback](https://github.com/turlamai/payback/pull/21) | Every delivered platform is free; no separate mobile sale is planned. Remove the existing ten-device/PB1 gate. Do not charge for backup, export or BYO sync |
+| [PodLens](https://github.com/turlamai/podlens/blob/main/PRICING.md) | Free BYOK listening/reading tool. Do not build another hosted-audio billing service. Validate repeat listening first |
+| [RegexMate](https://github.com/turlamai/regexmate/blob/main/PRICING.md) | Free CLI/GUI/MCP and internal production/CI/agent use. Cancel near-term team Pro; no corporate-identity fee. Existing BUSL grant stays in force |
+| [MoveBit](https://github.com/turlamai/movebit/blob/main/PRICING.md) | Free community utility; finish updates, multi-display interaction and recovery, and keep it small |
+| [Keyward](https://github.com/turlamai/keyward/blob/main/PRICING.md) | Free security and internal release infrastructure. No charges for key count or security features |
+| [Threadly](https://github.com/turlamai/threadly/blob/main/PRICING.md) | Free desktop community tool, in maintenance mode; sign-in, replies, notifications and BYOK stay free |
+| [SyncPilot](https://github.com/turlamai/syncpilot/blob/main/PRICING.md) | Free maintenance mode. No separate entitlement business for a shell controlling third-party Resilio |
+| [RelayPilot](https://github.com/turlamai/relaypilot/blob/main/PRICING.md) | Architecture experiment; no VPN, node or traffic presales and no claim of an existing service |
 | Pitboard | Free content entry point; maintain accuracy, sources and corrections, without a new subscription wall |
 | Racket Programming / Yinwang Archive | Free content/community entry points; do not package third-party archived content as exclusive paid material |
 

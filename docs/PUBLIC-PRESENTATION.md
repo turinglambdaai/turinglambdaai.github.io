@@ -65,4 +65,4 @@ For each affected product release or public-doc PR:
 
 ## Rollout and ownership
 
-The tracked cross-portfolio implementation is [issue #5](https://github.com/turinglambdaai/turinglambdaai.github.io/issues/5). Existing [homepage issue #2](https://github.com/turinglambdaai/turinglambdaai.github.io/issues/2) retains layout/featured-story ownership. Begin with consumer/professional products; then content sites and core libraries; handle archived/upstream repositories only after provenance review. This document is a repeatable quality contract, **not** a statement that 100 repositories are already upgraded.
+The tracked cross-portfolio implementation is [issue #5](https://github.com/turlamai/turinglambdaai.github.io/issues/5). Existing [homepage issue #2](https://github.com/turlamai/turinglambdaai.github.io/issues/2) retains layout/featured-story ownership. Begin with consumer/professional products; then content sites and core libraries; handle archived/upstream repositories only after provenance review. This document is a repeatable quality contract, **not** a statement that 100 repositories are already upgraded.
