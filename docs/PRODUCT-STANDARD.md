@@ -28,7 +28,7 @@ does not prove that an already running agent has read or implemented the policy.
 ## Ownership and composition
 
 The five-library graph and release order remain in
-[Keel's family architecture](https://github.com/turinglambdaai/keel/blob/main/docs/family-architecture.md).
+[Keel's family architecture](https://github.com/turlamai/keel/blob/main/docs/family-architecture.md).
 [PORTFOLIO.md](../PORTFOLIO.md) owns investment and commercial classification.
 Each product owns its domain, interaction contract, data format, release
 channels and commercial promise. Rivet and Glaze are alternative presentation

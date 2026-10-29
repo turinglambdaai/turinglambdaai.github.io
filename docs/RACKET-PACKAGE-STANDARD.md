@@ -2,7 +2,7 @@
 
 **English** · [简体中文](RACKET-PACKAGE-STANDARD.zh-CN.md)
 
-Status: maintainer guidance, 2026-10-27. This is **not** a product landing-page template or a mandate to restructure every repository. It complements [documentation languages](DOCUMENTATION-LANGUAGES.md) and is tracked under [package-quality issue #7](https://github.com/turinglambdaai/turinglambdaai.github.io/issues/7); customer applications and their sites remain in [public presentation](PUBLIC-PRESENTATION.md) / [issue #5](https://github.com/turinglambdaai/turinglambdaai.github.io/issues/5).
+Status: maintainer guidance, 2026-10-27. This is **not** a product landing-page template or a mandate to restructure every repository. It complements [documentation languages](DOCUMENTATION-LANGUAGES.md) and is tracked under [package-quality issue #7](https://github.com/turlamai/turlamai.github.io/issues/7); customer applications and their sites remain in [public presentation](PUBLIC-PRESENTATION.md) / [issue #5](https://github.com/turlamai/turlamai.github.io/issues/5).
 
 ## Classification before any edit
 

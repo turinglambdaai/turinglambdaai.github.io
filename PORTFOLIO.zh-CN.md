@@ -14,14 +14,14 @@ Taskly / Payback 的新文档先以独立 PR #60 / #21 交接，等待 CI 与合
 
 | 产品 | 决策 | 用户为什么付钱 | 执行顺序 |
 |---|---|---|---|
-| [Taskly](https://github.com/turinglambdaai/taskly/pull/60) | 完整官方桌面版买断，14 天试用；不把提醒/自然语言输入拆卖 | 稳定、顺手、可恢复的日常任务系统 | 消费主力 1；先完成现有交互/更新/恢复 |
-| [Fulcrum](https://github.com/turinglambdaai/fulcrum/blob/main/PRICING.zh-CN.md) | 免费现有启动器 + 新增工作流 Pro 买断 | 多步骤自动化的编辑、调试和失败恢复 | 消费主力 2；先证明一个新增付费闭环 |
-| [Booklight](https://github.com/turinglambdaai/booklight/blob/main/PRICING.zh-CN.md) | 免费现有阅读器 + 新增研究工作台 Pro 买断 | 有可追溯引用的跨书研究成果 | 第二梯队；先把阅读/批注恢复做稳 |
-| [gPTP Studio](https://github.com/turinglambdaai/gptp-studio/blob/main/PRICING.zh-CN.md) | Linux 官方 Pro 买断 + 可选更新续购 | 真实时间同步控制、参考硬件验证与工程证据 | 商业链技术试点；不等于最早能获得市场收入 |
-| [Autarx](https://github.com/turinglambdaai/autarx/blob/main/PRICING.zh-CN.md) | 完整工程工作台买断 + 可选更新续购 | 可验证的配置/校验/生成闭环 | 长线；不急于扩平台或销售渠道 |
-| [FlashPilot](https://github.com/turinglambdaai/flashpilot/blob/main/PRICING.zh-CN.md) | 免费 AGPL 引擎 + 官方验证资产/发行版买断 | 具体 ECU/适配器上的刷写、失败与恢复证据 | 长线；真实硬件在环通过才可立 offer |
-| [HackDigest](https://github.com/turinglambdaai/hackdigest/blob/main/PRICING.zh-CN.md) | 免费 BYOK；限额托管翻译/摘要订阅 | 不配置 key 的持续计算服务 | 先完成传输/密钥/成本验证；无终身托管 |
-| [Publy](https://github.com/turinglambdaai/publy/blob/main/PRICING.zh-CN.md) | 免费 CLI/插件/自托管；托管发布订阅 | 稳定出口、排程、凭据管理与恢复 | 自用可靠性通过后小规模试点；不开主题市场 |
+| [Taskly](https://github.com/turlamai/taskly/pull/60) | 完整官方桌面版买断，14 天试用；不把提醒/自然语言输入拆卖 | 稳定、顺手、可恢复的日常任务系统 | 消费主力 1；先完成现有交互/更新/恢复 |
+| [Fulcrum](https://github.com/turlamai/fulcrum/blob/main/PRICING.zh-CN.md) | 免费现有启动器 + 新增工作流 Pro 买断 | 多步骤自动化的编辑、调试和失败恢复 | 消费主力 2；先证明一个新增付费闭环 |
+| [Booklight](https://github.com/turlamai/booklight/blob/main/PRICING.zh-CN.md) | 免费现有阅读器 + 新增研究工作台 Pro 买断 | 有可追溯引用的跨书研究成果 | 第二梯队；先把阅读/批注恢复做稳 |
+| [gPTP Studio](https://github.com/turlamai/gptp-studio/blob/main/PRICING.zh-CN.md) | Linux 官方 Pro 买断 + 可选更新续购 | 真实时间同步控制、参考硬件验证与工程证据 | 商业链技术试点；不等于最早能获得市场收入 |
+| [Autarx](https://github.com/turlamai/autarx/blob/main/PRICING.zh-CN.md) | 完整工程工作台买断 + 可选更新续购 | 可验证的配置/校验/生成闭环 | 长线；不急于扩平台或销售渠道 |
+| [FlashPilot](https://github.com/turlamai/flashpilot/blob/main/PRICING.zh-CN.md) | 免费 AGPL 引擎 + 官方验证资产/发行版买断 | 具体 ECU/适配器上的刷写、失败与恢复证据 | 长线；真实硬件在环通过才可立 offer |
+| [HackDigest](https://github.com/turlamai/hackdigest/blob/main/PRICING.zh-CN.md) | 免费 BYOK；限额托管翻译/摘要订阅 | 不配置 key 的持续计算服务 | 先完成传输/密钥/成本验证；无终身托管 |
+| [Publy](https://github.com/turlamai/publy/blob/main/PRICING.zh-CN.md) | 免费 CLI/插件/自托管；托管发布订阅 | 稳定出口、排程、凭据管理与恢复 | 自用可靠性通过后小规模试点；不开主题市场 |
 
 Taskly 的完整商品形式可减少人为免费/Pro 矩阵。Fulcrum、Booklight 现有免费功能已多，新增付费层应交付工作流成果，不能把 BYOK、导出、基础搜索重新围起来。以上判断是本组合的产品决策，不是已验证的需求或销量预测。
 
@@ -29,14 +29,14 @@ Taskly 的完整商品形式可减少人为免费/Pro 矩阵。Fulcrum、Booklig
 
 | 产品 | 决策与投入边界 |
 |---|---|
-| [Payback](https://github.com/turinglambdaai/payback/pull/21) | 所有实际交付平台免费，不再计划手机单独收费。移除现存 10 台/PB1 门禁；不以备份、导出或 BYO 同步收费 |
-| [PodLens](https://github.com/turinglambdaai/podlens/blob/main/PRICING.zh-CN.md) | 免费 BYOK 听读工具；不建设另一套音频计费/托管服务；先验证重复收听 |
-| [RegexMate](https://github.com/turinglambdaai/regexmate/blob/main/PRICING.zh-CN.md) | 免费 CLI/GUI/MCP 和内部生产/CI/agent；取消近期待办中的团队 Pro，不因企业身份追收费；现有 BUSL grant 不变 |
-| [MoveBit](https://github.com/turinglambdaai/movebit/blob/main/PRICING.zh-CN.md) | 免费社区工具，完成更新/跨屏/恢复即可，保持小体量 |
-| [Keyward](https://github.com/turinglambdaai/keyward/blob/main/PRICING.zh-CN.md) | 免费安全及自用发布基础设施，不按密钥数或安全功能收费 |
-| [Threadly](https://github.com/turinglambdaai/threadly/blob/main/PRICING.zh-CN.md) | 免费桌面社区工具；登录、回帖、通知与 BYOK 免费，保活 |
-| [SyncPilot](https://github.com/turinglambdaai/syncpilot/blob/main/PRICING.zh-CN.md) | 免费保活，不为第三方 Resilio 的控制壳再建立授权体系 |
-| [RelayPilot](https://github.com/turinglambdaai/relaypilot/blob/main/PRICING.zh-CN.md) | 架构实验，不预售 VPN、节点或流量，不宣称有现成服务 |
+| [Payback](https://github.com/turlamai/payback/pull/21) | 所有实际交付平台免费，不再计划手机单独收费。移除现存 10 台/PB1 门禁；不以备份、导出或 BYO 同步收费 |
+| [PodLens](https://github.com/turlamai/podlens/blob/main/PRICING.zh-CN.md) | 免费 BYOK 听读工具；不建设另一套音频计费/托管服务；先验证重复收听 |
+| [RegexMate](https://github.com/turlamai/regexmate/blob/main/PRICING.zh-CN.md) | 免费 CLI/GUI/MCP 和内部生产/CI/agent；取消近期待办中的团队 Pro，不因企业身份追收费；现有 BUSL grant 不变 |
+| [MoveBit](https://github.com/turlamai/movebit/blob/main/PRICING.zh-CN.md) | 免费社区工具，完成更新/跨屏/恢复即可，保持小体量 |
+| [Keyward](https://github.com/turlamai/keyward/blob/main/PRICING.zh-CN.md) | 免费安全及自用发布基础设施，不按密钥数或安全功能收费 |
+| [Threadly](https://github.com/turlamai/threadly/blob/main/PRICING.zh-CN.md) | 免费桌面社区工具；登录、回帖、通知与 BYOK 免费，保活 |
+| [SyncPilot](https://github.com/turlamai/syncpilot/blob/main/PRICING.zh-CN.md) | 免费保活，不为第三方 Resilio 的控制壳再建立授权体系 |
+| [RelayPilot](https://github.com/turlamai/relaypilot/blob/main/PRICING.zh-CN.md) | 架构实验，不预售 VPN、节点或流量，不宣称有现成服务 |
 | Pitboard | 免费内容入口，维护事实、来源与勘误，不新建订阅墙 |
 | Racket 程序设计 / Yinwang Archive | 免费内容与社区入口；不将第三方归档内容包装为独家付费资源 |
 

@@ -46,4 +46,4 @@
 
 ## 实施跟踪
 
-全产品推进由 [Issue #5](https://github.com/turinglambdaai/turinglambdaai.github.io/issues/5) 跟踪；已有[主页 Issue #2](https://github.com/turinglambdaai/turinglambdaai.github.io/issues/2) 继续负责主站布局和产品推荐位。优先用户产品及专业工具，再到内容站点与基础库；归档/上游代码须先核对来源。**不能因为写完本规范就宣布 100 个仓库已优化。**
+全产品推进由 [Issue #5](https://github.com/turlamai/turlamai.github.io/issues/5) 跟踪；已有[主页 Issue #2](https://github.com/turlamai/turlamai.github.io/issues/2) 继续负责主站布局和产品推荐位。优先用户产品及专业工具，再到内容站点与基础库；归档/上游代码须先核对来源。**不能因为写完本规范就宣布 100 个仓库已优化。**
